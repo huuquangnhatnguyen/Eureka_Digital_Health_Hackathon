@@ -2,6 +2,8 @@
 
 Made-up data in the shape the hackathon brief describes in section 3. It contains no real patient data.
 
+For what every column means, with confidence and evidence for each guessed name, see [FIELDS.md](FIELDS.md).
+
 - `sample_db.json`: one patient document, in the form of a Cosmos DB (MongoDB API) collection export.
 - `sample_entry.json`: one tracker submission, as it would be added to `dailyLogs[].trackerResponses[]`.
 - `tracker_definition.json`: the question wording, which is stored outside the patient record.
