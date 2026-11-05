@@ -1,0 +1,5704 @@
+[
+  {
+    "_id": "6650f1c2a9e4b3d2c1f0a001",
+    "dailyLogs": [
+      {
+        "day": "2025-03-28",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "1027ba72-fe17-432d-9904-e72a721d8c2f",
+            "time": "20:21",
+            "name": "Excedrin",
+            "value": 1
+          },
+          {
+            "id": "1027ba72-fe17-432d-9904-e72a721d8c2f",
+            "time": "19:21",
+            "name": "Excedrin",
+            "value": 1
+          },
+          {
+            "id": "1027ba72-fe17-432d-9904-e72a721d8c2f",
+            "time": "20:21",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2025-04-03",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-03T13:35:07.214Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2025-04-28",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T17:29:41.880Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\",\"Shortness Of Breath\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T17:50:12.033Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\",\"Shortness Of Breath\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T17:51:03.517Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T17:53:26.402Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T17:54:09.761Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Coughing\",\"Wheezing\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T17:55:38.145Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Coughing\",\"Wheezing\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-04-28T18:25:50.678Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2025-06-25",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-06-25T17:21:16.392Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\",\"Activity limitations\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-06-25T17:23:44.905Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-06-25T17:31:02.118Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-06-25T18:31:57.260Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2025-06-27",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2025-06-27T15:11:29.447Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\",\"Tight Chest\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2026-02-27",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-02-27T13:39:33.590Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2026-03-11",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-03-11T16:48:58.912Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "12:47",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-05-05",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-05-05T17:44:21.306Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Coughing\",\"Tight Chest\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-05-05T17:52:04.771Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-05-05T17:52:39.054Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "19:51",
+            "name": "Excedrin",
+            "value": 1
+          },
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "19:51",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-06-24",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:31",
+            "name": "Dulera 2",
+            "value": 1
+          },
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "09:31",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-06-25",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-06-25T13:05:51.832Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:16",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-06-26",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-06-26T14:04:05.443Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Activity limitations\",\"Wheezing\",\"Coughing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:11",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-06-27",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-06-27T14:02:02.400Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:20",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-06-28",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-06-28T15:15:54.683Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Activity limitations\",\"Tight Chest\",\"Coughing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-06-30",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-06-30T14:46:33.306Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:55",
+            "name": "Dulera 2",
+            "value": 1
+          },
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "19:52",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-01",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-01T13:40:03.391Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:50",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-02",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-02T14:58:35.460Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Activity limitations\",\"Tight Chest\",\"Shortness Of Breath\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-04",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-04T15:56:07.171Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "11:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-08",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-08T13:07:14.221Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "22:08",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-10",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-10T14:20:33.712Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:33",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-11",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-12",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:58",
+            "name": "Dulera 2",
+            "value": 1
+          },
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "20:26",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-13",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-13T13:45:28.057Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-13T14:11:39.963Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-13T14:11:43.688Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-13T14:15:10.442Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-13T14:16:28.098Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-16",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-16T15:20:43.176Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "11:32",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-18",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-18T13:06:52.011Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:18",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-19",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-19T16:00:25.247Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-19T16:10:37.433Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-19T16:12:40.457Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-19T16:19:08.036Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-19T16:28:02.570Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "11:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-23",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-23T15:49:50.223Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "11:54",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-24",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-24T13:37:08.014Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-07-25",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-25T14:34:56.893Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:46",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-26",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:47",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-27",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-27T15:40:49.168Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Coughing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-07-28",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-28T15:45:48.262Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "11:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-30",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-30T14:33:11.585Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "20:03",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-07-31",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-07-31T15:28:36.462Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-08-01",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-01T13:47:42.766Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-01T14:13:29.838Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "21:32",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-06",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-06T15:21:39.400Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\",\"Coughing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-08-13",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-13T11:30:43.957Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:49",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-14",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-14T11:16:59.021Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:40",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-15",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-15T13:13:26.200Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-15T13:44:12.932Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:29",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-17",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-17T11:13:15.292Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\",\"Coughing\",\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "20:58",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-18",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-18T11:28:59.413Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:49",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-20",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-20T11:19:50.565Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\",\"Tight Chest\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "19:41",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-08-22",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-22T15:46:05.763Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "11:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-23",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-23T14:17:59.273Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Shortness Of Breath\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-08-24",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-24T11:23:41.155Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Coughing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:32",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-27",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-27T11:44:49.442Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\",\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "21:48",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-30",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-30T14:31:07.327Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "20:28",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-08-31",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-08-31T11:11:10.987Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "21:25",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-02",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:56",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-03",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-03T11:11:09.846Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\",\"Activity limitations\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:20",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-04",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-04T11:13:02.894Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-09-05",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-05T13:06:02.647Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-05T13:37:59.351Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-05T13:48:36.055Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:13",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-06",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-06T15:01:50.657Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "20:25",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-07",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-07T11:32:10.152Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:49",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-09",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-09T11:35:07.410Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-09T11:49:07.350Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-09T12:15:40.841Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-09-11",
+        "trackerResponses": [],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-09-16",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-16T11:43:51.074Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-09-17",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-17T11:28:25.053Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-17T11:30:24.951Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-17T11:55:44.985Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-17T12:18:26.558Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "19:09",
+            "name": "Dulera 2",
+            "value": 1
+          },
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "19:11",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-23",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-23T11:24:32.557Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Activity limitations\",\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+            "time": "20:47",
+            "name": "Excedrin",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-09-24",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-24T11:15:30.727Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Shortness Of Breath\",\"Activity limitations\",\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:40",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-25",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-09-25T11:19:18.041Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Activity limitations\",\"Tight Chest\",\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:43",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-09-30",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:36",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-01",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-01T11:28:52.665Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-01T11:33:16.035Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-01T11:50:46.528Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-01T12:08:51.590Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:33",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-02",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-02T11:28:34.032Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:50",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-03",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:18",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-04",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-04T14:50:23.690Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Tight Chest\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-05",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-05T11:38:04.567Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:52",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-11",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-11T14:54:22.912Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "10:59",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-13",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-13T11:19:08.655Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-13T12:04:57.224Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:25",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-14",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-14T11:19:54.486Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "21:23",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-15",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-15T11:21:41.186Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-10-16",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-16T11:16:38.638Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:37",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-17",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-17T14:31:21.669Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [],
+        "allMedicationsAdministered": false
+      },
+      {
+        "day": "2026-10-18",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-18T13:23:03.767Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:44",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-20",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-20T11:37:56.420Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "20:23",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-21",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-21T11:27:32.204Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:44",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-24",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-24T13:47:30.268Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Shortness Of Breath\",\"Tight Chest\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:58",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-28",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "07:43",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-29",
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "20:38",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-10-31",
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-10-31T16:02:34.749Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "22:08",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ],
+        "allMedicationsAdministered": true
+      },
+      {
+        "day": "2026-11-02",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-02T13:09:00.131Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-02T13:17:36.138Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-02T13:31:18.529Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-02T13:44:50.712Z",
+            "responses": []
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-02T13:53:15.490Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "08:20",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-03",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-03T13:14:00.819Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "08:25",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-04",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2026-11-05",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-05T13:24:00.697Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\",\"Tight Chest\"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-05T13:52:41.242Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Wheezing\",\"Tight Chest\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "21:30",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-06",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-06T13:04:00.807Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Bad"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"Coughing\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "08:15",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-07",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-07T14:34:00.154Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:40",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-08",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+            "date": "2026-11-08T14:04:00.863Z",
+            "responses": [
+              {
+                "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18",
+                "value": "Great"
+              },
+              {
+                "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+            "time": "09:10",
+            "name": "Dulera 2",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "medications": [
+      {
+        "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+        "dosage": {
+          "timing": {
+            "periodUnit": "Daily",
+            "frequency": 1,
+            "period": 5
+          },
+          "asNeeded": null
+        },
+        "howOften": "Daily",
+        "icon": "Capsule",
+        "name": "Dulera 2",
+        "relatedCondition": "Asthma Education Draft Tracker",
+        "archived": false,
+        "index": 2
+      },
+      {
+        "id": "1027ba72-fe17-432d-9904-e72a721d8c2f",
+        "dosage": {
+          "timing": {
+            "periodUnit": null,
+            "frequency": null,
+            "period": null
+          },
+          "asNeeded": true
+        },
+        "howOften": "As Needed",
+        "icon": "Capsule",
+        "name": "Excedrin",
+        "relatedCondition": null,
+        "archived": true,
+        "index": 0
+      },
+      {
+        "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+        "dosage": {
+          "timing": {
+            "periodUnit": null,
+            "frequency": null,
+            "period": null
+          },
+          "asNeeded": true
+        },
+        "howOften": "As Needed",
+        "icon": "Capsule",
+        "name": "Excedrin",
+        "relatedCondition": "Cerebral Palsy Tracker",
+        "archived": false,
+        "index": 1
+      }
+    ],
+    "reminders": [],
+    "medicalDevices": [
+      {
+        "protocol": 9,
+        "address": "AAF17BF4-FB64-B5AB-D7C6-27344E9A81FA",
+        "bootId": "SM",
+        "serialNumber": "Z125775",
+        "deviceType": 0,
+        "atsStandard": null,
+        "name": "Spirobank",
+        "advertisedName": "SM-009-Z125775",
+        "baselineReadingDate": "2026-06-24",
+        "baselineReadings": [
+          {
+            "date": "2026-06-24T13:38:12.501Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879,
+              "pefPercentPredicted": 23.36432,
+              "fev1PercentPredicted": 47.93997,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.39,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": 0,
+              "fvcPercentPredicted": 100.2463,
+              "fev1": 2,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 37.1,
+              "pef": 2.23,
+              "fef2575": 1.37,
+              "fvc": 5.39
+            }
+          },
+          {
+            "date": "2026-06-24T13:39:05.877Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879,
+              "pefPercentPredicted": 16.23978,
+              "fev1PercentPredicted": 28.52428,
+              "fev1Predicted": 4.171884,
+              "fev6": 4.68,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": 0,
+              "fvcPercentPredicted": 101.3622,
+              "fev1": 1.19,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 21.8,
+              "pef": 1.55,
+              "fef2575": 0.76,
+              "fvc": 5.45
+            }
+          },
+          {
+            "date": "2026-06-24T13:39:58.240Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                },
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16815,
+              "pefPercentPredicted": 22.52614,
+              "fev1PercentPredicted": 41.22837,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": 0,
+              "fvcPercentPredicted": 101.9202,
+              "fev1": 1.72,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 31.4,
+              "pef": 2.15,
+              "fef2575": 0.89,
+              "fvc": 5.48
+            }
+          },
+          {
+            "date": "2026-06-24T13:40:49.663Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879,
+              "pefPercentPredicted": 27.24091,
+              "fev1PercentPredicted": 43.62537,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.38,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": 0,
+              "fvcPercentPredicted": 103.4081,
+              "fev1": 1.82,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 32.7,
+              "pef": 2.6,
+              "fef2575": 0.98,
+              "fvc": 5.56
+            }
+          },
+          {
+            "date": "2026-06-24T13:41:37.019Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879,
+              "pefPercentPredicted": 102.4678,
+              "fev1PercentPredicted": 109.7825,
+              "fev1Predicted": 4.171884,
+              "fev6": 4.93,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": 0,
+              "fvcPercentPredicted": 91.69095,
+              "fev1": 4.58,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 92.9,
+              "pef": 9.78,
+              "fef2575": 6.86,
+              "fvc": 4.93
+            }
+          },
+          {
+            "date": "2026-06-24T13:42:24.388Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879,
+              "pefPercentPredicted": 113.7832,
+              "fev1PercentPredicted": 108.584,
+              "fev1Predicted": 4.171884,
+              "fev6": 4.96,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": 0,
+              "fvcPercentPredicted": 92.24891,
+              "fev1": 4.53,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 91.3,
+              "pef": 10.86,
+              "fef2575": 6.59,
+              "fvc": 4.96
+            }
+          },
+          {
+            "date": "2026-06-25T13:01:30.166Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.6575,
+              "fev1PercentPredicted": 104.5091,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.36,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.0,
+              "pef": 9.13,
+              "fef2575": 4.79,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-06-25T13:02:59.719Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.6668,
+              "fev1PercentPredicted": 106.4267,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.27,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.5724,
+              "fev1": 4.44,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.8,
+              "pef": 8.94,
+              "fef2575": 5.09,
+              "fvc": 5.3
+            }
+          },
+          {
+            "date": "2026-06-25T13:03:39.355Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.1337,
+              "fev1PercentPredicted": 106.187,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.14,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.43,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.4,
+              "pef": 9.08,
+              "fef2575": 4.72,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-06-26T14:02:43.874Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.3432,
+              "fev1PercentPredicted": 106.4267,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.3864,
+              "fev1": 4.44,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.9,
+              "pef": 9.1,
+              "fef2575": 4.89,
+              "fvc": 5.29
+            }
+          },
+          {
+            "date": "2026-06-30T14:43:32.145Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.4003,
+              "fev1PercentPredicted": 107.6252,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.49,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.5,
+              "pef": 9.01,
+              "fef2575": 5.17,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-06-30T14:44:33.979Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.6005,
+              "fev1PercentPredicted": 108.1046,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.51,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.9,
+              "pef": 9.22,
+              "fef2575": 5.23,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-07-04T15:53:46.779Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.6668,
+              "fev1PercentPredicted": 103.5503,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.32,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.6,
+              "pef": 8.94,
+              "fef2575": 4.69,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-07-04T15:54:09.885Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.0196,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.3,
+              "pef": 9.26,
+              "fef2575": 4.94,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-07-08T13:03:38.153Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 74.703,
+              "fev1PercentPredicted": 85.3331,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.14,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.3406,
+              "fev1": 3.56,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 68.7,
+              "pef": 7.13,
+              "fef2575": 4.09,
+              "fvc": 5.18
+            }
+          },
+          {
+            "date": "2026-07-08T13:04:54.363Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.753,
+              "fev1PercentPredicted": 108.1046,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.51,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.9,
+              "pef": 9.33,
+              "fef2575": 5.19,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-07-08T13:05:50.877Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.4003,
+              "fev1PercentPredicted": 105.9473,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.3864,
+              "fev1": 4.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.6,
+              "pef": 9.01,
+              "fef2575": 4.98,
+              "fvc": 5.29
+            }
+          },
+          {
+            "date": "2026-07-11T13:53:59.340Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.2291,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.9,
+              "pef": 9.28,
+              "fef2575": 4.69,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-07-11T13:54:07.197Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.7146,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.7,
+              "pef": 9.04,
+              "fef2575": 5.19,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-07-11T13:55:29.151Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.0382,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.8,
+              "pef": 8.88,
+              "fef2575": 4.91,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-07-12T13:46:21.451Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.5621,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.6,
+              "pef": 8.93,
+              "fef2575": 5.05,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-07-13T13:41:43.487Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.0196,
+              "fev1PercentPredicted": 108.1046,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.51,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.9,
+              "pef": 9.26,
+              "fef2575": 4.84,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-07-13T13:42:46.301Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.5434,
+              "fev1PercentPredicted": 107.6252,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.49,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.3,
+              "pef": 9.31,
+              "fef2575": 5.0,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-07-13T13:43:37.027Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.7716,
+              "fev1PercentPredicted": 106.4267,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.44,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.4,
+              "pef": 8.95,
+              "fef2575": 5.07,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-07-16T15:16:30.020Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.3432,
+              "fev1PercentPredicted": 107.8649,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.5,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.2,
+              "pef": 9.1,
+              "fef2575": 4.8,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-07-16T15:17:38.197Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.6482,
+              "fev1PercentPredicted": 106.9061,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.46,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.6,
+              "pef": 9.32,
+              "fef2575": 5.18,
+              "fvc": 5.27
+            }
+          },
+          {
+            "date": "2026-07-16T15:18:28.896Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.6959,
+              "fev1PercentPredicted": 108.584,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.53,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.9,
+              "pef": 9.42,
+              "fef2575": 5.07,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-07-18T13:03:21.703Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.2768,
+              "fev1PercentPredicted": 107.3855,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.48,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.7,
+              "pef": 9.38,
+              "fef2575": 4.89,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-07-18T13:04:09.536Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 77.3223,
+              "fev1PercentPredicted": 85.3331,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 3.56,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 68.6,
+              "pef": 7.38,
+              "fef2575": 4.15,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-07-19T15:56:21.735Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.1243,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.1,
+              "pef": 9.27,
+              "fef2575": 5.16,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-07-19T15:57:46.602Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.9718,
+              "fev1PercentPredicted": 103.5503,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.32,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.1,
+              "pef": 9.16,
+              "fef2575": 4.76,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-07-19T15:58:38.432Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.4387,
+              "fev1PercentPredicted": 107.1458,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.27,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.47,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.7,
+              "pef": 9.3,
+              "fef2575": 4.98,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-07-24T13:35:35.403Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.8671,
+              "fev1PercentPredicted": 107.8649,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.5,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.5,
+              "pef": 9.15,
+              "fef2575": 4.8,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-07-25T14:30:29.971Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.8671,
+              "fev1PercentPredicted": 102.5915,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.28,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.3,
+              "pef": 9.15,
+              "fef2575": 4.61,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-07-25T14:31:30.005Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.1814,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.14,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.8,
+              "pef": 9.18,
+              "fef2575": 5.11,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-07-25T14:32:37.700Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.7716,
+              "fev1PercentPredicted": 103.0709,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.3,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.1,
+              "pef": 8.95,
+              "fef2575": 4.88,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-07-26T14:28:01.141Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.3339,
+              "fev1PercentPredicted": 103.3106,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.31,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.1,
+              "pef": 9.29,
+              "fef2575": 4.76,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-07-26T14:29:36.733Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.6098,
+              "fev1PercentPredicted": 103.5503,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.32,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.1,
+              "pef": 9.03,
+              "fef2575": 4.93,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-07-26T14:30:27.554Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.4957,
+              "fev1PercentPredicted": 102.8312,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.29,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.7,
+              "pef": 9.21,
+              "fef2575": 4.78,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-07-28T15:41:46.803Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 92.8287,
+              "fev1PercentPredicted": 103.0709,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.3,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 81.9,
+              "pef": 8.86,
+              "fef2575": 4.64,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-07-28T15:42:07.227Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.1337,
+              "fev1PercentPredicted": 102.5915,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.28,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.0,
+              "pef": 9.08,
+              "fef2575": 4.9,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-07-28T15:43:34.821Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.3909,
+              "fev1PercentPredicted": 104.9885,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.38,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.4,
+              "pef": 9.2,
+              "fef2575": 4.74,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-07-31T15:24:28.541Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.4003,
+              "fev1PercentPredicted": 107.1458,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.47,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.1,
+              "pef": 9.01,
+              "fef2575": 4.97,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-07-31T15:25:50.762Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.6668,
+              "fev1PercentPredicted": 104.5091,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.36,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.7,
+              "pef": 8.94,
+              "fef2575": 4.94,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-07-31T15:26:43.295Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.5528,
+              "fev1PercentPredicted": 104.2694,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.35,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.2,
+              "pef": 9.12,
+              "fef2575": 4.68,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-08-06T15:17:08.831Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 68.4166,
+              "fev1PercentPredicted": 85.8125,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.05,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 94.1088,
+              "fev1": 3.58,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 70.8,
+              "pef": 6.53,
+              "fef2575": 4.1,
+              "fvc": 5.06
+            }
+          },
+          {
+            "date": "2026-08-06T15:18:16.852Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 70.9312,
+              "fev1PercentPredicted": 86.5316,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.0,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 93.5508,
+              "fev1": 3.61,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 71.8,
+              "pef": 6.77,
+              "fef2575": 4.14,
+              "fvc": 5.03
+            }
+          },
+          {
+            "date": "2026-08-06T15:19:06.757Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 67.8927,
+              "fev1PercentPredicted": 84.1346,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.03,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 94.6667,
+              "fev1": 3.51,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 69.0,
+              "pef": 6.48,
+              "fef2575": 4.09,
+              "fvc": 5.09
+            }
+          },
+          {
+            "date": "2026-08-13T11:26:11.767Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.8671,
+              "fev1PercentPredicted": 106.187,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.43,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.4,
+              "pef": 9.15,
+              "fef2575": 4.66,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-08-13T11:27:05.798Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.1907,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.8,
+              "pef": 8.99,
+              "fef2575": 5.15,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-08-13T11:28:28.879Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 92.4096,
+              "fev1PercentPredicted": 104.7488,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.13,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.3406,
+              "fev1": 4.37,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.4,
+              "pef": 8.82,
+              "fef2575": 5.15,
+              "fvc": 5.18
+            }
+          },
+          {
+            "date": "2026-08-14T11:12:33.112Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.3339,
+              "fev1PercentPredicted": 107.8649,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.3864,
+              "fev1": 4.5,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.1,
+              "pef": 9.29,
+              "fef2575": 4.75,
+              "fvc": 5.29
+            }
+          },
+          {
+            "date": "2026-08-14T11:13:01.940Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.1337,
+              "fev1PercentPredicted": 107.1458,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.47,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.7,
+              "pef": 9.08,
+              "fef2575": 4.96,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-08-14T11:14:40.940Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.4864,
+              "fev1PercentPredicted": 107.6252,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.5724,
+              "fev1": 4.49,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.7,
+              "pef": 9.4,
+              "fef2575": 5.15,
+              "fvc": 5.3
+            }
+          },
+          {
+            "date": "2026-08-22T15:44:22.758Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 82.1418,
+              "fev1PercentPredicted": 92.2844,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.26,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 3.85,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 72.9,
+              "pef": 7.84,
+              "fef2575": 4.35,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-08-23T14:13:38.535Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.6575,
+              "fev1PercentPredicted": 103.0709,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.3,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.5,
+              "pef": 9.13,
+              "fef2575": 4.97,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-08-23T14:14:25.833Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.1907,
+              "fev1PercentPredicted": 103.79,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.33,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.0,
+              "pef": 8.99,
+              "fef2575": 4.81,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-08-23T14:15:43.584Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.5528,
+              "fev1PercentPredicted": 104.0297,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.34,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.4,
+              "pef": 9.12,
+              "fef2575": 4.87,
+              "fvc": 5.27
+            }
+          },
+          {
+            "date": "2026-08-24T11:19:05.679Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.6482,
+              "fev1PercentPredicted": 106.9061,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.46,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.6,
+              "pef": 9.32,
+              "fef2575": 5.25,
+              "fvc": 5.27
+            }
+          },
+          {
+            "date": "2026-08-24T11:20:17.550Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.5621,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.6,
+              "pef": 8.93,
+              "fef2575": 4.91,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-08-24T11:21:21.752Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.1337,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.3,
+              "pef": 9.08,
+              "fef2575": 4.93,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-08-27T11:40:14.421Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.0382,
+              "fev1PercentPredicted": 104.0297,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.34,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.4,
+              "pef": 8.88,
+              "fef2575": 4.62,
+              "fvc": 5.27
+            }
+          },
+          {
+            "date": "2026-08-27T11:41:29.331Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.6098,
+              "fev1PercentPredicted": 104.2694,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.26,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.35,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.4,
+              "pef": 9.03,
+              "fef2575": 4.9,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-08-27T11:42:14.360Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.6098,
+              "fev1PercentPredicted": 105.7076,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.41,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.0,
+              "pef": 9.03,
+              "fef2575": 4.77,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-08-30T14:28:19.002Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.1243,
+              "fev1PercentPredicted": 106.9061,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.46,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.8,
+              "pef": 9.27,
+              "fef2575": 4.88,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-08-30T14:29:42.720Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.7623,
+              "fev1PercentPredicted": 105.9473,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.28,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.3864,
+              "fev1": 4.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.6,
+              "pef": 9.14,
+              "fef2575": 5.07,
+              "fvc": 5.29
+            }
+          },
+          {
+            "date": "2026-08-31T11:08:26.978Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                },
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 82.7705,
+              "fev1PercentPredicted": 92.0447,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 3.84,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 73.4,
+              "pef": 7.9,
+              "fef2575": 4.32,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-08-31T11:09:00.590Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.8671,
+              "fev1PercentPredicted": 106.9061,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.46,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.4,
+              "pef": 9.15,
+              "fef2575": 4.71,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-09-03T11:08:40.958Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                },
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 71.9789,
+              "fev1PercentPredicted": 80.5392,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 3.36,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 64.4,
+              "pef": 6.87,
+              "fef2575": 3.77,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-09-03T11:09:01.000Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.9625,
+              "fev1PercentPredicted": 107.3855,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.48,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.2,
+              "pef": 9.35,
+              "fef2575": 5.23,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-09-04T11:10:24.570Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.4957,
+              "fev1PercentPredicted": 104.2694,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.35,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.7,
+              "pef": 9.21,
+              "fef2575": 4.66,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-09-04T11:11:16.639Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.9055,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.6,
+              "pef": 9.44,
+              "fef2575": 5.19,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-09-05T13:03:41.594Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.4003,
+              "fev1PercentPredicted": 104.9885,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.38,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.9,
+              "pef": 9.01,
+              "fef2575": 4.72,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-09-05T13:04:51.428Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.7716,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.26,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.5,
+              "pef": 8.95,
+              "fef2575": 4.93,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-09-09T11:31:29.416Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.8007,
+              "fev1PercentPredicted": 108.3443,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.52,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.9,
+              "pef": 9.43,
+              "fef2575": 4.8,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-09-09T11:32:50.891Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.2862,
+              "fev1PercentPredicted": 106.187,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.43,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.7,
+              "pef": 9.19,
+              "fef2575": 4.97,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-09-09T11:33:55.189Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.8193,
+              "fev1PercentPredicted": 107.1458,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.47,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.6,
+              "pef": 9.05,
+              "fef2575": 5.05,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-09-11T11:37:57.658Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.8193,
+              "fev1PercentPredicted": 107.1458,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.5724,
+              "fev1": 4.47,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.3,
+              "pef": 9.05,
+              "fef2575": 5.2,
+              "fvc": 5.3
+            }
+          },
+          {
+            "date": "2026-09-11T11:38:05.634Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.3432,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.28,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.5724,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.0,
+              "pef": 9.1,
+              "fef2575": 5.2,
+              "fvc": 5.3
+            }
+          },
+          {
+            "date": "2026-09-11T11:39:14.575Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.505,
+              "fev1PercentPredicted": 105.9473,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.5,
+              "pef": 9.02,
+              "fef2575": 4.77,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-09-16T11:39:46.210Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.1907,
+              "fev1PercentPredicted": 105.2282,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.26,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.39,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.1,
+              "pef": 8.99,
+              "fef2575": 4.76,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-09-16T11:40:48.443Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.2955,
+              "fev1PercentPredicted": 106.187,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 4.43,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.4,
+              "pef": 9.0,
+              "fef2575": 4.73,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-09-16T11:41:46.624Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.2862,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.26,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.6,
+              "pef": 9.19,
+              "fef2575": 5.01,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-09-17T11:26:02.533Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 92.7239,
+              "fev1PercentPredicted": 104.5091,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.36,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.2,
+              "pef": 8.85,
+              "fef2575": 4.7,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-09-23T11:22:34.885Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 69.0452,
+              "fev1PercentPredicted": 86.2919,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.06,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 94.4807,
+              "fev1": 3.6,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 70.9,
+              "pef": 6.59,
+              "fef2575": 3.87,
+              "fvc": 5.08
+            }
+          },
+          {
+            "date": "2026-09-24T11:11:29.376Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 51.8625,
+              "fev1PercentPredicted": 62.8014,
+              "fev1Predicted": 4.171884,
+              "fev6": 4.97,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 92.9929,
+              "fev1": 2.62,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 52.4,
+              "pef": 4.95,
+              "fef2575": 2.8,
+              "fvc": 5.0
+            }
+          },
+          {
+            "date": "2026-09-24T11:12:18.556Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 66.4259,
+              "fev1PercentPredicted": 83.6553,
+              "fev1Predicted": 4.171884,
+              "fev6": 4.93,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 92.8069,
+              "fev1": 3.49,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 69.9,
+              "pef": 6.34,
+              "fef2575": 3.95,
+              "fvc": 4.99
+            }
+          },
+          {
+            "date": "2026-09-24T11:13:51.146Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 66.1116,
+              "fev1PercentPredicted": 83.1759,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.05,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 94.6667,
+              "fev1": 3.47,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 68.2,
+              "pef": 6.31,
+              "fef2575": 4.05,
+              "fvc": 5.09
+            }
+          },
+          {
+            "date": "2026-10-02T11:26:12.528Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.9055,
+              "fev1PercentPredicted": 105.9473,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.5,
+              "pef": 9.44,
+              "fef2575": 4.78,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-10-03T13:10:04.690Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.1907,
+              "fev1PercentPredicted": 103.5503,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.32,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.1,
+              "pef": 8.99,
+              "fef2575": 5.04,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-10-04T14:48:27.584Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.3909,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.5,
+              "pef": 9.2,
+              "fef2575": 4.65,
+              "fvc": 5.27
+            }
+          },
+          {
+            "date": "2026-10-05T11:34:44.479Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 69.6739,
+              "fev1PercentPredicted": 77.9025,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 3.25,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 61.6,
+              "pef": 6.65,
+              "fef2575": 3.79,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-10-05T11:35:53.328Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                },
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 79.2082,
+              "fev1PercentPredicted": 87.9698,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.27,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 3.67,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 69.5,
+              "pef": 7.56,
+              "fef2575": 3.9,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-10-05T11:36:39.250Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 92.8287,
+              "fev1PercentPredicted": 104.0297,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.34,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.2,
+              "pef": 8.86,
+              "fef2575": 5.08,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-10-17T14:27:49.592Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.5528,
+              "fev1PercentPredicted": 104.2694,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.27,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.35,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.4,
+              "pef": 9.12,
+              "fef2575": 4.65,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-10-17T14:28:10.067Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.1243,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.27,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.3,
+              "pef": 9.27,
+              "fef2575": 5.12,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-10-17T14:29:10.031Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.0673,
+              "fev1PercentPredicted": 105.9473,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.28,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.3864,
+              "fev1": 4.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.6,
+              "pef": 9.36,
+              "fef2575": 4.71,
+              "fvc": 5.29
+            }
+          },
+          {
+            "date": "2026-10-18T13:21:19.825Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.1721,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.9,
+              "pef": 9.37,
+              "fef2575": 4.98,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-10-20T11:33:01.184Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 98.1721,
+              "fev1PercentPredicted": 104.0297,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.34,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.1,
+              "pef": 9.37,
+              "fef2575": 5.04,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-10-20T11:34:23.238Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 71.2455,
+              "fev1PercentPredicted": 77.4231,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 3.23,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 61.8,
+              "pef": 6.8,
+              "fef2575": 3.76,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-10-20T11:35:22.875Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.9812,
+              "fev1PercentPredicted": 103.5503,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.3406,
+              "fev1": 4.32,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.4,
+              "pef": 8.97,
+              "fef2575": 4.98,
+              "fvc": 5.18
+            }
+          },
+          {
+            "date": "2026-10-21T11:24:34.179Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.6482,
+              "fev1PercentPredicted": 104.0297,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.34,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.1,
+              "pef": 9.32,
+              "fef2575": 4.7,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-10-21T11:25:38.392Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.9148,
+              "fev1PercentPredicted": 104.0297,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.34,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.0,
+              "pef": 9.25,
+              "fef2575": 4.89,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-10-28T11:21:02.405Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.2862,
+              "fev1PercentPredicted": 106.4267,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.44,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.7,
+              "pef": 9.19,
+              "fef2575": 5.22,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-10-28T11:22:52.396Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.81,
+              "fev1PercentPredicted": 107.6252,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.49,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 86.0,
+              "pef": 9.24,
+              "fef2575": 4.88,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-10-28T11:23:11.261Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.448,
+              "fev1PercentPredicted": 104.7488,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.37,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.4,
+              "pef": 9.11,
+              "fef2575": 4.93,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-10-29T11:07:03.018Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.7716,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.8,
+              "pef": 8.95,
+              "fef2575": 4.95,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-10-31T15:58:46.895Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.0859,
+              "fev1PercentPredicted": 106.187,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.16,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.43,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 85.2,
+              "pef": 8.98,
+              "fef2575": 5.09,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-10-31T15:59:54.028Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.143,
+              "fev1PercentPredicted": 104.2694,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.3406,
+              "fev1": 4.35,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.0,
+              "pef": 8.89,
+              "fef2575": 4.82,
+              "fvc": 5.18
+            }
+          },
+          {
+            "date": "2026-10-31T16:00:12.457Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutLonger",
+                  "instructions": "KeepGoingUntilCompletelyEmpty"
+                },
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 68.6262,
+              "fev1PercentPredicted": 76.2246,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.5266,
+              "fev1": 3.18,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 61.3,
+              "pef": 6.55,
+              "fef2575": 3.46,
+              "fvc": 5.19
+            }
+          },
+          {
+            "date": "2026-11-02T13:05:00.619Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.3432,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.5,
+              "pef": 9.1,
+              "fef2575": 5.02,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-11-02T13:05:55.100Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.9625,
+              "fev1PercentPredicted": 107.3855,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.27,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.5724,
+              "fev1": 4.48,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.5,
+              "pef": 9.35,
+              "fef2575": 5.11,
+              "fvc": 5.3
+            }
+          },
+          {
+            "date": "2026-11-02T13:06:50.420Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 97.2291,
+              "fev1PercentPredicted": 106.6664,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.45,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.4,
+              "pef": 9.28,
+              "fef2575": 5.07,
+              "fvc": 5.27
+            }
+          },
+          {
+            "date": "2026-11-03T13:10:00.629Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 94.2955,
+              "fev1PercentPredicted": 104.5091,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.19,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.0845,
+              "fev1": 4.36,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.5,
+              "pef": 9.0,
+              "fef2575": 4.92,
+              "fvc": 5.22
+            }
+          },
+          {
+            "date": "2026-11-03T13:10:55.648Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.3909,
+              "fev1PercentPredicted": 105.9473,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.23,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.8285,
+              "fev1": 4.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.0,
+              "pef": 9.2,
+              "fef2575": 5.01,
+              "fvc": 5.26
+            }
+          },
+          {
+            "date": "2026-11-03T13:11:50.173Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.8671,
+              "fev1PercentPredicted": 105.4679,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.21,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.4565,
+              "fev1": 4.4,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.0,
+              "pef": 9.15,
+              "fef2575": 4.99,
+              "fvc": 5.24
+            }
+          },
+          {
+            "date": "2026-11-05T13:20:00.433Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "BlowOutFaster",
+                  "instructions": "BlastOutImmediatelyWhenCompletelyFull"
+                }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 63.9114,
+              "fev1PercentPredicted": 81.9774,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.02,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 93.9228,
+              "fev1": 3.42,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 67.7,
+              "pef": 6.1,
+              "fef2575": 3.13,
+              "fvc": 5.05
+            }
+          },
+          {
+            "date": "2026-11-05T13:20:55.888Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 72.2932,
+              "fev1PercentPredicted": 88.9286,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.09,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 95.2247,
+              "fev1": 3.71,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 72.5,
+              "pef": 6.9,
+              "fef2575": 3.63,
+              "fvc": 5.12
+            }
+          },
+          {
+            "date": "2026-11-05T13:21:50.304Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 71.2455,
+              "fev1PercentPredicted": 87.7301,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.06,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 94.6667,
+              "fev1": 3.66,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 71.9,
+              "pef": 6.8,
+              "fef2575": 3.55,
+              "fvc": 5.09
+            }
+          },
+          {
+            "date": "2026-11-06T13:00:00.174Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 82.7705,
+              "fev1PercentPredicted": 97.0784,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.17,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.7126,
+              "fev1": 4.05,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 77.9,
+              "pef": 7.9,
+              "fef2575": 4.26,
+              "fvc": 5.2
+            }
+          },
+          {
+            "date": "2026-11-06T13:00:55.965Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 80.675,
+              "fev1PercentPredicted": 95.4005,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.12,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 95.7826,
+              "fev1": 3.98,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 77.3,
+              "pef": 7.7,
+              "fef2575": 4.15,
+              "fvc": 5.15
+            }
+          },
+          {
+            "date": "2026-11-06T13:01:50.678Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 81.7227,
+              "fev1PercentPredicted": 96.3593,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.15,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.3406,
+              "fev1": 4.02,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 77.6,
+              "pef": 7.8,
+              "fef2575": 4.21,
+              "fvc": 5.18
+            }
+          },
+          {
+            "date": "2026-11-07T14:30:00.767Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 93.2478,
+              "fev1PercentPredicted": 104.9885,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.38,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.4,
+              "pef": 8.9,
+              "fef2575": 4.93,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-11-07T14:30:55.765Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 91.1523,
+              "fev1PercentPredicted": 103.3106,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.18,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 96.8986,
+              "fev1": 4.31,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 82.7,
+              "pef": 8.7,
+              "fef2575": 4.81,
+              "fvc": 5.21
+            }
+          },
+          {
+            "date": "2026-11-07T14:31:50.778Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 92.2,
+              "fev1PercentPredicted": 104.2694,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.2,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.2705,
+              "fev1": 4.35,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 83.2,
+              "pef": 8.8,
+              "fef2575": 4.88,
+              "fvc": 5.23
+            }
+          },
+          {
+            "date": "2026-11-08T14:00:00.467Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 96.3909,
+              "fev1PercentPredicted": 106.9061,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.25,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.2005,
+              "fev1": 4.46,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.5,
+              "pef": 9.2,
+              "fef2575": 5.09,
+              "fvc": 5.28
+            }
+          },
+          {
+            "date": "2026-11-08T14:00:55.619Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.3432,
+              "fev1PercentPredicted": 105.7076,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.22,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 97.6425,
+              "fev1": 4.41,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.0,
+              "pef": 9.1,
+              "fef2575": 5.0,
+              "fvc": 5.25
+            }
+          },
+          {
+            "date": "2026-11-08T14:01:50.808Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "fvcPlusResults": {
+              "unlabeled1": null,
+              "pefPercentPredicted": 95.8671,
+              "fev1PercentPredicted": 106.4267,
+              "fev1Predicted": 4.171884,
+              "fev6": 5.24,
+              "fvcPredicted": 5.376757,
+              "unlabeled2": null,
+              "fvcPercentPredicted": 98.0145,
+              "fev1": 4.44,
+              "pefPredicted": 9.544466,
+              "fev1FvcPercent": 84.3,
+              "pef": 9.15,
+              "fef2575": 5.05,
+              "fvc": 5.27
+            }
+          }
+        ]
+      }
+    ],
+    "asthmaTreatmentPlan": {
+      "status": "Green",
+      "expiration": "2026-12-31T00:00:00.000Z",
+      "retestTime": null
+    },
+    "earnedMedicationBadges": [],
+    "earnedTrackerBadges": [
+      {
+        "badgeName": "TrackerBadge10",
+        "date": "2026-03-11T16:48:59.546Z"
+      },
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2025-05-01T00:16:23.561Z"
+      }
+    ]
+  }
+]

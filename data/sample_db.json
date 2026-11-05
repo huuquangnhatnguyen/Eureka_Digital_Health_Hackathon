@@ -1,0 +1,271 @@
+[
+  {
+    "_id": "6650f1c2a9e4b3d2c1f0a001",
+    "dailyLogs": [
+      {
+        "day": "2025-03-28",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          { "id": "1027ba72-fe17-432d-9904-e72a721d8c2f", "time": "20:21", "name": "Excedrin", "value": 1 },
+          { "id": "1027ba72-fe17-432d-9904-e72a721d8c2f", "time": "19:21", "name": "Excedrin", "value": 1 },
+          { "id": "1027ba72-fe17-432d-9904-e72a721d8c2f", "time": "20:21", "name": "Excedrin", "value": 1 }
+        ]
+      },
+      {
+        "day": "2025-04-03",
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-03T13:35:07.214Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Bad" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Wheezing\"]" }
+          ] }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2025-04-28",
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T17:29:41.880Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Wheezing\",\"Shortness Of Breath\"]" }
+          ] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T17:50:12.033Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Bad" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Wheezing\",\"Shortness Of Breath\"]" }
+          ] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T17:51:03.517Z", "responses": [] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T17:53:26.402Z", "responses": [] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T17:54:09.761Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Coughing\",\"Wheezing\"]" }
+          ] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T17:55:38.145Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Coughing\",\"Wheezing\"]" }
+          ] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-04-28T18:25:50.678Z", "responses": [] }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2025-06-25",
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-06-25T17:21:16.392Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Bad" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Tight Chest\",\"Activity limitations\"]" }
+          ] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-06-25T17:23:44.905Z", "responses": [] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-06-25T17:31:02.118Z", "responses": [] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-06-25T18:31:57.260Z", "responses": [] }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2025-06-27",
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2025-06-27T15:11:29.447Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Bad" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Wheezing\",\"Tight Chest\"]" }
+          ] }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2026-02-27",
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2026-02-27T13:39:33.590Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" }
+          ] }
+        ],
+        "medicationAdministrations": []
+      },
+      {
+        "day": "2026-03-11",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2026-03-11T16:48:58.912Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"None of these \"]" }
+          ] }
+        ],
+        "medicationAdministrations": [
+          { "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f", "time": "12:47", "name": "Dulera 2", "value": 1 }
+        ]
+      },
+      {
+        "day": "2026-05-05",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2026-05-05T17:44:21.306Z", "responses": [
+            { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" },
+            { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Coughing\",\"Tight Chest\"]" }
+          ] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2026-05-05T17:52:04.771Z", "responses": [] },
+          { "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47", "date": "2026-05-05T17:52:39.054Z", "responses": [] }
+        ],
+        "medicationAdministrations": [
+          { "id": "aecc069e-60a2-413d-b596-25054e662cbb", "time": "19:51", "name": "Excedrin", "value": 1 },
+          { "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f", "time": "19:51", "name": "Dulera 2", "value": 1 }
+        ]
+      },
+      {
+        "day": "2026-06-24",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          { "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f", "time": "09:31", "name": "Dulera 2", "value": 1 },
+          { "id": "aecc069e-60a2-413d-b596-25054e662cbb", "time": "09:31", "name": "Excedrin", "value": 1 }
+        ]
+      }
+    ],
+    "medications": [
+      {
+        "id": "4aec1b37-c83a-412a-a4f6-f3d8332c740f",
+        "dosage": { "timing": { "periodUnit": "Daily", "frequency": 1, "period": 5 }, "asNeeded": null },
+        "howOften": "Daily",
+        "icon": "Capsule",
+        "name": "Dulera 2",
+        "relatedCondition": "Asthma Education Draft Tracker",
+        "archived": false,
+        "index": 2
+      },
+      {
+        "id": "1027ba72-fe17-432d-9904-e72a721d8c2f",
+        "dosage": { "timing": { "periodUnit": null, "frequency": null, "period": null }, "asNeeded": true },
+        "howOften": "As Needed",
+        "icon": "Capsule",
+        "name": "Excedrin",
+        "relatedCondition": null,
+        "archived": true,
+        "index": 0
+      },
+      {
+        "id": "aecc069e-60a2-413d-b596-25054e662cbb",
+        "dosage": { "timing": { "periodUnit": null, "frequency": null, "period": null }, "asNeeded": true },
+        "howOften": "As Needed",
+        "icon": "Capsule",
+        "name": "Excedrin",
+        "relatedCondition": "Cerebral Palsy Tracker",
+        "archived": false,
+        "index": 1
+      }
+    ],
+    "reminders": [],
+    "medicalDevices": [
+      {
+        "protocol": 9,
+        "address": "AAF17BF4-FB64-B5AB-D7C6-27344E9A81FA",
+        "bootId": "SM",
+        "serialNumber": "Z125775",
+        "deviceType": 0,
+        "atsStandard": null,
+        "name": "Spirobank",
+        "advertisedName": "SM-009-Z125775",
+        "baselineReadingDate": "2026-06-24",
+        "baselineReadings": [
+          {
+            "date": "2026-06-24T13:38:12.501Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                { "message": "BlowOutLonger", "instructions": "KeepGoingUntilCompletelyEmpty" }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879, "pefPercentPredicted": 23.36432, "fev1PercentPredicted": 47.93997, "fev1Predicted": 4.171884,
+              "fev6": 5.39, "fvcPredicted": 5.376757, "unlabeled2": 0, "fvcPercentPredicted": 100.2463,
+              "fev1": 2, "pefPredicted": 9.544466, "fev1FvcPercent": 37.1, "pef": 2.23, "fef2575": 1.37, "fvc": 5.39
+            }
+          },
+          {
+            "date": "2026-06-24T13:39:05.877Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                { "message": "BlowOutLonger", "instructions": "KeepGoingUntilCompletelyEmpty" }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879, "pefPercentPredicted": 16.23978, "fev1PercentPredicted": 28.52428, "fev1Predicted": 4.171884,
+              "fev6": 4.68, "fvcPredicted": 5.376757, "unlabeled2": 0, "fvcPercentPredicted": 101.3622,
+              "fev1": 1.19, "pefPredicted": 9.544466, "fev1FvcPercent": 21.8, "pef": 1.55, "fef2575": 0.76, "fvc": 5.45
+            }
+          },
+          {
+            "date": "2026-06-24T13:39:58.240Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                { "message": "BlowOutLonger", "instructions": "KeepGoingUntilCompletelyEmpty" },
+                { "message": "BlowOutFaster", "instructions": "BlastOutImmediatelyWhenCompletelyFull" }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16815, "pefPercentPredicted": 22.52614, "fev1PercentPredicted": 41.22837, "fev1Predicted": 4.171884,
+              "fev6": 5.19, "fvcPredicted": 5.376757, "unlabeled2": 0, "fvcPercentPredicted": 101.9202,
+              "fev1": 1.72, "pefPredicted": 9.544466, "fev1FvcPercent": 31.4, "pef": 2.15, "fef2575": 0.89, "fvc": 5.48
+            }
+          },
+          {
+            "date": "2026-06-24T13:40:49.663Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                { "message": "BlowOutLonger", "instructions": "KeepGoingUntilCompletelyEmpty" }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879, "pefPercentPredicted": 27.24091, "fev1PercentPredicted": 43.62537, "fev1Predicted": 4.171884,
+              "fev6": 5.38, "fvcPredicted": 5.376757, "unlabeled2": 0, "fvcPercentPredicted": 103.4081,
+              "fev1": 1.82, "pefPredicted": 9.544466, "fev1FvcPercent": 32.7, "pef": 2.6, "fef2575": 0.98, "fvc": 5.56
+            }
+          },
+          {
+            "date": "2026-06-24T13:41:37.019Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                { "message": "BlowOutLonger", "instructions": "KeepGoingUntilCompletelyEmpty" }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879, "pefPercentPredicted": 102.4678, "fev1PercentPredicted": 109.7825, "fev1Predicted": 4.171884,
+              "fev6": 4.93, "fvcPredicted": 5.376757, "unlabeled2": 0, "fvcPercentPredicted": 91.69095,
+              "fev1": 4.58, "pefPredicted": 9.544466, "fev1FvcPercent": 92.9, "pef": 9.78, "fef2575": 6.86, "fvc": 4.93
+            }
+          },
+          {
+            "date": "2026-06-24T13:42:24.388Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                { "message": "BlowOutLonger", "instructions": "KeepGoingUntilCompletelyEmpty" }
+              ]
+            },
+            "fvcPlusResults": {
+              "unlabeled1": 16879, "pefPercentPredicted": 113.7832, "fev1PercentPredicted": 108.584, "fev1Predicted": 4.171884,
+              "fev6": 4.96, "fvcPredicted": 5.376757, "unlabeled2": 0, "fvcPercentPredicted": 92.24891,
+              "fev1": 4.53, "pefPredicted": 9.544466, "fev1FvcPercent": 91.3, "pef": 10.86, "fef2575": 6.59, "fvc": 4.96
+            }
+          }
+        ]
+      }
+    ],
+    "asthmaTreatmentPlan": {
+      "status": "Green",
+      "expiration": "2026-12-31T00:00:00.000Z",
+      "retestTime": null
+    },
+    "earnedMedicationBadges": [],
+    "earnedTrackerBadges": [
+      { "badgeName": "TrackerBadge10", "date": "2026-03-11T16:48:59.546Z" },
+      { "badgeName": "TrackerBadge5", "date": "2025-05-01T00:16:23.561Z" }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+  "name": "Asthma Education Draft Tracker",
+  "questions": [
+    { "id": "9d4b7a1e-3c6f-4b2d-a8e5-1f0c7d3b9e62", "type": "device", "text": "Please complete your spirometer reading" },
+    { "id": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "type": "faceScale", "text": "How are you feeling today?" },
+    { "id": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "type": "checkbox", "text": "Please select the following symptoms that you are currently experiencing" }
+  ]
+}

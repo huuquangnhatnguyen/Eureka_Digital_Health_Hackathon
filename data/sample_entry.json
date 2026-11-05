@@ -1,0 +1,8 @@
+{
+  "trackerId": "b7e2c4a0-5d1f-4c8e-9a3b-2f6d8e1c0a47",
+  "date": "2026-06-24T13:45:10.284Z",
+  "responses": [
+    { "questionId": "e1a9f3c2-7b4d-4e6a-8c5f-0d2b9a7e3f18", "value": "Great" },
+    { "questionId": "5c8d2e7f-1a3b-4f9c-b6e0-7a4d1c9e2b53", "value": "[\"Coughing\",\"Wheezing\"]" }
+  ]
+}

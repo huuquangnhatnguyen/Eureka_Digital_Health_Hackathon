@@ -1,0 +1,49 @@
+# Sample data
+
+Made-up data in the shape the hackathon brief describes in section 3. It contains no real patient data.
+
+- `sample_db.json`: one patient document, in the form of a Cosmos DB (MongoDB API) collection export.
+- `sample_entry.json`: one tracker submission, as it would be added to `dailyLogs[].trackerResponses[]`.
+- `tracker_definition.json`: the question wording, which is stored outside the patient record.
+- `sample_db_week.json`: `sample_db.json` plus one invented week (2026-11-02 to 2026-11-08) of daily home spirometry. Each day has one 3-blow session before the Dulera dose, plus the mood and symptom answers. 11-04 is a missed dose with nothing logged. 11-05 and 11-06 are a dip (best PEF about 72% of predicted, with wheeze), and the patient recovers by the weekend. The 18 new blows are added to `medicalDevices[0].baselineReadings[]` in the same shape as the original 6 (24 in total). `trackerResponses` holds only questionnaire answers. Guesses: `"Acceptable"` as a quality value, and FEV6 and FEF25-75 are made up. The unknown `unlabeled1` and `unlabeled2` are set to null.
+  - **Sparse history:** `generate_week_fill.py` also fills the 2026-06-25 to 2026-11-01 gap with made-up days, about half of all days (70 days). It uses a fixed random seed. These days include:
+    - a 1–3 blow spirometry session on most logged days, sometimes with a not-acceptable blow and coaching messages
+    - the mood and symptom survey, with the symptom answer sometimes skipped
+    - a Dulera dose on about 80% of days, sometimes in the evening
+    - a rare as-needed Excedrin dose
+  - **Rough patches:** two invented ones, in early August and late September, with lower FEV1 and PEF and more "Bad" answers.
+  - **Times:** school days (from 08-12) log around 7 AM local time. Timestamps are UTC with random milliseconds, using EDT until 11-01 and EST after.
+  - **Messy submissions:** about 20% of the new days, plus 11-02 and 11-05, get extra submissions minutes apart. Some are blank (`responses: []`) and some flip Great/Bad, like the brief's April 28 example.
+  - **Format fixes in the hand-written week:** symptom lists now have no spaces (`["A","B"]`), and timestamps have random milliseconds.
+  - **Decisions (asked):**
+    - no rescue inhaler added; the medication list is unchanged
+    - `asthmaTreatmentPlan` shows the latest state: `Green`, `retestTime: null`
+    - `reminders` and `earnedMedicationBadges` stay empty, and no new tracker badges
+    - the spirometer question stays unanswered
+  - **Guesses:**
+    - `allMedicationsAdministered` = whether a Dulera dose was logged that day
+    - the day of a submission = its UTC date. All new submissions are in the morning, so the UTC and local dates match.
+  - **Totals:** 86 days, 111 submissions (22 blank), 128 blows.
+  - **Re-running the script:** it appends, so run it only on a fresh copy of the hand-written week. The pre-fill file is not kept in the repo.
+
+## Where the values come from
+
+| Part | Source |
+|---|---|
+| Top-level sections (`dailyLogs`, `medications`, `reminders`, `medicalDevices`, `asthmaTreatmentPlan`, the two badge lists) | Section 3 of the brief |
+| Doses: day, allMedicationsAdministered, id, time, name, value | Screenshot 1, row for row |
+| Medications: ids, names, how often, icon, archived, index | Screenshot 1 |
+| Device and the 6 spirometer blows, including all numbers and the 7 quality messages | Screenshot 1 |
+| Tracker submissions: times, answers, blank entries | Screenshot 2, row for row (local times converted to UTC) |
+| Tracker badge timestamps | Screenshot 1 |
+
+## Guesses
+
+- **Field names and casing.** The brief only names the top-level sections plus `questionId` and `value`. All other field names come from the spreadsheet column headings in camelCase, for example `Boot Id` → `bootId`.
+- **The `trackerResponses[]` fields `trackerId` and `date`.** These are guesses.
+- **Spirometry labels.** Screenshot 1 cuts the headings off. I worked them out from the math: FEV1 / FEV1 predicted = FEV1 % predicted, and FEV1 / FVC = the ratio column. Only `fvc` is labeled in the source. `fev6` and `fef2575` are best guesses, and `unlabeled1` and `unlabeled2` are still unknown.
+- **Medication `dosage` sub-fields.** The headings are cut off. The values (1, 5, TRUE) are as shown in the screenshot.
+- **Truncated text.** "NotAccept..." became `NotAcceptable`, "BlowOutL..." became `BlowOutLonger`, and "BlowOutF..." became `BlowOutFaster`.
+- **IDs.** All tracker, question and patient IDs are invented. In the medication IDs, the hidden middle parts are invented.
+- **Empty fields.** `asthmaTreatmentPlan` values, spirometry blow timestamps, and the empty `reminders` and `earnedMedicationBadges` lists. The screenshots show none of these.
+- **Blank submissions.** Rows that are blank in Screenshot 2 are stored as `responses: []`. The spirometer question is never answered, as in Screenshot 2.
