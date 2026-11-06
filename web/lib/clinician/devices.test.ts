@@ -39,3 +39,15 @@ test("questionnaire device answers use the columns of that device", () => {
   expect(devices(11).questionnaire.columns).toEqual(["Date / time (UTC)", "Glucose (mg/dL)", "Accepted"]);
   expect(devices(16).questionnaire.rows.length).toBeGreaterThan(0);
 });
+
+test("trend offers extra measures; defaults stay as before; every series has points data", () => {
+  const on = [1, 11, 16].map((i) => devices(i).devices[0].trend.series.filter((s: { on?: boolean }) => s.on).map((s: { key: string }) => s.key));
+  expect(on).toEqual([["fev1", "fvc"], ["glucose"], ["spo2"]]);
+  for (const i of [1, 11, 16]) {
+    const t = devices(i).devices[0].trend;
+    expect(t.series.length).toBeGreaterThan(1);
+    for (const s of t.series) expect(t.points.some((p: Record<string, unknown>) => Number.isFinite(p[s.key]))).toBe(true);
+  }
+  const g = devices(11).devices[0].trend.points.find((p: { glucose: number | null }) => p.glucose != null);
+  expect(g.glucoseMin <= g.glucose && g.glucose <= g.glucoseMax).toBe(true);
+});

@@ -12,7 +12,7 @@ const delta = (v, prev, unit, d = 2, what = "previous usable session") =>
 const messages = r => (r.qualityReport?.qualityIndications || []).map(i => [i.qualityMessage ?? i.message, i.instructions].filter(Boolean).map(splitCamel).join(": ")).join("; ");
 const qualityDetails = r => [`Device quality: ${r.qualityReport?.quality || "Not supplied"} · Accepted flag: ${yesNo(r.accepted)}`];
 const row = (r, cells, details) => ({ key: r.date, date: r.date.slice(0, 10), time: r.date.slice(11, 19) + " UTC", cells, ok: spiroAccepted(r), messages: messages(r), details: [...qualityDetails(r), ...details] });
-/** Per-UTC-day value of each series, from accepted readings. agg: "max" (spirometry, as the original) or "median". */
+/** Per-UTC-day value of each series, from accepted readings. agg: "max" (spirometry, as the original), "min" or "median". */
 function daily(readings, res, keys, agg) {
   const days = new Map();
   for (const r of readings) {
@@ -21,7 +21,7 @@ function daily(readings, res, keys, agg) {
     if (!spiroAccepted(r)) continue;
     for (const k of keys) if (Number.isFinite(r[res]?.[k])) days.get(day).vals[k].push(r[res][k]);
   }
-  return [...days.values()].map(({ day, vals }) => ({ day, ...Object.fromEntries(keys.map(k => [k, vals[k].length ? (agg === "max" ? Math.max(...vals[k]) : median(vals[k])) : null])) }));
+  return [...days.values()].map(({ day, vals }) => ({ day, ...Object.fromEntries(keys.map(k => [k, vals[k].length ? (agg === "max" ? Math.max(...vals[k]) : agg === "min" ? Math.min(...vals[k]) : median(vals[k])) : null])) }));
 }
 
 function spirometry(d, readings) {
@@ -36,10 +36,16 @@ function spirometry(d, readings) {
       subs: [key !== "fev1FvcPercent" ? `${num(f[key + "PercentPredicted"], 0)}% predicted` : "Ratio of session maximum volumes", delta(f[key], prior?.fvcPlusResults?.[key], unit)]
     })),
     trend: {
-      title: "FEV1 & FVC over time", unit: "Liters", zero: true, decimals: 2,
-      series: [{ key: "fev1", label: "FEV1", color: "#BE3268", dash: "", legend: "━━ FEV1" }, { key: "fvc", label: "FVC", color: "#287C82", dash: "6 4", legend: "┄┄ FVC" }],
-      points: daily(readings, "fvcPlusResults", ["fev1", "fvc"], "max"),
-      caption: "Daily maximum of each measure from accepted blows; FEV1 and FVC may come from different blows. Recorded days without accepted values break the line."
+      title: "Lung function over time", zero: true, decimals: 2,
+      // on: plotted by default; the rest can be added from the chart's Measures picker
+      series: [
+        { key: "fev1", label: "FEV1", unit: "L", color: "#BE3268", dash: "", on: true }, { key: "fvc", label: "FVC", unit: "L", color: "#287C82", dash: "6 4", on: true },
+        { key: "fev6", label: "FEV6", unit: "L", color: "#6B4FA0", dash: "2 3" }, { key: "pef", label: "Peak flow", unit: "L/s", color: "#B86E00", dash: "10 4" },
+        { key: "fef2575", label: "FEF25–75", unit: "L/s", color: "#2463AD", dash: "8 3 2 3" },
+        { key: "fev1Predicted", label: "Predicted FEV1", unit: "L", color: "#BE3268", dash: "1 4" }, { key: "fvcPredicted", label: "Predicted FVC", unit: "L", color: "#287C82", dash: "1 4" }
+      ],
+      points: daily(readings, "fvcPlusResults", ["fev1", "fvc", "fev6", "pef", "fef2575", "fev1Predicted", "fvcPredicted"], "max"),
+      caption: "Daily maximum of each measure from accepted blows; measures may come from different blows. Recorded days without accepted values break the line."
     },
     note: "Sessions group blows on the same UTC date, separated by no more than 30 minutes. Values use each measure’s largest accepted volume; they may come from different blows.",
     caption: "One row per blow. Volumes in liters; % predicted shown below each volume. Rejected readings are retained for review.",
@@ -48,6 +54,11 @@ function spirometry(d, readings) {
       [["pef", "Peak flow", "L/s"], ["fev6", "FEV6", "L"], ["fef2575", "FEF25–75", "L/s"], ["fev1Predicted", "Predicted FEV1", "L"], ["fvcPredicted", "Predicted FVC", "L"], ["pefPredicted", "Predicted peak flow", "L/s"], ["pefPercentPredicted", "Peak flow predicted", "%"]]
         .map(([key, label, unit]) => `${label}: ${num(r.fvcPlusResults?.[key])} ${unit}`)))
   };
+}
+
+function glucoseDaily(readings) {
+  const [md, lo, hi] = ["median", "min", "max"].map(agg => daily(readings, "glucoseResults", ["glucose"], agg));
+  return md.map((p, i) => ({ ...p, glucoseMin: lo[i].glucose, glucoseMax: hi[i].glucose }));
 }
 
 function glucose(d, readings) {
@@ -65,10 +76,13 @@ function glucose(d, readings) {
       { label: "In target range", value: vs.length ? num(inRange / vs.length * 100, 0) : "—", unit: "%", subs: ["70–180 mg/dL", `${vs.filter(v => v < 70).length} below · ${vs.filter(v => v > 180).length} above`] }
     ],
     trend: {
-      title: "Blood glucose over time", unit: "mg/dL", zero: true, decimals: 0,
-      series: [{ key: "glucose", label: "Daily median", color: "#BE3268", dash: "", legend: "━━ Daily median" }],
-      points: daily(readings, "glucoseResults", ["glucose"], "median"),
-      caption: "Daily median of accepted readings. Strip errors are left out of the line and kept in the table below."
+      title: "Blood glucose over time", zero: true, decimals: 0,
+      series: [
+        { key: "glucose", label: "Daily median", unit: "mg/dL", color: "#BE3268", dash: "", on: true },
+        { key: "glucoseMin", label: "Daily lowest", unit: "mg/dL", color: "#2463AD", dash: "6 4" }, { key: "glucoseMax", label: "Daily highest", unit: "mg/dL", color: "#B86E00", dash: "2 3" }
+      ],
+      points: glucoseDaily(readings),
+      caption: "Daily median, lowest and highest of accepted readings. Strip errors are left out of the line and kept in the table below."
     },
     note: "Each reading is one finger-stick test; several a day are normal.",
     caption: "One row per reading. Strip errors and rejected readings are retained for review.",
@@ -87,9 +101,12 @@ function oximetry(d, readings) {
       label, value: num(o(latest, key), dp), unit, subs: [delta(o(latest, key), o(prior, key), unit, dp, "previous reading")]
     })),
     trend: {
-      title: "SpO2 over time", unit: "%", zero: false, decimals: 0,
-      series: [{ key: "spo2", label: "SpO2", color: "#BE3268", dash: "", legend: "━━ SpO2" }],
-      points: daily(readings, "oximetryResults", ["spo2"], "median"),
+      title: "Pulse oximetry over time", zero: false, decimals: 0,
+      series: [
+        { key: "spo2", label: "SpO2", unit: "%", color: "#BE3268", dash: "", on: true }, { key: "pulse", label: "Pulse", unit: "bpm", color: "#287C82", dash: "6 4" },
+        { key: "perfusionIndex", label: "Perfusion index", unit: "%", color: "#6B4FA0", dash: "2 3", decimals: 1 }
+      ],
+      points: daily(readings, "oximetryResults", ["spo2", "pulse", "perfusionIndex"], "median"),
       caption: "Accepted readings; on days with more than one, the median. Rejected readings break the line."
     },
     note: "",
