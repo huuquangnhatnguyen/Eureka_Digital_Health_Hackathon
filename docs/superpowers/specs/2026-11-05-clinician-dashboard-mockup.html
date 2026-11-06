@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Clinician view · hi-fi mockup</title>
+<style>
+:root{--page:#f4f4f1;--surface:#fff;--ink:#141414;--ink2:#55544f;--muted:#8a8984;--grid:#e6e5df;--border:rgba(0,0,0,.09);
+--blue:#2a78d6;--orange:#eb6834;--good:#1f9d3a;--warn:#d99a00;--bad:#d03b3b;--none:#e3e2dc}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#d9d8d2;font:13px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+.note{text-align:center;padding:8px;color:#444;font-size:12px}
+.frame{width:1440px;height:900px;transform-origin:top left;background:var(--page);display:grid;grid-template-rows:52px 112px 1fr 26px;gap:10px;padding:12px 16px;box-shadow:0 4px 30px rgba(0,0,0,.2);margin:0 auto}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px}
+header{display:flex;align-items:center;gap:18px;padding:0 16px}
+.sel{border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-weight:600;font-size:14px;display:flex;gap:8px;align-items:center}
+.sel small{color:var(--muted);font-weight:400}
+.pill{border-radius:999px;padding:3px 10px;font-weight:600;font-size:12px}
+.p-y{background:#fdefc4;color:#7a5600}.p-g{background:#d9f1dd;color:#11632a}.p-r{background:#f8d6d6;color:#8c1f1f}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:7px;overflow:hidden}
+.seg span{padding:5px 12px;color:var(--ink2);cursor:pointer;font-size:12px}
+.seg .on{background:var(--ink);color:#fff;font-weight:600}
+.meta{color:var(--ink2);font-size:12px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tile{padding:12px 16px;display:grid;grid-template-rows:auto 1fr auto;cursor:pointer;border-left:5px solid transparent}
+.tile .q{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2)}
+.tile .v{font-size:34px;font-weight:700;line-height:1.1;display:flex;align-items:baseline;gap:8px}
+.tile .v small{font-size:13px;font-weight:500;color:var(--ink2)}
+.tile .s{color:var(--ink2);font-size:12px}
+.t-bad{border-left-color:var(--bad)}.t-warn{border-left-color:var(--warn)}.t-good{border-left-color:var(--good)}
+.c-bad{color:var(--bad)}.c-warn{color:#b07c00}.c-good{color:var(--good)}
+.main{display:grid;grid-template-columns:1fr 330px;gap:10px;min-height:0}
+.tl{padding:10px 14px 6px;display:grid;grid-template-rows:auto 1fr;min-height:0}
+.tlhead{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.tlhead h3{margin:0;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-right:auto}
+.lbl{font-size:11px;color:var(--ink2)}
+svg text{font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums}
+svg .rl{fill:var(--ink2);font-size:11.5px}
+svg .grp{fill:var(--ink);font-weight:700;font-size:10px;letter-spacing:.06em}
+.side{padding:12px 14px;overflow:hidden}
+.side h3{margin:0 0 8px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2)}
+.flag{display:grid;grid-template-columns:10px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--grid)}
+.flag:first-of-type{border-top:0}
+.flag i{width:10px;height:10px;border-radius:50%;margin-top:4px}
+.flag b{display:block;font-size:13px}.flag span{color:var(--ink2);font-size:12px}
+.i-crit{background:var(--bad)}.i-ser{background:var(--orange)}.i-warn{background:var(--warn)}.i-info{background:#aaa9a3}
+.tip{position:absolute;background:#141414;color:#fff;border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.5;width:230px;box-shadow:0 6px 20px rgba(0,0,0,.25);pointer-events:none}
+.tip b{font-size:13px}.tip .k{color:#aaa}
+footer{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;padding:0 4px;align-items:center}
+.legend{display:flex;gap:12px;font-size:11px;color:var(--ink2)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+</style></head><body>
+<div class="note">Hi-fi mockup · 1440×900 laptop frame, scaled to fit · made-up numbers shaped like synthetic "Patient 2" (poor adherence) · tooltip shown pinned on Oct 30 as an example of hover</div>
+<div class="frame" id="frame">
+
+<header class="card">
+  <div class="sel">Patient 2 <small>id 0ab407…</small> ▾</div>
+  <span class="pill p-y">● Yellow zone</span>
+  <span class="meta">Action plan expires Jun 30 2027 · Controller 2×/day · Rescue as needed</span>
+  <span style="margin-left:auto" class="meta">Showing Oct 10 – Nov 8</span>
+  <div class="seg"><span>7 days</span><span class="on">30 days</span><span>90 days</span></div>
+</header>
+
+<div class="tiles">
+  <div class="card tile t-bad"><div class="q">How is the disease going?</div><div class="v c-bad">Worse</div><div class="s">Felt <b>Bad 9 days</b> (↑6 vs previous 30) · symptom days ↑5</div></div>
+  <div class="card tile t-bad"><div class="q">Is lung function changing?</div><div class="v c-bad">↓ 14 <small>pts · FEV1 % predicted</small></div><div class="s">Last 7 days avg <b>68%</b> vs 82% earlier · now in Yellow</div></div>
+  <div class="card tile t-bad"><div class="q">Taking the medication?</div><div class="v c-bad">58% <small>of controller doses</small></div><div class="s">Morning <b>80%</b> · Evening <b>36%</b> · 4 days not logged</div></div>
+  <div class="card tile t-warn"><div class="q">How often are symptoms?</div><div class="v c-warn">14 <small>of 30 days</small></div><div class="s">Most: <b>Coughing 11</b> · Wheezing 8 · Tight chest 5</div></div>
+</div>
+
+<div class="main">
+  <div class="card tl">
+    <div class="tlhead">
+      <h3>Daily timeline · Oct 10 – Nov 8</h3>
+      <span class="lbl">Lung metric</span>
+      <div class="seg"><span class="on">FEV1 % pred</span><span>FEV1 (L)</span><span>FEV1/FVC</span><span>PEF</span></div>
+      <span class="lbl">vs</span>
+      <div class="seg"><span class="on">Predicted</span><span>Personal best</span><span>Baseline</span></div>
+    </div>
+    <div style="position:relative;min-height:0"><svg id="tl" width="100%" height="100%"></svg><div class="tip" id="tip"></div></div>
+  </div>
+
+  <div class="card side">
+    <h3>Also worth knowing</h3>
+    <div class="flag"><i class="i-crit"></i><div><b>Rescue inhaler 3.5× / week</b><span>Above 2/week suggests asthma is not well controlled (GINA).</span></div></div>
+    <div class="flag"><i class="i-ser"></i><div><b>Lung dips follow missed doses</b><span>5 of 6 days below 80% came within 2 days of a missed controller dose.</span></div></div>
+    <div class="flag"><i class="i-warn"></i><div><b>Evening dose is the one missed</b><span>Morning 80% vs evening 36%. Consider timing or a reminder.</span></div></div>
+    <div class="flag"><i class="i-warn"></i><div><b>Plan zone check</b><span>Plan says Yellow; last 3 readings 64–70%. Plan still fits.</span></div></div>
+    <div class="flag"><i class="i-info"></i><div><b>Missed school 2 days</b><span>Oct 30, Nov 4 · both on rescue-use days.</span></div></div>
+    <div class="flag"><i class="i-info"></i><div><b>Readings mostly reliable</b><span>88% of blows accepted. Top coaching: "blow out longer".</span></div></div>
+    <div class="flag"><i class="i-info"></i><div><b>4 days not logged</b><span>Oct 18, 19, 26, Nov 2 · gaps shown hatched on the timeline.</span></div></div>
+  </div>
+</div>
+
+<footer><span>Synthetic data · demo only · not clinical advice</span>
+<div class="legend"><span><span class="sw" style="background:var(--blue)"></span>Dose taken</span><span><span class="sw" style="background:var(--none)"></span>Missed</span><span><span class="sw" style="background:repeating-linear-gradient(45deg,#ccc 0 2px,#fff 2px 4px)"></span>Not logged</span><span><span class="sw" style="background:var(--orange)"></span>Rescue</span><span><span class="sw" style="background:var(--good)"></span>Great</span><span><span class="sw" style="background:var(--warn)"></span>Okay</span><span><span class="sw" style="background:var(--bad)"></span>Bad</span><span><span class="sw" style="background:#55544f"></span>Symptom reported</span></div>
+<span>Data through Nov 8 2026</span></footer>
+</div>
+
+<script>
+// fake 30-day series shaped like the poor-adherence patient
+const N=30, start=new Date('2026-10-10T00:00:00Z');
+const day=i=>{const d=new Date(start);d.setUTCDate(d.getUTCDate()+i);return d};
+const fmt=(d,o)=>d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',...o});
+const nolog=new Set([8,9,16,23]);
+const am=[1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,0,1,1,1,1,0,1,0,1,1,0,1,1,1];
+const pm=[1,1,0,1,0,0,1,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1];
+const fev=[86,84,85,83,82,80,84,83,null,null,82,81,79,78,80,76,null,74,72,70,69,71,73,null,70,67,65,68,66,64];
+const rescue=[0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,1,0,1,0,1,2,1,0,1,1];
+const feel=['G','G','G','O','G','O','G','G',null,null,'G','O','O','B','O','B',null,'O','B','B','B','O','O',null,'B','B','B','O','B','B'];
+const sym={Coughing:[0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,1,0,1,1,1,1,0,0,0,1,1,1,0,1,1],
+Wheezing:[0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,0,1,1,1,0,1,0],
+'Tight chest':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,0,1],
+'Short of breath':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1],
+'Activity limited':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0]};
+const school=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0];
+
+const svg=document.getElementById('tl'), NS='http://www.w3.org/2000/svg';
+const el=(t,a,p=svg)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+function draw(){
+  svg.innerHTML='';
+  const W=svg.clientWidth,H=svg.clientHeight,L=120,R=W-8,cw=(R-L)/N;
+  const defs=el('defs',{});const pat=el('pattern',{id:'h',width:4,height:4,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},defs);el('rect',{width:2,height:4,fill:'#cfcec8'},pat);
+  const x=i=>L+i*cw;
+  // layout: lung chart top, then rows
+  const rows=[['grp','MEDICATION'],['am','Controller AM'],['pm','Controller PM'],['rescue','Rescue inhaler'],['grp','HOW THEY FEEL'],['feel','Feeling'],['grp','SYMPTOMS'],...Object.keys(sym).map(k=>['sym',k]),['school','Missed school']];
+  const rh=Math.max(14,Math.min(20,(H-200)/rows.length)), axisH=18;
+  const lungH=H-axisH-rows.length*rh-10, lt=6, lb=lungH;
+  // zone bands
+  const y=v=>lt+(100-v)/(100-40)*(lb-lt);
+  el('rect',{x:L,y:y(100),width:R-L,height:y(80)-y(100),fill:'#1f9d3a',opacity:.08});
+  el('rect',{x:L,y:y(80),width:R-L,height:y(50)-y(80),fill:'#d99a00',opacity:.12});
+  el('rect',{x:L,y:y(50),width:R-L,height:y(40)-y(50),fill:'#d03b3b',opacity:.1});
+  for(const v of [100,80,60,40]){el('line',{x1:L,x2:R,y1:y(v),y2:y(v),stroke:'#e6e5df'});el('text',{x:L-6,y:y(v)+4,'text-anchor':'end'}).textContent=v+'%'}
+  el('text',{x:4,y:lt+12,class:'rl','font-weight':700}).textContent='FEV1 % pred';
+  el('text',{x:4,y:lt+28}).textContent='Green ≥80';
+  el('text',{x:4,y:lt+42}).textContent='Yellow 50–80';
+  // line with gaps
+  let seg=[];const flush=()=>{if(seg.length>1)el('polyline',{points:seg.join(' '),fill:'none',stroke:'#2a78d6','stroke-width':2.5,'stroke-linejoin':'round'});seg=[]};
+  fev.forEach((v,i)=>{if(v==null){flush();return}seg.push(`${x(i)+cw/2},${y(v)}`)});flush();
+  fev.forEach((v,i)=>{if(v!=null)el('circle',{cx:x(i)+cw/2,cy:y(v),r:3,fill:v<80?'#d99a00':'#2a78d6',stroke:'#fff','stroke-width':1})});
+  // avg comparison
+  el('line',{x1:x(23),x2:R,y1:y(68),y2:y(68),stroke:'#d03b3b','stroke-dasharray':'4 3'});
+  el('text',{x:R-4,y:y(68)-5,'text-anchor':'end',fill:'#d03b3b',style:'fill:#d03b3b'}).textContent='last 7d avg 68%';
+  // rows
+  let top=lungH+6;
+  for(const [k,name] of rows){
+    const cy=top+rh/2;
+    if(k==='grp'){el('text',{x:4,y:cy+4,class:'grp'}).textContent=name;el('line',{x1:L,x2:R,y1:cy,y2:cy,stroke:'#eeede8'});top+=rh;continue}
+    el('text',{x:4,y:cy+4,class:'rl'}).textContent=(k==='sym'?'  ':'')+name;
+    for(let i=0;i<N;i++){
+      const bx=x(i)+1,bw=cw-2,by=top+2,bh=rh-4;
+      if(nolog.has(i)){el('rect',{x:bx,y:by,width:bw,height:bh,fill:'url(#h)',rx:2});continue}
+      let f=null;
+      if(k==='am')f=am[i]?'#2a78d6':'#e3e2dc';
+      if(k==='pm')f=pm[i]?'#2a78d6':'#e3e2dc';
+      if(k==='rescue'&&rescue[i])f='#eb6834';
+      if(k==='feel')f={G:'#1f9d3a',O:'#d99a00',B:'#d03b3b'}[feel[i]]||'#f0efea';
+      if(k==='sym'&&sym[name][i])f='#55544f';
+      if(k==='school'&&school[i])f='#d03b3b';
+      if(f)el('rect',{x:bx,y:by,width:bw,height:bh,fill:f,rx:2});
+      if(k==='rescue'&&rescue[i]>1)el('text',{x:bx+bw/2,y:by+bh-2,'text-anchor':'middle',style:'fill:#fff;font-size:9px;font-weight:700'}).textContent=rescue[i];
+    }
+    top+=rh;
+  }
+  // axis
+  for(let i=0;i<N;i+=3){el('text',{x:x(i)+cw/2,y:top+14,'text-anchor':'middle'}).textContent=fmt(day(i))}
+  // weekend shading hint + hover guide (pinned example)
+  const hi=20;
+  el('rect',{x:x(hi),y:0,width:cw,height:top,fill:'none',stroke:'#141414','stroke-width':1.5,rx:3});
+  const tip=document.getElementById('tip');
+  tip.innerHTML=`<b>${fmt(day(hi),{weekday:'short'})}</b><br><span class="k">Controller</span> AM 07:12 · PM <b style="color:#ff9b9b">missed</b><br><span class="k">Rescue</span> 1 puff 16:40<br><span class="k">Feeling</span> Bad<br><span class="k">Symptoms</span> Coughing, Tight chest<br><span class="k">Best FEV1</span> 69% pred (2.31 L) · PEF 66%<br><span class="k">Blows</span> 3 of 3 accepted<br><span class="k">Missed school</span> yes`;
+  tip.style.left=(x(hi)-240)+'px';tip.style.top='60px';
+}
+function fit(){const f=document.getElementById('frame');const s=Math.min(1,(innerWidth-20)/1440,(innerHeight-40)/900);f.style.transform=`scale(${s})`;f.style.marginLeft=Math.max(0,(innerWidth-1440*s)/2)+'px';document.body.style.height=(900*s+40)+'px';f.style.margin='0';f.style.marginLeft=Math.max(0,(innerWidth-1440*s)/2)+'px'}
+fit();draw();addEventListener('resize',fit);
+</script>
+</body></html>
