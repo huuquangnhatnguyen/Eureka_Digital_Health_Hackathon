@@ -8,6 +8,9 @@ import { analyze, buildModel, diffDays, fmtRange, fmtTime } from "@/lib/clinicia
 import { DEPARTMENTS, departmentsWithPatients, groupPatients, inDepartment } from "@/lib/clinician/departments";
 import { fmtD, focusOf, getJSON, type Any } from "./view";
 import Overview from "./Overview";
+import Vitals from "./Vitals";
+import Medications from "./Medications";
+import Devices from "./Devices";
 
 const TABS = [
   ["overview", "Overview"],
@@ -93,9 +96,10 @@ export default function ClinicianView() {
             <Notices model={model} A={A} range={range} onShowAll={() => setRange("all")} />
             <WorkspaceNav tab={tab} onChange={setTab} />
             <div id="workspace-content" role="tabpanel" aria-labelledby={`tab-${tab}`}>
-              {tab === "overview" ? <Overview key={deptId} model={model} raw={detail.patient} A={viewA} focus={focus} deptId={deptId} /> : (
-                <section className="sec"><p className="empty">{TABS.find(([id]) => id === tab)![1]} — coming in the next steps.</p></section>
-              )}
+              {tab === "overview" ? <Overview key={deptId} model={model} raw={detail.patient} A={viewA} focus={focus} deptId={deptId} />
+                : tab === "vitals" ? <Vitals model={model} raw={detail.patient} A={viewA} />
+                : tab === "medications" ? <Medications model={model} raw={detail.patient} A={A} />
+                : <Devices raw={detail.patient} A={A} />}
             </div>
           </>
         )}

@@ -89,7 +89,8 @@ function fmtNum(x, d = 1) {
 }
 const plural = (n, w, pl) => `${n} ${n === 1 ? w : pl || w + "s"}`;
 const nextMonth = mk => { const y = +mk.slice(0, 4), m = +mk.slice(5, 7); return m === 12 ? `${y + 1}-01` : `${y}-${String(m + 1).padStart(2, "0")}`; };
-const splitCamel = s => String(s || "").replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().replace(/^./, c => c.toUpperCase());
+// second replace splits a one-letter word before a capital ("UseANew" -> "Use A New"); the original lost it ("anew")
+const splitCamel = s => String(s || "").replace(/([a-z])([A-Z])/g, "$1 $2").replace(/([A-Z])([A-Z][a-z])/g, "$1 $2").toLowerCase().replace(/^./, c => c.toUpperCase());
 
 /* Device coaching codes in plain English. */
 const COACHING_TEXT = {
