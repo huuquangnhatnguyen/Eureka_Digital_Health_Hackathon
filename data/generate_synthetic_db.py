@@ -113,7 +113,7 @@ def session(d, minute, profile, sev):
     fev1 = min(fev1, fvc * 0.98)
     pef = pred[2] * lvl
     blows = []
-    if rng.random() < 0.15:
+    if rng.random() < profile.get("bad_blow", 0.15):
         blows.append(make_blow(iso_utc(d, minute), fev1 * 0.8, fvc * 0.9, pef * 0.75, pred, rng.choice(ISSUES)))
         minute += 1
     for i in range(3):
@@ -198,13 +198,7 @@ def make_patient(profile):
         if streak in (5, 10, 30):
             badges.append({"badgeName": f"TrackerBadge{streak}", "date": iso_utc(d, minute + 1)})
 
-    latest = best(last_blows)
-    pct = latest["fvcPlusResults"]["pefPercentPredicted"]
-    status = zone(pct)
-    retest = None
-    if status != "Green":
-        t = datetime.fromisoformat(latest["date"].replace("Z", "+00:00")) + timedelta(hours=4)
-        retest = t.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+    plan = plan_for(best(last_blows))
     serial = "Z%06d" % rng.randint(100000, 999999)
     return {
         "_id": oid(),
@@ -223,10 +217,20 @@ def make_patient(profile):
             "baselineReadingDate": readings[0]["date"][:10],
             "baselineReadings": readings,
         }],
-        "asthmaTreatmentPlan": {"status": status, "expiration": "2027-06-30T00:00:00.000Z", "retestTime": retest},
+        "asthmaTreatmentPlan": plan,
         "earnedMedicationBadges": [],
         "earnedTrackerBadges": badges,
     }
+
+
+def plan_for(latest):
+    """Asthma action-plan zone from the latest best blow."""
+    status = zone(latest["fvcPlusResults"]["pefPercentPredicted"])
+    retest = None
+    if status != "Green":
+        t = datetime.fromisoformat(latest["date"].replace("Z", "+00:00")) + timedelta(hours=4)
+        retest = t.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+    return {"status": status, "expiration": "2027-06-30T00:00:00.000Z", "retestTime": retest}
 
 
 # Three more chronic conditions, each with a home device and the same three PROFILES. Same shape as asthma:
@@ -281,14 +285,14 @@ def measure_cf(d, minute, profile, sev):
 def measure_t1d(d, minute, profile, sev):
     readings, ok = [], []
     for i, context in enumerate(MEALS):
-        if i and rng.random() < 0.15:  # a skipped check; the morning one is always done
+        if i and rng.random() < profile.get("skip_check", 0.15):  # a skipped check; the morning one is always done
             continue
         t = minute if i == 0 else (12 * 60, 15 * 60 + 30, 18 * 60)[i - 1] + rng.randint(0, 40)
-        if rng.random() < 0.04:  # failed strip, re-tested a minute later
+        if rng.random() < profile.get("strip_fail", 0.04):  # failed strip, re-tested a minute later
             readings.append({"date": iso_utc(d, t), "accepted": False, "qualityReport": qreport(("StripError", "UseANewTestStrip")),
                              "glucoseResults": {"glucose": None, "unit": "mg/dL", "mealContext": context}})
             t += 1
-        low = rng.random() < 0.05 * (1 - sev)
+        low = rng.random() < profile.get("lows", 0.05) * (1 - sev)
         g = int(min(450, max(40, 55 + rng.randint(0, 14) if low else rng.gauss(135 + 170 * sev, 35 + 20 * sev))))
         readings.append({"date": iso_utc(d, t), "accepted": True, "qualityReport": qreport(),
                          "glucoseResults": {"glucose": g, "unit": "mg/dL", "mealContext": context}})
@@ -311,7 +315,7 @@ def ox_reading(d, minute, sev, issue=None):
 
 def measure_heart(d, minute, profile, sev):
     readings = []
-    if rng.random() < 0.15:
+    if rng.random() < profile.get("bad_signal", 0.15):
         readings.append(ox_reading(d, minute, sev, ("PoorSignal", "KeepYourHandStill")))
         minute += 1
     readings.append(ox_reading(d, minute, sev))
@@ -336,8 +340,7 @@ def make_tracker(c):
     }
 
 
-def make_condition_patient(c, tracker, profile):
-    q_dev, q_feel, q_symp, q_school = (q["id"] for q in tracker["questions"])
+def meds_for(c, tracker):
     name, icon, per_day = c["daily"]
     daily, prn = rid(), rid()
     meds = [
@@ -347,6 +350,30 @@ def make_condition_patient(c, tracker, profile):
          "howOften": "As Needed", "icon": c["prn"][1], "name": c["prn"][0], "relatedCondition": tracker["name"],
          "archived": False, "index": 1},
     ]
+    return meds, daily, prn
+
+
+def device_for(c, readings):
+    dev_name, boot, dev_type, ats = c["device"]
+    serial = ("Z%06d" if boot == "SM" else boot[0] + "%06d") % rng.randint(100000, 999999)
+    return {
+        "protocol": 9 if boot == "SM" else None,  # protocol's meaning is unknown; only seen for the Spirobank
+        "address": rid().upper(),
+        "bootId": boot,
+        "serialNumber": serial,
+        "deviceType": dev_type,
+        "atsStandard": ats,
+        "name": dev_name,
+        "advertisedName": f"SM-009-{serial}" if boot == "SM" else f"{boot}-{serial}",
+        "baselineReadingDate": readings[0]["date"][:10],
+        "baselineReadings": readings,
+    }
+
+
+def make_condition_patient(c, tracker, profile):
+    q_dev, q_feel, q_symp, q_school = (q["id"] for q in tracker["questions"])
+    name, icon, per_day = c["daily"]
+    meds, daily, prn = meds_for(c, tracker)
     # poor adherence: its flare starts with the drift; one flare: the condition's own dates
     profile = {**profile, "flares": [(c["drift_from"], n) if profile["adherence"] < 0.6 else c["flare"]
                                      for _, n in profile["flares"]]}
@@ -401,22 +428,160 @@ def make_condition_patient(c, tracker, profile):
         streak += 1
         if streak in (5, 10, 30):
             badges.append({"badgeName": f"TrackerBadge{streak}", "date": iso_utc(d, minute + 1)})
-    dev_name, boot, dev_type, ats = c["device"]
-    serial = ("Z%06d" if boot == "SM" else boot[0] + "%06d") % rng.randint(100000, 999999)
-    device = {
-        "protocol": 9 if boot == "SM" else None,  # protocol's meaning is unknown; only seen for the Spirobank
-        "address": rid().upper(),
-        "bootId": boot,
-        "serialNumber": serial,
-        "deviceType": dev_type,
-        "atsStandard": ats,
-        "name": dev_name,
-        "advertisedName": f"SM-009-{serial}" if boot == "SM" else f"{boot}-{serial}",
-        "baselineReadingDate": readings[0]["date"][:10],
-        "baselineReadings": readings,
-    }
+    device = device_for(c, readings)  # before oid(), to keep the random draws in their original order
     return {"_id": oid(), "dailyLogs": logs, "medications": meds, "reminders": [], "medicalDevices": [device],
             "asthmaTreatmentPlan": None, "earnedMedicationBadges": [], "earnedTrackerBadges": badges}
+
+
+# Two more patients per disease, messier than the 3 profiles above: tracking that fades, late joiners, gaps
+# (holiday, hospital stay), skipped questions, poor device technique, mood that doesn't match the reading
+# (stoic or anxious), changed answers, doses logged late at round times or not at all.
+# Knobs: engage/adherence = (start, end) daily probability; mood = bias added to how bad the day feels;
+# device = chance of using the device on a logged day; partial = chance of skipping survey questions;
+# meds_only = chance the app was opened only to log a dose; dup = chance of a second (blank or changed)
+# submission; late = chance of logging in the early evening; miss_bad = chance of not logging on a bad day;
+# prn_log = chance an as-needed dose gets logged; drift = (from day, severity reached at the end).
+ASTHMA = {"file": "asthma", "symptoms": SYMPTOMS, "red": [], "daily": ("Controller inhaler (synthetic)", "Inhaler", 2),
+          "prn": ("Rescue inhaler (synthetic)", "Inhaler"), "device": ("Spirobank", "SM", 0, True)}
+MESSY = {
+    "asthma": [
+        {"label": "teen, tracking fades over the term, stoic", "engage": (0.95, 0.35), "adherence": (0.85, 0.4),
+         "drift": (55, 0.45), "weekend_skip": 0.4, "device": 0.75, "bad_blow": 0.45, "short": 0.3, "mood": -0.25,
+         "partial": 0.25, "dup": 0.05, "late": 0.1, "pred": (3.20, 3.80, 7.1), "baseline": 0.93},
+        {"label": "holiday gap, autumn flare, anxious", "gaps": [(20, 9)], "flares": [(52, 10)], "engage": (0.85, 0.85),
+         "adherence": (0.75, 0.8), "device": 0.6, "mood": 0.2, "dup": 0.3, "late": 0.55, "partial": 0.1,
+         "meds_only": 0.1, "miss_bad": 0.2, "pred": (2.85, 3.30, 6.4), "baseline": 0.96},
+    ],
+    "cf": [
+        {"label": "joined late, hospital stay for a flare", "join": 18, "flares": [(44, 9)], "gaps": [(47, 6)],
+         "engage": (0.9, 0.8), "adherence": (0.9, 0.85), "device": 0.8, "partial": 0.1, "dup": 0.1, "late": 0.15,
+         "bad_blow": 0.2, "short": 0.15, "miss_bad": 0.3},
+        {"label": "weekends off, often skips the spirometer", "weekend_skip": 0.85, "engage": (0.85, 0.75),
+         "adherence": (0.7, 0.6), "drift": (60, 0.3), "device": 0.45, "partial": 0.2, "meds_only": 0.15, "mood": 0.1,
+         "dup": 0.15, "late": 0.3, "bad_blow": 0.3, "short": 0.25},
+    ],
+    "t1d": [
+        {"label": "teen, skips checks, under-reports", "skip_check": 0.5, "engage": (0.9, 0.55), "adherence": (0.85, 0.6),
+         "drift": (40, 0.45), "mood": -0.3, "partial": 0.35, "device": 0.9, "strip_fail": 0.08, "prn_log": 0.5,
+         "weekend_skip": 0.3, "late": 0.2, "dup": 0.05},
+        {"label": "tight control with lows, parent logs everything, sick days", "lows": 0.18, "skip_check": 0.05,
+         "flares": [(30, 4)], "engage": (0.97, 0.95), "adherence": (0.98, 0.98), "mood": 0.25, "dup": 0.35,
+         "partial": 0.05, "device": 1.0, "late": 0.1, "prn_log": 1.0},
+    ],
+    "heart": [
+        {"label": "stable, logs a few days a week", "engage": (0.5, 0.4), "adherence": (0.85, 0.8), "partial": 0.45,
+         "device": 0.7, "dup": 0.05, "late": 0.4, "bad_signal": 0.3, "meds_only": 0.2},
+        {"label": "slowly worse despite taking meds, skips bad days", "drift": (30, 0.7), "adherence": (0.95, 0.92),
+         "engage": (0.9, 0.7), "miss_bad": 0.35, "mood": -0.1, "partial": 0.15, "device": 0.85, "dup": 0.15,
+         "late": 0.2, "bad_signal": 0.2},
+    ],
+}
+
+
+def lerp(pair, k):
+    return pair[0] + (pair[1] - pair[0]) * k / (DAYS - 1)
+
+
+def clock(m):
+    return f"{m // 60:02d}:{m % 60:02d}"
+
+
+def measure_spiro(c, d, minute, p, sev):
+    lungs = CF_LUNGS if c["file"] == "cf" else {"pred": p["pred"], "baseline": p["baseline"]}
+    blows = session(d, minute, {**p, **lungs}, sev)
+    if rng.random() < p.get("short", 0):  # gave up after 1-2 good blows (good ones are last)
+        blows = blows[:len(blows) - rng.randint(1, 2)]
+    b = best(blows)
+    if not b:
+        return blows, None, sev, [], None
+    r = b["fvcPlusResults"]
+    x = clamp((1 - r["fev1PercentPredicted"] / (lungs["baseline"] * 100)) / 0.35)
+    return blows, {"fev1": r["fev1"], "fvc": r["fvc"], "pef": r["pef"], "accepted": True}, x, [], None
+
+
+def make_messy_patient(c, tracker, p):
+    q_dev, q_feel, q_symp, q_school = (q["id"] for q in tracker["questions"])
+    meds, daily, prn = meds_for(c, tracker)
+    name, _, per_day = c["daily"]
+    dumps = lambda v: json.dumps(v, separators=(",", ":"))
+    start = END - timedelta(days=DAYS - 1)
+    logs, readings, badges, streak = [], [], [], 0
+    for k in range(DAYS):
+        d = start + timedelta(days=k)
+        sev = sev_on({"flares": p.get("flares", []), "adherence": 1}, k)
+        if "drift" in p:
+            f, top = p["drift"]
+            sev = max(sev, max(0, k - f) / (DAYS - f) * top)
+        engage = lerp(p["engage"], k) * (1 - p.get("weekend_skip", 0) * (d.weekday() >= 5)) \
+            * (1 - p.get("miss_bad", 0) * (sev > 0.5))
+        if k < p.get("join", 0) or any(s <= k < s + n for s, n in p.get("gaps", [])) or rng.random() >= engage:
+            streak = 0
+            continue
+        school = d.weekday() < 5
+        dev_min = rng.randint(7 * 60, 7 * 60 + 35) if school else rng.randint(9 * 60, 11 * 60 + 30)
+        survey_min = dev_min + 5
+        if rng.random() < p.get("late", 0):  # ends by 18:45 local, so still the same UTC day
+            survey_min = rng.randint(17 * 60, 18 * 60 + 30)
+            if c["file"] != "t1d":  # glucose checks stay tied to meals
+                dev_min = survey_min - 5
+        subs, day_readings, x, prn_times = [], [], sev, None
+        if rng.random() >= p.get("meds_only", 0):
+            answer, extra = None, []
+            if rng.random() < p["device"]:
+                measure = measure_spiro if c["file"] in ("asthma", "cf") else lambda c, *a: MEASURE[c["file"]](*a)
+                day_readings, answer, x, extra, prn_times = measure(c, d, dev_min, p, sev)
+            felt = clamp(x + p.get("mood", 0) + rng.gauss(0, 0.12))  # how the day feels to them, not what the device says
+            feel = "Bad" if felt >= 0.45 else "Okay" if felt >= 0.2 else "Great"
+            syms = rng.sample(c["symptoms"], min(len(c["symptoms"]), int(felt * 3 + rng.random()))) + extra
+            if x >= 0.5:
+                syms += [s for s in c["red"] if rng.random() < 0.4]
+            if not syms or rng.random() < 0.03:  # 3%: ticks "None of these" next to a symptom by mistake
+                syms.append("None of these ")
+            survey = [{"questionId": q_feel, "value": feel}, {"questionId": q_symp, "value": dumps(syms)}]
+            if school:
+                survey.append({"questionId": q_school, "value": "true" if x > 0.55 and rng.random() < 0.6 else "false"})
+            if rng.random() < p.get("partial", 0):  # answered a question or two, then closed the app
+                survey = rng.sample(survey, rng.randint(0, len(survey) - 1))
+            resp = ([{"questionId": q_dev, "value": dumps(answer)}] if answer else []) + survey
+            if resp:
+                subs.append({"trackerId": tracker["id"], "date": iso_utc(d, survey_min), "responses": resp})
+            if rng.random() < p.get("dup", 0):
+                again = iso_utc(d, survey_min + rng.randint(1, 15))
+                if rng.random() < 0.5:
+                    subs.append({"trackerId": tracker["id"], "date": again, "responses": []})
+                else:  # came back and changed the mood answer
+                    other = rng.choice([f for f in ("Great", "Okay", "Bad") if f != feel])
+                    subs.append({"trackerId": tracker["id"], "date": again, "responses": [{"questionId": q_feel, "value": other}]})
+        readings.extend(day_readings)
+
+        doses, taken = [], 0
+        morning = (dev_min if dev_min < 12 * 60 else rng.randint(7 * 60, 9 * 60)) + rng.randint(-10, 30)
+        for slot in (morning, rng.randint(18 * 60, 21 * 60 + 30))[:per_day]:
+            if rng.random() < lerp(p["adherence"], k):
+                if rng.random() < 0.3:  # logged later from memory, at a round time
+                    slot = slot // 30 * 30
+                taken += 1
+                doses.append({"id": daily, "time": clock(slot), "name": name, "value": 1})
+        if prn_times is None:
+            prn_times = [rng.randint(8 * 60, 21 * 60) for _ in range(round(x * 3 * rng.uniform(0.5, 1)))]
+        for t in prn_times:
+            if rng.random() < p.get("prn_log", 0.9):  # some as-needed doses never get logged
+                doses.append({"id": prn, "time": clock(t), "name": c["prn"][0], "value": 2 if c["file"] == "asthma" else 1})
+        doses.sort(key=lambda m: m["time"])
+        if not (subs or doses or day_readings):
+            streak = 0
+            continue
+        logs.append({"day": d.isoformat(), "allMedicationsAdministered": taken == per_day,
+                     "trackerResponses": subs, "medicationAdministrations": doses})
+        streak += 1
+        if streak in (5, 10, 30):
+            badges.append({"badgeName": f"TrackerBadge{streak}", "date": iso_utc(d, survey_min + 1)})
+    plan = None
+    if c["file"] == "asthma":
+        last = max(r["date"][:10] for r in readings if r["accepted"])
+        plan = plan_for(best([r for r in readings if r["date"][:10] == last]))
+    return {"_id": oid(), "dailyLogs": logs, "medications": meds, "reminders": [], "medicalDevices": [device_for(c, readings)],
+            "asthmaTreatmentPlan": plan, "earnedMedicationBadges": [], "earnedTrackerBadges": badges}
 
 
 def write(path, data):
@@ -426,12 +591,17 @@ def write(path, data):
 
 
 def main():
-    write(OUT_DB, [make_patient(p) for p in PROFILES])  # asthma first, so its random draws (and output) stay unchanged
-    write(OUT_TRACKER, TRACKER)
+    groups = [(ASTHMA, TRACKER, [make_patient(p) for p in PROFILES])]  # asthma first, so its random draws stay unchanged
     for c in CONDITIONS:
         t = make_tracker(c)
-        write(f"data/synthetic_{c['file']}_db.json", [make_condition_patient(c, t, p) for p in PROFILES])
-        write(f"data/synthetic_{c['file']}_tracker_definition.json", t)
+        groups.append((c, t, [make_condition_patient(c, t, p) for p in PROFILES]))
+    for c, t, patients in groups:  # after all the originals, so their random draws (and output) stay unchanged
+        patients += [make_messy_patient(c, t, p) for p in MESSY[c["file"]]]
+    for c, t, patients in groups:
+        db, tr = (OUT_DB, OUT_TRACKER) if c is ASTHMA else (f"data/synthetic_{c['file']}_db.json",
+                                                             f"data/synthetic_{c['file']}_tracker_definition.json")
+        write(db, patients)
+        write(tr, t)
 
 
 if __name__ == "__main__":

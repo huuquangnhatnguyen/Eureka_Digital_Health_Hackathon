@@ -6,11 +6,11 @@ load = lambda f: json.load(open(f"data/{f}", encoding="utf-8"))
 FILES = [("synthetic_db.json", "synthetic_tracker_definition.json")] + [
     (f"synthetic_{k}_db.json", f"synthetic_{k}_tracker_definition.json") for k in ("cf", "t1d", "heart")]
 db, trackers = [], {}
-for db_file, tracker_file in FILES:  # each file holds one disease: 3 patients, all on that file's tracker
+for db_file, tracker_file in FILES:  # each file holds one disease: 3 tidy + 2 messy patients, all on that file's tracker
     t = load(tracker_file)
     trackers[t["id"]] = t
     group = load(db_file)
-    assert len(group) == 3 and all(tr["trackerId"] == t["id"] for p in group for l in p["dailyLogs"] for tr in l["trackerResponses"])
+    assert len(group) == 5 and all(tr["trackerId"] == t["id"] for p in group for l in p["dailyLogs"] for tr in l["trackerResponses"])
     db += group
 ref = json.load(open("data/sample_db.json", encoding="utf-8"))[0]  # structure reference only
 
@@ -29,7 +29,7 @@ def daily_med(p):
     return next(m for m in p["medications"] if m["howOften"] == "Daily")
 
 
-def check_patient(p):
+def check_patient(p, tidy):
     assert set(p) == TOP, set(p) ^ TOP
     med_ids = {m["id"] for m in p["medications"]}
     ctrl = daily_med(p)
@@ -101,7 +101,7 @@ def check_patient(p):
             by_day.setdefault(b["date"][:10], []).append(r["fev1"])
     for day, vals in by_day.items():  # ATS-style repeatability: top two FEV1 within 0.15 L
         top = sorted(vals, reverse=True)
-        assert len(top) >= 3 and top[0] - top[1] <= 0.15, (day, top)
+        assert (len(top) >= 3 or not tidy) and (len(top) < 2 or top[0] - top[1] <= 0.15), (day, top)
 
     plan = p["asthmaTreatmentPlan"]
     if tracker["name"] != "Asthma Tracker (synthetic)":  # the zone is asthma-only
@@ -117,11 +117,11 @@ def adherence(p):
     return n / (ctrl["dosage"]["timing"]["frequency"] * len(p["dailyLogs"]))
 
 
-for p in db:
-    check_patient(p)
+for i, p in enumerate(db):
+    check_patient(p, i % 5 < 3)
 
-assert len(db) == 12 and len(trackers) == 4
-for g in range(0, 12, 3):  # each condition group: well controlled, poor adherence, one flare
+assert len(db) == 20 and len(trackers) == 4
+for g in range(0, 20, 5):  # each condition group: well controlled, poor adherence, one flare
     a = [adherence(p) for p in db[g:g + 3]]
     assert a[0] > 0.85 and a[1] < 0.6, (g, a)  # profiles really differ
 assert db[0]["asthmaTreatmentPlan"]["status"] == "Green"
@@ -160,7 +160,7 @@ def days_of(p):
 
 
 peaks = []
-for g in range(3, 12, 3):
+for g in range(5, 20, 5):  # the rules below hold for the 3 tidy patients only
     for i, p in enumerate(db[g:g + 3]):
         rows = days_of(p)
         for day, feel, syms, bad, ok, prn in rows:
@@ -171,13 +171,21 @@ for g in range(3, 12, 3):
         if i == 2:
             peaks.append(max((r for r in rows if r[3] is not None), key=lambda r: r[3])[0])
 assert len({date.fromisoformat(d).isocalendar()[1] for d in peaks}) == len(peaks), ("flares share a week", peaks)
-t1d = [days_of(p) for p in db[6:9]]
+t1d = [days_of(p) for p in db[10:13]]
 for rows in t1d:
     for day, feel, syms, bad, ok, prn in rows:
         assert prn == sum(b["glucoseResults"]["glucose"] > 250 for b in ok), (day, "one correction dose per high")
         assert ("Shakiness" in syms) == any(b["glucoseResults"]["glucose"] < 70 for b in ok), (day, "shaky = a low")
 mean = lambda rows: sum(r[3] for r in rows) / len(rows)
 assert mean(t1d[1][-15:]) > mean(t1d[0][-15:]) + 40, "missed insulin -> higher sugars"
+
+messy = [p for i, p in enumerate(db) if i % 5 >= 3]
+for p in messy:  # really messier: skipped days and questions
+    t = trackers[next(s for l in p["dailyLogs"] for s in l["trackerResponses"])["trackerId"]]
+    assert len(p["dailyLogs"]) < 88 and any(0 < len(s["responses"]) < len(t["questions"]) - 1
+                                            for l in p["dailyLogs"] for s in l["trackerResponses"])
+assert any(sum(b["accepted"] for b in p["medicalDevices"][0]["baselineReadings"] if b["date"][:10] == l["day"]) in (1, 2)
+           for p in messy[:4] for l in p["dailyLogs"]), "some spirometry sessions stop early"
 
 print("ok:", len(db), "patients")
 for p in db:

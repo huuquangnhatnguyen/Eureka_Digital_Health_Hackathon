@@ -98,7 +98,7 @@ test("emptyDay is unlogged with no readings", () => {
 });
 
 test("cystic fibrosis: spirometry works like asthma, no zone", () => {
-  const p = getPatient(4)!;
+  const p = getPatient(6)!;
   const b = buildDays(p, getTracker(p));
   expect(b.plan).toBeNull();
   expect(b.baseline).not.toBeNull();
@@ -106,7 +106,7 @@ test("cystic fibrosis: spirometry works like asthma, no zone", () => {
 });
 
 test("glucose meter and pulse oximeter readings land on days, but not as blows", () => {
-  for (const i of [7, 10]) {
+  for (const i of [11, 16]) {
     const p = getPatient(i)!;
     const b = buildDays(p, getTracker(p));
     const days = Object.values(b.days);

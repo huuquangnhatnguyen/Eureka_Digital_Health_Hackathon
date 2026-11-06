@@ -72,6 +72,8 @@ export interface PatientDoc {
   asthmaTreatmentPlan: { status: "Green" | "Yellow" | "Red"; expiration: string | null; retestTime: string | null } | null;
   earnedMedicationBadges: unknown[];
   earnedTrackerBadges: unknown[];
+  /** Overview card ids in display order, as the clinician last left them; absent = the default cards. */
+  overviewCards?: string[];
 }
 
 export interface TrackerQuestion {

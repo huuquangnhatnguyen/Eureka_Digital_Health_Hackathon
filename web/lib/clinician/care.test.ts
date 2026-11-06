@@ -18,24 +18,24 @@ test("status thresholds", () => {
 
 test("one row per patient; doses never exceed what was due; device reading follows the device", () => {
   const r = rows();
-  expect(r).toHaveLength(12);
+  expect(r).toHaveLength(20);
   for (const x of r) {
     expect(x.taken).toBeLessThanOrEqual(x.due);
     expect(x.bits).toHaveLength(7);
   }
   expect(r[0].reading).toMatch(/^FEV1 \d+% predicted$/);
-  expect(r[6].reading).toMatch(/^\d+ mg\/dL$/);
-  expect(r[9].reading).toMatch(/^SpO2 \d+%$/);
+  expect(r[10].reading).toMatch(/^\d+ mg\/dL$/);
+  expect(r[15].reading).toMatch(/^SpO2 \d+%$/);
 });
 
-test("the struggling patients (2, 5, 8, 11) sort first by review priority", () => {
+test("the struggling patients (2, 4, 7, 12, 17) sort first by review priority", () => {
   const order = careFilter(rows(), F, () => true).map((x: { index: number }) => x.index);
-  expect(order.slice(0, 4).sort((a: number, b: number) => a - b)).toEqual([2, 5, 8, 11]);
+  expect(order.slice(0, 5).sort((a: number, b: number) => a - b)).toEqual([2, 4, 7, 12, 17]);
 });
 
 test("filters: department, search, status; reviewed rows drop below unreviewed of the same status", () => {
-  expect(careFilter(rows(), F, (x: { plan: string }) => /asthma/i.test(x.plan))).toHaveLength(3);
-  expect(careFilter(rows(), { ...F, search: "patient 1", sort: "name" }, () => true).map((x: { index: number }) => x.index)).toEqual([1, 10, 11, 12]);
+  expect(careFilter(rows(), F, (x: { plan: string }) => /asthma/i.test(x.plan))).toHaveLength(5);
+  expect(careFilter(rows(), { ...F, search: "patient 1", sort: "name" }, () => true).map((x: { index: number }) => x.index)).toEqual([1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]);
   const red = careFilter(rows(), { ...F, status: "red" }, () => true);
   expect(red.every((x: { status: string }) => x.status === "red")).toBe(true);
   if (red.length > 1) {

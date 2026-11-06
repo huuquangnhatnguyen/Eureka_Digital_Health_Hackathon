@@ -30,7 +30,7 @@ test("asthma patient: spirometry sessions, GINA, real question text", () => {
 });
 
 test("diabetes and heart patients: no spirometry, answers still parsed", () => {
-  for (const i of [7, 10]) {
+  for (const i of [11, 16]) {
     const model = build(i);
     expect(model.sessions).toHaveLength(0);
     expect(model.trackers[0].category).toBe("other");

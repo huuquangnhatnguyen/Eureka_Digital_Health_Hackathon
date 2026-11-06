@@ -12648,5 +12648,5462 @@
         "date": "2026-11-05T12:15:56.297Z"
       }
     ]
+  },
+  {
+    "_id": "bc7f6a9084ef93c610a0f527",
+    "dailyLogs": [
+      {
+        "day": "2026-08-13",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-13T21:14:06.054Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":92,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:17",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:52",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-14",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:14",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:46",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-16",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:14",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:10",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-24",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-24T11:21:58.921Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":93,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:25",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "446bf34e-9942-4433-8410-4b8256f054af",
+            "time": "14:31",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-25",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-25T21:43:52.540Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":83,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:21",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:28",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-26",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-26T22:06:18.073Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":83,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:11",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:19",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-27",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-27T21:36:07.386Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:58",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:48",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-28",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-28T11:38:56.400Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:51",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:41",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-29",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-29T13:42:54.502Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":86,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "10:05",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:54",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-31",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-31T11:39:58.822Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":84,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:38",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "21:25",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-01",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-01T11:07:55.861Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":76,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:13",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-02",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-02T11:36:22.859Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":75,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:54",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-03",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-03T11:39:45.012Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-06",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "09:13",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-10",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-10T22:13:33.191Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":95,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "21:25",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-12",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-12T14:42:40.721Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":82,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:41",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-16",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-16T22:04:39.068Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:21",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-19",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-19T15:14:18.701Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "11:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:37",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-20",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-20T21:21:01.461Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":82,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Shortness Of Breath\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:25",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:26",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-23",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-23T11:08:58.066Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:12",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-02",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-02T11:09:29.098Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-03",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-03T21:25:40.731Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":88,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:34",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-08",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-08T11:16:13.953Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":82,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:18",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-10",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-10T13:55:30.913Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":79,\"accepted\":true}"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "10:04",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:29",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-12",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:42",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:10",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-13",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-13T11:29:58.415Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":83,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-13T11:34:19.211Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:50",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:11",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-17",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-17T22:06:46.647Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":100,\"pulse\":80,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "08:17",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "21:01",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-18",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-18T15:05:19.342Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":84,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-18T15:11:00.890Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "10:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-19",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-19T11:13:38.501Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":84,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-19T11:17:57.864Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-20",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-20T11:34:31.955Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:46",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-26",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-26T11:39:09.117Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "21:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-28",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:34",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "20:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-29",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-29T11:35:52.833Z",
+            "responses": [
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:31",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-30",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-30T11:39:37.472Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":88,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:43",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-31",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-31T13:45:36.010Z",
+            "responses": [
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "09:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "21:11",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-01",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-11-01T16:25:21.955Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "11:41",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "446bf34e-9942-4433-8410-4b8256f054af",
+            "time": "20:50",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-03",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-11-03T12:23:36.519Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Dizziness\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "07:12",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "19:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-08",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [],
+        "medicationAdministrations": [
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "10:08",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "medications": [
+      {
+        "id": "558fdbad-e593-4016-8ec7-559c57284d92",
+        "dosage": {
+          "timing": {
+            "periodUnit": "Daily",
+            "frequency": 2,
+            "period": 1
+          },
+          "asNeeded": false
+        },
+        "howOften": "Daily",
+        "icon": "Pill",
+        "name": "Heart medication (synthetic)",
+        "relatedCondition": "Congenital Heart Disease Tracker (synthetic)",
+        "archived": false,
+        "index": 0
+      },
+      {
+        "id": "446bf34e-9942-4433-8410-4b8256f054af",
+        "dosage": {
+          "timing": {
+            "periodUnit": null,
+            "frequency": null,
+            "period": null
+          },
+          "asNeeded": true
+        },
+        "howOften": "As Needed",
+        "icon": "Pill",
+        "name": "Extra diuretic dose (synthetic)",
+        "relatedCondition": "Congenital Heart Disease Tracker (synthetic)",
+        "archived": false,
+        "index": 1
+      }
+    ],
+    "reminders": [],
+    "medicalDevices": [
+      {
+        "protocol": null,
+        "address": "B57EF101-FC6C-472D-8ECD-A0CCBA1A034C",
+        "bootId": "PO",
+        "serialNumber": "P965221",
+        "deviceType": 2,
+        "atsStandard": false,
+        "name": "Pulse oximeter (synthetic)",
+        "advertisedName": "PO-P965221",
+        "baselineReadingDate": "2026-08-13",
+        "baselineReadings": [
+          {
+            "date": "2026-08-13T21:09:14.355Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 108,
+              "perfusionIndex": 0.9
+            }
+          },
+          {
+            "date": "2026-08-13T21:10:28.304Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 92,
+              "perfusionIndex": 4.6
+            }
+          },
+          {
+            "date": "2026-08-24T11:16:27.976Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 90,
+              "pulse": 113,
+              "perfusionIndex": 0.5
+            }
+          },
+          {
+            "date": "2026-08-24T11:17:26.668Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 93,
+              "perfusionIndex": 1.9
+            }
+          },
+          {
+            "date": "2026-08-25T21:38:44.429Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 83,
+              "perfusionIndex": 3.2
+            }
+          },
+          {
+            "date": "2026-08-26T22:01:12.658Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 89,
+              "pulse": 101,
+              "perfusionIndex": 0.9
+            }
+          },
+          {
+            "date": "2026-08-26T22:02:12.692Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 83,
+              "perfusionIndex": 2.5
+            }
+          },
+          {
+            "date": "2026-08-28T11:33:54.058Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 90,
+              "pulse": 123,
+              "perfusionIndex": 0.7
+            }
+          },
+          {
+            "date": "2026-08-28T11:34:03.613Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 86,
+              "perfusionIndex": 1.8
+            }
+          },
+          {
+            "date": "2026-08-29T13:37:12.036Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 86,
+              "perfusionIndex": 2.7
+            }
+          },
+          {
+            "date": "2026-08-31T11:34:33.799Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 84,
+              "perfusionIndex": 4.6
+            }
+          },
+          {
+            "date": "2026-09-01T11:02:59.653Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 76,
+              "perfusionIndex": 3.7
+            }
+          },
+          {
+            "date": "2026-09-02T11:31:09.418Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 75,
+              "perfusionIndex": 4.7
+            }
+          },
+          {
+            "date": "2026-09-10T22:08:32.279Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 87,
+              "pulse": 108,
+              "perfusionIndex": 0.8
+            }
+          },
+          {
+            "date": "2026-09-10T22:09:04.611Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 95,
+              "perfusionIndex": 3.4
+            }
+          },
+          {
+            "date": "2026-09-12T14:37:40.230Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 82,
+              "perfusionIndex": 3.0
+            }
+          },
+          {
+            "date": "2026-09-19T15:09:30.771Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 86,
+              "perfusionIndex": 4.4
+            }
+          },
+          {
+            "date": "2026-09-20T21:16:28.919Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 82,
+              "perfusionIndex": 3.3
+            }
+          },
+          {
+            "date": "2026-10-03T21:20:08.893Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 88,
+              "perfusionIndex": 3.5
+            }
+          },
+          {
+            "date": "2026-10-08T11:11:34.480Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 82,
+              "perfusionIndex": 4.9
+            }
+          },
+          {
+            "date": "2026-10-10T13:50:18.959Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 79,
+              "perfusionIndex": 2.9
+            }
+          },
+          {
+            "date": "2026-10-13T11:24:13.206Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 83,
+              "perfusionIndex": 4.3
+            }
+          },
+          {
+            "date": "2026-10-17T22:01:33.032Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 100,
+              "pulse": 80,
+              "perfusionIndex": 2.0
+            }
+          },
+          {
+            "date": "2026-10-18T15:00:35.590Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 84,
+              "perfusionIndex": 3.5
+            }
+          },
+          {
+            "date": "2026-10-19T11:08:54.298Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 84,
+              "perfusionIndex": 3.0
+            }
+          },
+          {
+            "date": "2026-10-30T11:34:31.235Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 88,
+              "perfusionIndex": 2.5
+            }
+          },
+          {
+            "date": "2026-11-01T16:20:02.260Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 87,
+              "perfusionIndex": 2.3
+            }
+          },
+          {
+            "date": "2026-11-03T12:18:03.942Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 87,
+              "perfusionIndex": 4.4
+            }
+          }
+        ]
+      }
+    ],
+    "asthmaTreatmentPlan": null,
+    "earnedMedicationBadges": [],
+    "earnedTrackerBadges": [
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2026-08-28T11:39:05.284Z"
+      },
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2026-11-01T16:26:41.961Z"
+      }
+    ]
+  },
+  {
+    "_id": "5057260fa14f9aa0aa15549b",
+    "dailyLogs": [
+      {
+        "day": "2026-08-11",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-11T11:29:23.137Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":92,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:27",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-12",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-12T11:32:17.974Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":94,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:23",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-14",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-14T11:25:19.869Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":93,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "09:26",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-15",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-15T15:15:00.596Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":91,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "11:11",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:17",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-16",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-16T14:05:26.233Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":88,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "09:55",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:02",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-17",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-17T11:30:57.600Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":91,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:49",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:01",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-18",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-18T11:23:32.231Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":84,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-19",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-19T11:21:28.444Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":90,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-19T11:35:05.948Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:19",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:38",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-20",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-20T11:06:44.378Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":83,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:58",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-21",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-21T11:16:10.751Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:12",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-22",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-22T15:09:12.135Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "11:13",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:13",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-23",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-23T15:07:30.988Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "11:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:35",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-24",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-24T11:25:43.526Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":83,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:11",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-25",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-25T11:39:03.802Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":74,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:53",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:50",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-26",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-26T11:15:35.100Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Low appetite\",\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-26T11:23:35.652Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "18:39",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-27",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-27T11:34:03.031Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":75,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:35",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:20",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-28",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-28T11:17:30.680Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":89,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:31",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-08-31",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-08-31T11:36:37.064Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:43",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:07",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-01",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-01T11:11:40.049Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":93,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:04",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:06",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-03",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-03T11:25:16.253Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":83,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:41",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:03",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-04",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-04T11:39:35.036Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":85,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Low appetite\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:32",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-06",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-06T15:11:00.090Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":82,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-06T15:24:09.881Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "11:24",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:26",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-07",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-07T11:06:47.673Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-08",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-08T11:23:42.942Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-08T11:37:22.006Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-10",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-10T11:05:00.119Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "06:54",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-11",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-11T11:31:52.556Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":94,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Swelling in legs or feet\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:24",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "08:56",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:44",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-12",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-12T13:12:09.398Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":92,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "09:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:46",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-13",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-13T13:45:18.827Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":92,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "09:51",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-14",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-14T11:33:17.231Z",
+            "responses": [
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:43",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-15",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-15T11:11:49.347Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":82,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:09",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:55",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-17",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-17T11:32:26.105Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":75,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-17T11:41:42.715Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:47",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:50",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-18",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-18T21:06:31.030Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":98,\"pulse\":95,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "08:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:52",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-20",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-20T15:09:11.307Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-21",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-21T11:32:13.510Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":92,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:54",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-22",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-22T11:30:18.223Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Swelling in legs or feet\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:08",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-23",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-23T11:18:37.266Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":87,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:29",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:50",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-24",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-24T21:54:08.107Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":97,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-24T21:57:36.490Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:05",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:50",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-25",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-25T22:30:26.311Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":93,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-26",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-26T14:59:54.134Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":93,\"accepted\":true}"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-26T15:05:27.969Z",
+            "responses": []
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "10:53",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "12:13",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:24",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-27",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-27T13:52:31.088Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":94,\"pulse\":86,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "10:13",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "14:43",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-09-30",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-09-30T21:18:17.981Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":94,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "06:52",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:10",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-01",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-01T21:55:22.729Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":94,\"pulse\":96,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-01T21:59:16.176Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "06:57",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "19:05",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:22",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-02",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-02T11:16:03.682Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":94,\"pulse\":90,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:38",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "20:58",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-03",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-03T15:20:59.282Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":100,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\",\"Low appetite\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:04",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-04",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-04T13:33:52.764Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":94,\"pulse\":97,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "09:51",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "15:29",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:31",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-05",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-05T11:18:19.706Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":92,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Shortness Of Breath\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "13:12",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-06",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-06T11:31:09.068Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":93,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "10:16",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:22",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-07",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-07T11:05:37.080Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":93,\"pulse\":96,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Shortness Of Breath\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "09:50",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:27",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-08",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-08T11:17:10.525Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":105,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:12",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-09",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-09T11:27:08.278Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Dizziness\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:14",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "18:33",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:39",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-10",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-10T22:04:57.941Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Swelling in legs or feet\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "11:24",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:24",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-14",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-14T21:17:34.864Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":93,\"pulse\":93,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Dizziness\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-14T21:22:45.821Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:19",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "08:37",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:32",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-15",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-15T11:31:29.074Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":91,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Swelling in legs or feet\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:48",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:58",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-16",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-16T22:04:48.399Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":95,\"pulse\":98,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Shortness Of Breath\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-16T22:09:31.478Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "08:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "14:16",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-18",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-18T14:43:16.698Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "11:01",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "14:45",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:51",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-19",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-19T11:12:23.849Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":96,\"pulse\":100,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:07",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-21",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-21T11:22:20.405Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":91,\"pulse\":100,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\",\"Dizziness\",\"Fainting\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:45",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "12:06",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-22",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-22T11:20:28.893Z",
+            "responses": [
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Shortness Of Breath\",\"None of these \"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:34",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "20:57",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-23",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-23T11:15:08.753Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\",\"Swelling in legs or feet\",\"Blue lips or fingers\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:48",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-27",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-27T11:06:54.371Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":92,\"pulse\":103,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Low appetite\",\"Swelling in legs or feet\",\"Blue lips or fingers\",\"Fainting\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "09:43",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:46",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-28",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-28T11:39:53.621Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Shortness Of Breath\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "08:01",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "20:48",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-10-31",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-31T15:23:38.505Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":92,\"pulse\":104,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Swelling in legs or feet\",\"Fatigue\",\"None of these \"]"
+              }
+            ]
+          },
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-10-31T15:32:17.816Z",
+            "responses": [
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Great"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "09:09",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "11:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "12:48",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "20:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-01",
+        "allMedicationsAdministered": false,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-11-01T15:26:36.416Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":93,\"pulse\":99,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Dizziness\",\"Swelling in legs or feet\"]"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "14:47",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "21:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-05",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-11-05T12:05:33.414Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":93,\"pulse\":104,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Fatigue\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:00",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "12:03",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:49",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-06",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-11-06T12:19:19.668Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":93,\"pulse\":111,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Okay"
+              },
+              {
+                "questionId": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+                "value": "[\"Dizziness\",\"Blue lips or fingers\",\"Fainting\"]"
+              },
+              {
+                "questionId": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+                "value": "false"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "07:13",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "19:51",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "day": "2026-11-08",
+        "allMedicationsAdministered": true,
+        "trackerResponses": [
+          {
+            "trackerId": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+            "date": "2026-11-08T15:37:07.728Z",
+            "responses": [
+              {
+                "questionId": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+                "value": "{\"spo2\":91,\"pulse\":108,\"accepted\":true}"
+              },
+              {
+                "questionId": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+                "value": "Bad"
+              }
+            ]
+          }
+        ],
+        "medicationAdministrations": [
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "10:30",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "16:21",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+            "time": "18:51",
+            "name": "Heart medication (synthetic)",
+            "value": 1
+          },
+          {
+            "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+            "time": "20:36",
+            "name": "Extra diuretic dose (synthetic)",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "medications": [
+      {
+        "id": "3c48262e-18b2-41ce-94c9-b8da0e79f577",
+        "dosage": {
+          "timing": {
+            "periodUnit": "Daily",
+            "frequency": 2,
+            "period": 1
+          },
+          "asNeeded": false
+        },
+        "howOften": "Daily",
+        "icon": "Pill",
+        "name": "Heart medication (synthetic)",
+        "relatedCondition": "Congenital Heart Disease Tracker (synthetic)",
+        "archived": false,
+        "index": 0
+      },
+      {
+        "id": "cc744411-bcdb-46b7-98b9-27288354fb66",
+        "dosage": {
+          "timing": {
+            "periodUnit": null,
+            "frequency": null,
+            "period": null
+          },
+          "asNeeded": true
+        },
+        "howOften": "As Needed",
+        "icon": "Pill",
+        "name": "Extra diuretic dose (synthetic)",
+        "relatedCondition": "Congenital Heart Disease Tracker (synthetic)",
+        "archived": false,
+        "index": 1
+      }
+    ],
+    "reminders": [],
+    "medicalDevices": [
+      {
+        "protocol": null,
+        "address": "BD95ECFA-6EC8-4E59-A240-EB74B771B7E2",
+        "bootId": "PO",
+        "serialNumber": "P352450",
+        "deviceType": 2,
+        "atsStandard": false,
+        "name": "Pulse oximeter (synthetic)",
+        "advertisedName": "PO-P352450",
+        "baselineReadingDate": "2026-08-11",
+        "baselineReadings": [
+          {
+            "date": "2026-08-11T11:24:33.308Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 90,
+              "pulse": 97,
+              "perfusionIndex": 0.8
+            }
+          },
+          {
+            "date": "2026-08-11T11:25:24.908Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 92,
+              "perfusionIndex": 4.8
+            }
+          },
+          {
+            "date": "2026-08-12T11:27:06.580Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 91,
+              "pulse": 113,
+              "perfusionIndex": 0.9
+            }
+          },
+          {
+            "date": "2026-08-12T11:28:22.064Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 94,
+              "perfusionIndex": 4.4
+            }
+          },
+          {
+            "date": "2026-08-14T11:20:42.640Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 93,
+              "perfusionIndex": 2.9
+            }
+          },
+          {
+            "date": "2026-08-15T15:10:18.672Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 91,
+              "perfusionIndex": 3.0
+            }
+          },
+          {
+            "date": "2026-08-16T14:00:30.471Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 88,
+              "perfusionIndex": 2.7
+            }
+          },
+          {
+            "date": "2026-08-17T11:25:44.328Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 91,
+              "perfusionIndex": 2.2
+            }
+          },
+          {
+            "date": "2026-08-18T11:18:02.142Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 84,
+              "perfusionIndex": 2.2
+            }
+          },
+          {
+            "date": "2026-08-19T11:16:43.529Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 90,
+              "perfusionIndex": 3.2
+            }
+          },
+          {
+            "date": "2026-08-20T11:01:07.195Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 83,
+              "perfusionIndex": 4.7
+            }
+          },
+          {
+            "date": "2026-08-22T15:04:47.698Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 87,
+              "perfusionIndex": 1.9
+            }
+          },
+          {
+            "date": "2026-08-23T15:02:14.238Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 87,
+              "perfusionIndex": 2.3
+            }
+          },
+          {
+            "date": "2026-08-24T11:20:43.491Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 83,
+              "perfusionIndex": 2.8
+            }
+          },
+          {
+            "date": "2026-08-25T11:34:23.096Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 74,
+              "perfusionIndex": 3.9
+            }
+          },
+          {
+            "date": "2026-08-26T11:10:48.283Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 86,
+              "perfusionIndex": 3.6
+            }
+          },
+          {
+            "date": "2026-08-27T11:29:58.210Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 111,
+              "perfusionIndex": 0.4
+            }
+          },
+          {
+            "date": "2026-08-27T11:30:25.179Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 75,
+              "perfusionIndex": 2.3
+            }
+          },
+          {
+            "date": "2026-08-28T11:12:40.046Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 89,
+              "perfusionIndex": 3.2
+            }
+          },
+          {
+            "date": "2026-09-01T11:06:50.134Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 93,
+              "perfusionIndex": 3.7
+            }
+          },
+          {
+            "date": "2026-09-03T11:20:12.547Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 83,
+              "perfusionIndex": 2.8
+            }
+          },
+          {
+            "date": "2026-09-04T11:34:57.414Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 85,
+              "perfusionIndex": 3.8
+            }
+          },
+          {
+            "date": "2026-09-06T15:06:00.560Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 82,
+              "perfusionIndex": 4.4
+            }
+          },
+          {
+            "date": "2026-09-07T11:01:16.881Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 87,
+              "perfusionIndex": 3.5
+            }
+          },
+          {
+            "date": "2026-09-08T11:18:56.107Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 86,
+              "perfusionIndex": 2.3
+            }
+          },
+          {
+            "date": "2026-09-10T11:00:13.902Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 87,
+              "perfusionIndex": 1.9
+            }
+          },
+          {
+            "date": "2026-09-11T11:26:18.311Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 94,
+              "perfusionIndex": 2.9
+            }
+          },
+          {
+            "date": "2026-09-12T13:07:36.901Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 92,
+              "perfusionIndex": 1.5
+            }
+          },
+          {
+            "date": "2026-09-13T13:40:21.022Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 92,
+              "perfusionIndex": 3.6
+            }
+          },
+          {
+            "date": "2026-09-15T11:06:39.672Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 82,
+              "perfusionIndex": 2.0
+            }
+          },
+          {
+            "date": "2026-09-17T11:27:47.414Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 75,
+              "perfusionIndex": 3.2
+            }
+          },
+          {
+            "date": "2026-09-18T21:01:37.296Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 86,
+              "pulse": 93,
+              "perfusionIndex": 0.4
+            }
+          },
+          {
+            "date": "2026-09-18T21:02:03.366Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 98,
+              "pulse": 95,
+              "perfusionIndex": 2.1
+            }
+          },
+          {
+            "date": "2026-09-21T11:27:05.169Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 91,
+              "pulse": 111,
+              "perfusionIndex": 0.7
+            }
+          },
+          {
+            "date": "2026-09-21T11:28:55.684Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 92,
+              "perfusionIndex": 3.8
+            }
+          },
+          {
+            "date": "2026-09-22T11:25:17.745Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 86,
+              "perfusionIndex": 2.2
+            }
+          },
+          {
+            "date": "2026-09-23T11:13:38.440Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 87,
+              "perfusionIndex": 4.8
+            }
+          },
+          {
+            "date": "2026-09-24T21:49:12.039Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 97,
+              "pulse": 86,
+              "perfusionIndex": 4.0
+            }
+          },
+          {
+            "date": "2026-09-25T22:25:11.644Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 93,
+              "perfusionIndex": 2.4
+            }
+          },
+          {
+            "date": "2026-09-26T14:54:45.198Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 93,
+              "perfusionIndex": 4.7
+            }
+          },
+          {
+            "date": "2026-09-27T13:47:20.725Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 94,
+              "pulse": 86,
+              "perfusionIndex": 4.3
+            }
+          },
+          {
+            "date": "2026-09-30T21:13:52.652Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 94,
+              "perfusionIndex": 2.3
+            }
+          },
+          {
+            "date": "2026-10-01T21:50:38.865Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 94,
+              "pulse": 96,
+              "perfusionIndex": 4.3
+            }
+          },
+          {
+            "date": "2026-10-02T11:11:32.559Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 94,
+              "pulse": 90,
+              "perfusionIndex": 2.2
+            }
+          },
+          {
+            "date": "2026-10-03T15:15:13.931Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 100,
+              "perfusionIndex": 3.4
+            }
+          },
+          {
+            "date": "2026-10-04T13:28:21.908Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 94,
+              "pulse": 97,
+              "perfusionIndex": 3.3
+            }
+          },
+          {
+            "date": "2026-10-05T11:13:12.686Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 92,
+              "perfusionIndex": 3.1
+            }
+          },
+          {
+            "date": "2026-10-06T11:26:13.845Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 93,
+              "perfusionIndex": 1.7
+            }
+          },
+          {
+            "date": "2026-10-07T11:00:53.714Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 96,
+              "perfusionIndex": 4.6
+            }
+          },
+          {
+            "date": "2026-10-08T11:12:16.047Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 105,
+              "perfusionIndex": 3.3
+            }
+          },
+          {
+            "date": "2026-10-14T21:12:45.165Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 93,
+              "perfusionIndex": 4.2
+            }
+          },
+          {
+            "date": "2026-10-15T11:26:05.976Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 91,
+              "perfusionIndex": 1.5
+            }
+          },
+          {
+            "date": "2026-10-16T21:59:32.820Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 95,
+              "pulse": 98,
+              "perfusionIndex": 4.1
+            }
+          },
+          {
+            "date": "2026-10-19T11:07:48.458Z",
+            "accepted": false,
+            "qualityReport": {
+              "quality": "NotAcceptable",
+              "qualityIndications": [
+                {
+                  "message": "PoorSignal",
+                  "instructions": "KeepYourHandStill"
+                }
+              ]
+            },
+            "oximetryResults": {
+              "spo2": 86,
+              "pulse": 130,
+              "perfusionIndex": 0.7
+            }
+          },
+          {
+            "date": "2026-10-19T11:08:55.186Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 96,
+              "pulse": 100,
+              "perfusionIndex": 1.6
+            }
+          },
+          {
+            "date": "2026-10-21T11:17:52.954Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 91,
+              "pulse": 100,
+              "perfusionIndex": 1.9
+            }
+          },
+          {
+            "date": "2026-10-27T11:01:58.614Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 92,
+              "pulse": 103,
+              "perfusionIndex": 3.0
+            }
+          },
+          {
+            "date": "2026-10-31T15:18:55.328Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 92,
+              "pulse": 104,
+              "perfusionIndex": 1.9
+            }
+          },
+          {
+            "date": "2026-11-01T15:21:32.481Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 99,
+              "perfusionIndex": 3.1
+            }
+          },
+          {
+            "date": "2026-11-05T12:00:11.189Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 104,
+              "perfusionIndex": 1.7
+            }
+          },
+          {
+            "date": "2026-11-06T12:14:03.316Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 93,
+              "pulse": 111,
+              "perfusionIndex": 4.8
+            }
+          },
+          {
+            "date": "2026-11-08T15:32:47.513Z",
+            "accepted": true,
+            "qualityReport": {
+              "quality": "Acceptable",
+              "qualityIndications": []
+            },
+            "oximetryResults": {
+              "spo2": 91,
+              "pulse": 108,
+              "perfusionIndex": 4.5
+            }
+          }
+        ]
+      }
+    ],
+    "asthmaTreatmentPlan": null,
+    "earnedMedicationBadges": [],
+    "earnedTrackerBadges": [
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2026-08-18T11:24:28.100Z"
+      },
+      {
+        "badgeName": "TrackerBadge10",
+        "date": "2026-08-23T15:08:40.468Z"
+      },
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2026-09-14T11:34:56.663Z"
+      },
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2026-09-24T21:55:26.856Z"
+      },
+      {
+        "badgeName": "TrackerBadge5",
+        "date": "2026-10-04T13:34:39.547Z"
+      },
+      {
+        "badgeName": "TrackerBadge10",
+        "date": "2026-10-09T11:28:42.462Z"
+      }
+    ]
   }
 ]
