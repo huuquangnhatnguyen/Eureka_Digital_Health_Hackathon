@@ -1,0 +1,40 @@
+{
+  "id": "ef9b1b52-e0fb-4a8f-be23-f12b1ea6dea9",
+  "name": "Type 1 Diabetes Tracker (synthetic)",
+  "questions": [
+    {
+      "id": "05a40178-7b03-499f-aaa2-37aa1336819e",
+      "type": "device",
+      "text": "Please check your blood sugar"
+    },
+    {
+      "id": "a5acc7a8-c81f-442b-9c3d-0fc5a9dbc15e",
+      "type": "faceScale",
+      "text": "How are you feeling today?",
+      "options": [
+        "Great",
+        "Okay",
+        "Bad"
+      ]
+    },
+    {
+      "id": "c72f6093-3aa8-416c-bd27-746eeb09dcbb",
+      "type": "checkbox",
+      "text": "Please select the following symptoms that you are currently experiencing",
+      "options": [
+        "Excessive thirst",
+        "Frequent urination",
+        "Headache",
+        "Fatigue",
+        "Shakiness",
+        "Nausea or vomiting",
+        "None of these "
+      ]
+    },
+    {
+      "id": "c7da0c2f-c0d5-425b-9476-74b87a295e16",
+      "type": "yesNo",
+      "text": "Did you miss school today because of your diabetes?"
+    }
+  ]
+}

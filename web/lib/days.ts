@@ -1,5 +1,5 @@
 // One patient document → per-day facts. Port of buildDays in dashboard/logic.js, extended per the spec.
-import type { Blow, PatientDoc, TrackerDef } from "./types";
+import type { Blow, PatientDoc, Reading, TrackerDef } from "./types";
 
 export type BestKey = "fev1" | "fev1PercentPredicted" | "fev1FvcPercent" | "pef" | "pefPercentPredicted";
 const BEST_KEYS: BestKey[] = ["fev1", "fev1PercentPredicted", "fev1FvcPercent", "pef", "pefPercentPredicted"];
@@ -18,7 +18,8 @@ export interface Day {
   school: boolean | null;
   flip: boolean;
   blank: number;
-  blows: Blow[];
+  readings: Reading[]; // every device reading that day, any device
+  blows: Blow[]; // the spirometer ones
   okBlows: number;
   best: Record<BestKey, number> | null;
   coach: string[];
@@ -37,7 +38,7 @@ export interface Built {
 
 export const emptyDay = (day: string): Day => ({
   day, logged: false, am: [], pm: [], ctrlCount: 0, rescue: [], feel: null, symptoms: null, school: null,
-  flip: false, blank: 0, blows: [], okBlows: 0, best: null, coach: [],
+  flip: false, blank: 0, readings: [], blows: [], okBlows: 0, best: null, coach: [],
 });
 
 export function addDays(day: string, n: number): string {
@@ -64,6 +65,7 @@ function parseSymptoms(value: string): string[] | null {
   }
 }
 
+const isBlow = (r: Reading): r is Blow => "fvcPlusResults" in r;
 const bestOf = (blows: Blow[], k: "fev1" | "pef") => Math.max(0, ...blows.map((b) => b.fvcPlusResults[k]));
 
 export function buildDays(doc: PatientDoc, tracker: TrackerDef): Built {
@@ -99,7 +101,12 @@ export function buildDays(doc: PatientDoc, tracker: TrackerDef): Built {
   }
 
   const device = doc.medicalDevices[0];
-  for (const b of device?.baselineReadings ?? []) if (b.date) get(b.date.slice(0, 10)).blows.push(b);
+  for (const r of device?.baselineReadings ?? []) {
+    if (!r.date) continue;
+    const d = get(r.date.slice(0, 10));
+    d.readings.push(r);
+    if (isBlow(r)) d.blows.push(r);
+  }
 
   for (const d of Object.values(days)) {
     const ok = d.blows.filter((b) => b.accepted);
@@ -107,10 +114,10 @@ export function buildDays(doc: PatientDoc, tracker: TrackerDef): Built {
     d.best = ok.length
       ? (Object.fromEntries(BEST_KEYS.map((k) => [k, Math.max(...ok.map((b) => b.fvcPlusResults[k]))])) as Record<BestKey, number>)
       : null;
-    d.coach = d.blows.flatMap((b) => b.qualityReport?.qualityIndications?.map((q) => q.message) ?? []);
+    d.coach = d.readings.flatMap((b) => b.qualityReport?.qualityIndications?.map((q) => q.message) ?? []);
   }
 
-  const accepted = (device?.baselineReadings ?? []).filter((b) => b.accepted);
+  const accepted = (device?.baselineReadings ?? []).filter(isBlow).filter((b) => b.accepted);
   const baseBlows = accepted.filter((b) => b.date.slice(0, 10) === device?.baselineReadingDate);
   const sorted = Object.keys(days).sort();
   return {

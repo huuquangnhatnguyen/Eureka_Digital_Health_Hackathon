@@ -96,3 +96,22 @@ test("missed school and rescue", () => {
 test("emptyDay is unlogged with no readings", () => {
   expect(emptyDay("2026-01-01")).toMatchObject({ logged: false, best: null, feel: null, symptoms: null, school: null });
 });
+
+test("cystic fibrosis: spirometry works like asthma, no zone", () => {
+  const p = getPatient(4)!;
+  const b = buildDays(p, getTracker(p));
+  expect(b.plan).toBeNull();
+  expect(b.baseline).not.toBeNull();
+  expect(Object.values(b.days).some((d) => d.best && d.feel && d.symptoms)).toBe(true);
+});
+
+test("glucose meter and pulse oximeter readings land on days, but not as blows", () => {
+  for (const i of [7, 10]) {
+    const p = getPatient(i)!;
+    const b = buildDays(p, getTracker(p));
+    const days = Object.values(b.days);
+    expect(days.reduce((t, d) => t + d.readings.length, 0)).toBe(p.medicalDevices[0].baselineReadings.length);
+    expect(days.every((d) => d.blows.length === 0 && d.best === null)).toBe(true);
+    expect(b.personalBest).toEqual({ fev1: 0, pef: 0 });
+  }
+});

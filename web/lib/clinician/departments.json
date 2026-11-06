@@ -1,0 +1,14 @@
+[
+  { "id": "pcp", "label": "Primary care", "conditions": ["*"] },
+  { "id": "pulm", "label": "Pulmonology", "conditions": ["asthma", "cystic fibrosis", "copd", "bronchiectasis", "bronchopulmonary dysplasia"] },
+  { "id": "endo", "label": "Endocrinology", "conditions": ["diabetes", "thyroid", "growth hormone", "adrenal"] },
+  { "id": "cardio", "label": "Cardiology", "conditions": ["heart", "cardiac", "hypertension", "arrhythmia"] },
+  { "id": "neuro", "label": "Neurology", "conditions": ["headache", "migraine", "epilepsy", "seizure", "cerebral palsy"] },
+  { "id": "gi", "label": "Gastroenterology", "conditions": ["colitis", "crohn", "inflammatory bowel", "celiac"] },
+  { "id": "heme", "label": "Hematology", "conditions": ["sickle cell", "hemophilia", "anemia", "thalassemia"] },
+  { "id": "onc", "label": "Oncology", "conditions": ["cancer", "leukemia", "lymphoma", "tumor"] },
+  { "id": "rheum", "label": "Rheumatology", "conditions": ["arthritis", "lupus"] },
+  { "id": "nephro", "label": "Nephrology", "conditions": ["kidney", "renal", "nephrotic"] },
+  { "id": "allergy", "label": "Allergy & immunology", "conditions": ["allergy", "eczema", "immunodeficiency"] },
+  { "id": "psych", "label": "Psychiatry", "conditions": ["anxiety", "depression", "adhd"] }
+]

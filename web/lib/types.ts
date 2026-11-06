@@ -1,4 +1,4 @@
-// Raw document shapes, as in data/synthetic_db.json (field meanings: data/FIELDS.md).
+// Raw document shapes, as in data/synthetic*_db.json (field meanings: data/FIELDS.md).
 
 export interface MedicationAdministration { id: string; time: string; name: string; value: number }
 
@@ -38,18 +38,29 @@ export interface FvcPlusResults {
   unlabeled1: unknown; unlabeled2: unknown;
 }
 
-export interface Blow {
+interface ReadingBase {
   date: string; // ISO UTC
   accepted: boolean;
   qualityReport: { quality: string; qualityIndications: { message: string }[] };
-  fvcPlusResults: FvcPlusResults;
 }
+
+/** Spirometer (asthma, cystic fibrosis). */
+export interface Blow extends ReadingBase { fvcPlusResults: FvcPlusResults }
+/** Glucose meter (type 1 diabetes); glucose is null when the strip failed. */
+export interface GlucoseReading extends ReadingBase {
+  glucoseResults: { glucose: number | null; unit: "mg/dL"; mealContext: string };
+}
+/** Pulse oximeter (congenital heart disease). */
+export interface OximetryReading extends ReadingBase {
+  oximetryResults: { spo2: number; pulse: number; perfusionIndex: number };
+}
+export type Reading = Blow | GlucoseReading | OximetryReading;
 
 export interface MedicalDevice {
   name: string;
   serialNumber: string;
   baselineReadingDate: string; // YYYY-MM-DD
-  baselineReadings: Blow[];
+  baselineReadings: Reading[];
 }
 
 export interface PatientDoc {
@@ -57,8 +68,8 @@ export interface PatientDoc {
   dailyLogs: DailyLog[];
   medications: Medication[];
   reminders: unknown[];
-  medicalDevices: MedicalDevice[];
-  asthmaTreatmentPlan: { status: "Green" | "Yellow" | "Red"; expiration: string | null; retestTime: string | null };
+  medicalDevices: MedicalDevice[]; // one home device per patient
+  asthmaTreatmentPlan: { status: "Green" | "Yellow" | "Red"; expiration: string | null; retestTime: string | null } | null;
   earnedMedicationBadges: unknown[];
   earnedTrackerBadges: unknown[];
 }
@@ -78,4 +89,4 @@ export type ShowAs = "raw" | "predicted" | "best" | "baseline";
 export type Period = 7 | 30 | 90;
 export interface View { patient: number; period: Period; metric: Metric; showAs: ShowAs }
 
-export interface PatientListItem { index: number; shortId: string; zone: string }
+export interface PatientListItem { index: number; shortId: string; condition: string; zone: string | null }
