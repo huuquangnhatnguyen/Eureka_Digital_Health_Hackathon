@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { devicesData } from "@/lib/clinician/devices";
 import DbTable from "./DbTable";
 import type { Any } from "./view";
@@ -76,19 +76,46 @@ function Device({ d }: { d: Any }) {
   );
 }
 
-/** Daily trend, ported from the original spiroTrend(); one or two series on one axis, gaps break the line. */
+/** Daily trend, ported from the original spiroTrend(); the clinician picks which measures share the one axis, gaps break the line. */
 function Trend({ t }: { t: Any }) {
-  const vals: number[] = t.points.flatMap((p: Any) => t.series.map((s: Any) => p[s.key])).filter(Number.isFinite);
-  if (!vals.length) return <p className="empty">No accepted readings to plot in selected dates.</p>;
-  // zero-based like the original for volumes and glucose; SpO2 sits in a narrow band, so it gets a padded min–max axis
-  const lo = t.zero ? 0 : Math.floor(Math.min(...vals) - 2), hi = t.zero ? Math.max(1, Math.ceil(Math.max(...vals))) : Math.min(100, Math.ceil(Math.max(...vals) + 1));
+  const [shown, setShown] = useState<string[]>(() => t.series.filter((s: Any) => s.on).map((s: Any) => s.key));
+  const series = t.series.filter((s: Any) => shown.includes(s.key));
+  const toggle = (key: string, on: boolean) => setShown(on ? [...shown, key] : shown.filter((k) => k !== key));
+  const vals: number[] = t.points.flatMap((p: Any) => series.map((s: Any) => p[s.key])).filter(Number.isFinite);
+  const head = (
+    <div className="spiro-header">
+      <h3>{t.title} <small className="muted">{[...new Set(series.map((s: Any) => s.unit))].join(" · ")}</small></h3>
+      <details className="overview-add">
+        <summary>Measures · {series.length}/{t.series.length}</summary>
+        <div className="overview-picker">
+          <strong>Show on chart</strong>
+          {t.series.map((s: Any) => (
+            <label key={s.key} className="chart-pick">
+              <input type="checkbox" checked={shown.includes(s.key)} onChange={(e) => toggle(s.key, e.target.checked)} />
+              <svg width={28} height={8} aria-hidden="true"><line x1={0} x2={28} y1={4} y2={4} stroke={s.color} strokeWidth={2.5} strokeDasharray={s.dash || undefined} /></svg>
+              {s.label} <span className="muted">{s.unit}</span>
+            </label>
+          ))}
+        </div>
+      </details>
+    </div>
+  );
+  if (!series.length) return <figure className="spiro-trend">{head}<p className="empty">Pick at least one measure to plot.</p></figure>;
+  if (!vals.length) return <figure className="spiro-trend">{head}<p className="empty">No accepted readings to plot in selected dates.</p></figure>;
+  // zero-based like the original for volumes and glucose; oximetry sits in a narrow band, so it gets a padded min–max axis (capped at 100 when everything is %)
+  const pad = Math.ceil(Math.max(...vals) + 1), cap = series.every((s: Any) => s.unit === "%") ? Math.min(100, pad) : pad;
+  const lo = t.zero ? 0 : Math.floor(Math.min(...vals) - 2), hi = t.zero ? Math.max(1, Math.ceil(Math.max(...vals))) : cap;
   const t0 = Date.parse(t.points[0].day), span = Date.parse(t.points.at(-1).day) - t0;
   const x = (p: Any) => (span ? 50 + ((Date.parse(p.day) - t0) / span) * 690 : 395), y = (v: number) => 175 - ((v - lo) / (hi - lo || 1)) * 145;
   const grid = [lo, (lo + hi) / 2, hi];
   return (
     <figure className="spiro-trend">
-      <h3>{t.title} <small className="muted">{t.unit}</small></h3>
-      <div className="spiro-legend">{t.series.map((s: Any) => <span key={s.key}>{s.legend}</span>)}</div>
+      {head}
+      <div className="spiro-legend">{series.map((s: Any) => (
+        <span key={s.key} style={{ color: s.color }}>
+          <svg width={24} height={8} aria-hidden="true"><line x1={0} x2={24} y1={4} y2={4} stroke={s.color} strokeWidth={2.5} strokeDasharray={s.dash || undefined} /></svg> {s.label}
+        </span>
+      ))}</div>
       <svg viewBox="0 0 790 210" role="img" aria-label={`${t.title}; exact readings in the table below`}>
         {grid.map((v) => (
           <g key={v}>
@@ -96,7 +123,7 @@ function Trend({ t }: { t: Any }) {
             <text x={38} y={y(v) + 4} textAnchor="end" fill="#526474" fontSize={12}>{v.toFixed(t.decimals === 0 ? 0 : 1)}</text>
           </g>
         ))}
-        {t.series.map((s: Any) => {
+        {series.map((s: Any) => {
           let path = "", connected = false;
           for (const p of t.points) {
             if (!Number.isFinite(p[s.key])) { connected = false; continue; }
@@ -107,7 +134,7 @@ function Trend({ t }: { t: Any }) {
             <g key={s.key}>
               <path d={path} fill="none" stroke={s.color} strokeWidth={2.5} strokeDasharray={s.dash || undefined} />
               {t.points.filter((p: Any) => Number.isFinite(p[s.key])).map((p: Any) => (
-                <circle key={p.day} cx={x(p)} cy={y(p[s.key])} r={3} fill={s.color}><title>{`${p.day} · ${s.label} ${p[s.key].toFixed(t.decimals)} ${t.unit}`}</title></circle>
+                <circle key={p.day} cx={x(p)} cy={y(p[s.key])} r={3} fill={s.color}><title>{`${p.day} · ${s.label} ${p[s.key].toFixed(s.decimals ?? t.decimals)} ${s.unit}`}</title></circle>
               ))}
             </g>
           );
