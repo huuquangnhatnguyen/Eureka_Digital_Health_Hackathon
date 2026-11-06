@@ -1,8 +1,8 @@
 // shortcut: ported near-verbatim (untyped JS) from the HTML's card-based "At a glance" (secGlance override, baselineWidget, reviewPlot).
 // Builds plain card objects; app/clinician/Review.tsx draws them. The original was asthma/spirometry-only; here every
 // condition gets the same cards, and the device card follows the patient's device (spirometer, glucose meter, pulse oximeter).
-import { addDays, eachDay, fmtDay, fmtRange, median, plural, splitCamel, tally } from "./model";
-import { classify, RANGES, unusualTest } from "./ranges";
+import { addDays, eachDay, fmtDay, fmtRange, mean, median, plural, splitCamel, tally } from "./model";
+import { classify, rangeFor } from "./ranges";
 
 /* ---------------- raw spirometer readings (also used by the Devices tab) ---------------- */
 export function spiroAccepted(r) { return r.accepted === true && (!r.qualityReport?.quality || r.qualityReport.quality === "Acceptable"); }
@@ -97,7 +97,7 @@ function baselineObservations(groups, d) {
   });
 }
 /** A device-field card from the raw baseline readings. kind = the device the card reads. */
-function baselineCard(id, raw, A, bins, kind) {
+function baselineCard(id, raw, A, bins, kind, saved) {
   const d = { ...baselineFields[id], kind }, groups = baselineGroupsOf(raw, A, kind), readings = groups.flatMap(s => s.blows), [one, many] = NOUN[kind];
   const source = { confidence: d.confidence, code: `medicalDevices[].baselineReadings[].${id === "accepted" ? "accepted" : RESULTS[kind] + "." + d.field}` };
   if (id === "accepted") {
@@ -114,17 +114,13 @@ function baselineCard(id, raw, A, bins, kind) {
   }
   const dp = d.dp ?? (d.pct ? 1 : 2), observations = baselineObservations(groups, d), valid = observations.filter(o => o.rawValue != null), latest = valid.at(-1);
   const fmt = v => `${v.toFixed(dp)} ${d.unit}`, lim = v => d.pct ? `${v}%` : `${v} ${d.unit}`;
-  const range = RANGES[id], unusual = unusualTest(valid.map(o => o.rawValue)), flagged = v => classify(range, v) || unusual(v);
-  // What a point stands for can hide out-of-range readings in its interval, so each point lists them and marks the extremes.
-  const flagsOf = vs => {
-    const low = vs.filter(v => classify(range, v) === "low").length, high = vs.filter(v => classify(range, v) === "high").length, odd = vs.filter(unusual).length;
-    return [low && `${low} below ${lim(range.lo)}`, high && `${high} above ${lim(range.hi)}`, odd && `${odd} unusual for this patient`].filter(Boolean).join(" · ");
-  };
+  const range = rangeFor(id, saved), vsAll = valid.map(o => o.rawValue);
+  const countOf = (vs, s) => vs.filter(v => classify(range, v) === s).length;
   const points = bins.list.map(b => {
     const obs = observations.filter(o => o.key >= b.start && o.key <= b.end), usable = obs.filter(o => o.rawValue != null), last = usable.at(-1);
     const vs = usable.map(o => o.rawValue), v = d.median ? median(vs) : last?.rawValue ?? null;
-    const marks = vs.length ? [...new Set([Math.min(...vs), Math.max(...vs)])].filter(x => x !== v && flagged(x)).map(x => ({ v: x, status: classify(range, x), odd: unusual(x) })) : [];
-    const flags = { status: v == null ? null : classify(range, v), odd: v != null && unusual(v), marks, flag: flagsOf(vs) };
+    // the point can hide out-of-range readings in its interval, so the values table counts them
+    const flags = { status: v == null ? null : classify(range, v), flag: [countOf(vs, "low") && `${countOf(vs, "low")} below ${lim(range.lo)}`, countOf(vs, "high") && `${countOf(vs, "high")} above ${lim(range.hi)}`].filter(Boolean).join(" · ") };
     if (d.median) {
       // several readings a day: one reading can't stand for the interval, so chart the median
       return { ...b, v, ...flags, detail: vs.length ? `median ${fmt(v)} of ${plural(vs.length, one, many)} (${fmt(Math.min(...vs))} – ${fmt(Math.max(...vs))})` : "No usable value" };
@@ -132,31 +128,27 @@ function baselineCard(id, raw, A, bins, kind) {
     return { ...b, v, ...flags, detail: last ? `${fmt(last.rawValue)} · ${spiroStamp(last.reading)} · ${last.device} · latest of ${usable.length} ${kind === "spirometry" ? "sessions" : many} with a value${obs.at(-1) !== last ? `; later ${kind === "spirometry" ? "session" : one} has no usable value` : ""}` : "No usable value" };
   });
   const lastRaw = readings.slice().sort((a, b) => a.date.localeCompare(b.date)).at(-1);
-  const max = Math.max(d.pct ? 120 : 1, Math.ceil(Math.max(0, ...valid.map(o => o.rawValue)) / (d.pct ? 20 : 1)) * (d.pct ? 20 : 1));
+  const max = Math.max(d.pct ? 120 : 1, Math.ceil(Math.max(0, ...vsAll) / (d.pct ? 20 : 1)) * (d.pct ? 20 : 1));
   const color = d.field.startsWith("fvc") || d.field === "pulse" ? "#287C82" : "#BE3268";
-  const selection = d.median ? "Accepted readings only; strip errors are left out."
-    : d.predicted ? "Predicted values are read from the latest blow, including blows not kept by the app."
-      : kind !== "spirometry" ? "Accepted readings only."
-        : d.basis ? `Each session uses the accepted blow with the largest ${d.basis.toUpperCase()} and its matching ${d.field.includes("Percent") ? "reported percent predicted" : "measured value"}.`
-          : "Recorded ratio from the latest accepted blow in each session; not the ratio of session maximum volumes.";
-  const how = d.median ? "Charts show the median of each interval, since there are several readings a day." : `Charts show the latest ${kind === "spirometry" ? "session" : one} with a value in each interval, never an average.`;
-  const foot = `${selection} ${how}${d.unit === "L/s" ? " L/s follows the supplied mapping (unit confidence 90%)." : ""}`;
   const latestLabel = latest ? `${d.median ? "Latest reading · " : ""}${spiroStamp(latest.reading)} · ${latest.device}` : readings.length ? "No usable value in selected dates" : "No device readings in selected dates";
   const missing = latest && ((observations.at(-1)?.rawValue == null) || d.predicted && !Number.isFinite(lastRaw?.[RESULTS[kind]]?.[d.field]));
-  const status = latest && classify(range, latest.rawValue);
+  const status = latest && classify(range, latest.rawValue), noun = kind === "spirometry" ? ["session", "sessions"] : [one, many];
   const card = {
     title: labelOf(id, kind), value: latest ? fmt(latest.rawValue) : "No data", context: latestLabel + (missing ? " · Newer readings lack a usable value" : ""),
-    flag: status ? (status === "low" ? "Below normal" : "Above normal") : latest && unusual(latest.rawValue) ? "Unusual for this patient" : "",
-    plot: { points, max, unit: d.pct ? "%" : "", decimals: d.pct ? 0 : dp, line: true, color, label: `${d.label} (${d.unit})`, range: range && { lo: range.lo, hi: range.hi } }, source, foot
+    flag: status === "low" ? "Below normal" : status === "high" ? "Above normal" : "",
+    plot: { points, max, unit: d.pct ? "%" : "", decimals: d.pct ? 0 : dp, line: true, color, label: `${d.label} (${d.unit})`, range },
+    average: vsAll.length ? { value: fmt(mean(vsAll)), sub: `Mean of ${plural(vsAll.length, ...noun)} in the selected dates` } : null,
+    source
   };
   if (range) {
-    const vs = valid.map(o => o.rawValue), normal = range.hi == null ? `${lim(range.lo)} or above` : `${range.lo}–${lim(range.hi)}`;
+    const normal = range.lo != null && range.hi != null ? `${range.lo}–${lim(range.hi)}` : range.lo != null ? `${lim(range.lo)} or above` : `${lim(range.hi)} or below`;
+    if (card.average) card.average.sub += ` · ${Math.round((vsAll.length - countOf(vsAll, "low") - countOf(vsAll, "high")) / vsAll.length * 100)}% in range`;
+    card.range = { key: id, unit: d.pct ? "%" : d.unit, value: range, custom: !!saved?.[id], text: normal };
     card.lists = [{ items: [
-      [`Below ${lim(range.lo)}`, vs.filter(v => classify(range, v) === "low").length], [normal, vs.filter(v => !classify(range, v)).length],
-      ...(range.hi != null ? [[`Above ${lim(range.hi)}`, vs.filter(v => classify(range, v) === "high").length]] : []),
-      ["Unusual for this patient", vs.filter(unusual).length]
+      ...(range.lo != null ? [[`Below ${lim(range.lo)}`, countOf(vsAll, "low")]] : []),
+      [normal, vsAll.length - countOf(vsAll, "low") - countOf(vsAll, "high")],
+      ...(range.hi != null ? [[`Above ${lim(range.hi)}`, countOf(vsAll, "high")]] : [])
     ] }];
-    card.foot += ` Counts are ${kind === "spirometry" ? "sessions" : "accepted readings"} in the selected dates. ${range.source} "Unusual" means far from this patient's own readings in these dates.`;
   }
   return card;
 }
@@ -173,7 +165,7 @@ function symptomTally(model, T) {
     Cards follow the order of `selected`; every card carries the id it came from.
     Returns null when no tracker is in focus.
     @returns {any} */
-export function buildReview(model, raw, A, focus, selected) {
+export function buildReview(model, raw, A, focus, selected, ranges = raw.overviewRanges) {
   const CUR = model.visit.slice(0, 4), fmtD = k => fmtDay(k, { year: k.slice(0, 4) !== CUR });
   const trackers = A.trackers.filter(T => focus.includes(T.t));
   if (!trackers.length) return null;
@@ -218,8 +210,8 @@ export function buildReview(model, raw, A, focus, selected) {
       continue;
     }
     if (id === "doses") { cards.push({ id, title: asthma ? "Controller doses logged" : "Scheduled doses logged", value: due ? `${Math.round(taken / due * 100)}%` : "No data", context: `${taken} of ${due} scheduled doses · Patient-reported`, plot: { points: medpoints, max: 100, unit: "%", color: "#287C82", label: "Scheduled doses logged" }, foot: `${meds.map(X => X.L.name).join(", ") || "No scheduled medication recorded"}. ${bucket} percentages count only days with app entries.` }); continue; }
-    if (id === "device") { cards.push({ ...baselineCard(FIXED[kind][0], raw, A, bins, kind), title: FIXED[kind][1], id }); continue; }
-    if (baselineFields[id]) { cards.push({ ...baselineCard(id, raw, A, bins, kind), id }); continue; }
+    if (id === "device") { cards.push({ ...baselineCard(FIXED[kind][0], raw, A, bins, kind, ranges), title: FIXED[kind][1], id }); continue; }
+    if (baselineFields[id]) { cards.push({ ...baselineCard(id, raw, A, bins, kind, ranges), id }); continue; }
     const card = { id, title: labelOf(id, kind), value: "", context: "", foot: "" };
     if (id === "symptoms") Object.assign(card, {
       context: "Number of days each symptom was reported", foot: "A day may include more than one symptom.",

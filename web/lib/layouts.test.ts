@@ -25,7 +25,7 @@ test("file store: a saved layout comes back on that patient only", async () => {
 
 test("PATCH accepts only unique, known card ids, for patients that exist", async () => {
   expect((await patch("5", { overviewCards: [] })).status).toBe(200); // removing every card is allowed
-  for (const bad of [null, {}, { overviewCards: "doses" }, { overviewCards: ["bogus"] }, { overviewCards: ["doses", "doses"] }, { overviewCards: [1] }])
+  for (const bad of [null, {}, { overviewCards: "doses" }, { overviewRanges: { spo2: { lo: 90, hi: 80 } } }, { overviewCards: ["doses"], overviewRanges: { bogus: { lo: 1, hi: 2 } } }, { overviewCards: ["bogus"] }, { overviewCards: ["doses", "doses"] }, { overviewCards: [1] }])
     expect((await patch("5", bad)).status).toBe(400);
   expect((await patch("99", { overviewCards: ["doses"] })).status).toBe(404);
   expect(await cardsOf("5")).toEqual([]);
@@ -47,7 +47,7 @@ test("Redis store: HSET on save, HGET on load, over Upstash's REST API", async (
   expect((await patch("6", { overviewCards: ["doses", "device"] })).status).toBe(200);
   expect(await cardsOf("6")).toEqual(["doses", "device"]);
   const id = getPatient(6)!._id;
-  expect(calls).toEqual([["HGET", "overview-cards", id], ["HSET", "overview-cards", id, '["doses","device"]'], ["HGET", "overview-cards", id]]);
+  expect(calls).toEqual([["HGET", "overview-cards", id], ["HGET", "overview-ranges", id], ["HSET", "overview-cards", id, '["doses","device"]'], ["HGET", "overview-cards", id], ["HGET", "overview-ranges", id]]);
 });
 
 test("Redis down: saving answers 500, loading still serves the patient with default cards", async () => {
@@ -59,4 +59,15 @@ test("Redis down: saving answers 500, loading still serves the patient with defa
   const res = await GET(new Request("http://x") as never, ctx("7"));
   expect(res.status).toBe(200);
   expect((await res.json()).patient.overviewCards).toBeUndefined();
+});
+
+test("ranges are saved per patient next to the layout, and sending one leaves the other alone", async () => {
+  const get = async (id: string) => (await (await GET(new Request("http://x") as never, ctx(id))).json()).patient;
+  expect((await patch("8", { overviewCards: ["device"] })).status).toBe(200);
+  expect((await patch("8", { overviewRanges: { fev1Percent: { lo: 75, hi: null } } })).status).toBe(200);
+  expect(await get("8")).toMatchObject({ overviewCards: ["device"], overviewRanges: { fev1Percent: { lo: 75, hi: null } } });
+  expect((await get("9")).overviewRanges).toBeUndefined();
+  expect(fs.existsSync(path.join(dir, "overview_ranges.json"))).toBe(true);
+  expect((await patch("8", { overviewRanges: {} })).status).toBe(200); // back to the defaults
+  expect((await get("8")).overviewRanges).toEqual({});
 });

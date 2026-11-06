@@ -31,7 +31,7 @@ test("device cards read the matching raw readings", () => {
   const glucose = review(12).cards[2];
   expect(glucose.value).toMatch(/^\d+ mg\/dL$/);
   expect(glucose.source.code).toBe("medicalDevices[].baselineReadings[].glucoseResults.glucose");
-  expect(glucose.lists[0].items.map(([k]: [string]) => k)).toEqual(["Below 70 mg/dL", "70–180 mg/dL", "Above 180 mg/dL", "Unusual for this patient"]);
+  expect(glucose.lists[0].items.map(([k]: [string]) => k)).toEqual(["Below 70 mg/dL", "70–180 mg/dL", "Above 180 mg/dL"]);
   expect(review(17).cards[2].value).toMatch(/^\d+ %$/);
 });
 
@@ -76,9 +76,21 @@ test("bins: daily up to 14 days, weekly up to 91, else ~12 buckets", () => {
 
 test("device cards with a normal range flag readings outside it", () => {
   const fev1 = review(2).cards[2]; // poor adherence, drifts into the yellow zone
-  expect(fev1.plot.range).toEqual({ lo: 80, hi: undefined });
+  expect(fev1.plot.range).toEqual({ lo: 80, hi: null });
+  expect(fev1.foot).toBeUndefined();
   expect(fev1.lists[0].items[0][0]).toBe("Below 80%");
   expect(fev1.lists[0].items[0][1]).toBeGreaterThan(0);
   expect(fev1.plot.points.some((p: { flag: string }) => p.flag.includes("below 80%"))).toBe(true);
   expect(review(1).cards[2].plot.points.every((p: { status: string | null }) => !p.status)).toBe(true); // well controlled
+});
+
+test("a saved range replaces the default on the chart, the counts and the average", () => {
+  const { raw, model, A } = setup(17);
+  const card = buildReview(model, raw, A, model.trackers, DEFAULT_CARDS, { spo2: { lo: 97, hi: null } }).cards[2];
+  expect(card.plot.range).toEqual({ lo: 97, hi: null });
+  expect(card.range).toMatchObject({ key: "spo2", custom: true, text: "97% or above" });
+  expect(card.lists[0].items.map(([k]: [string]) => k)).toEqual(["Below 97%", "97% or above"]);
+  expect(card.average.value).toMatch(/^\d+ %$/);
+  expect(card.average.sub).toMatch(/% in range$/);
+  expect(review(17).cards[2].range.custom).toBe(false);
 });
