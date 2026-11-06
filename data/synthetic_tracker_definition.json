@@ -1,0 +1,39 @@
+{
+  "id": "515c8333-3a04-4486-ba63-376f81227b4f",
+  "name": "Asthma Tracker (synthetic)",
+  "questions": [
+    {
+      "id": "0bf7add1-4532-4ea0-861c-b147b3e09d36",
+      "type": "device",
+      "text": "Please complete your spirometer reading"
+    },
+    {
+      "id": "2382d326-db5b-4140-b3c4-6dce5759a20a",
+      "type": "faceScale",
+      "text": "How are you feeling today?",
+      "options": [
+        "Great",
+        "Okay",
+        "Bad"
+      ]
+    },
+    {
+      "id": "618db1b7-b3e2-4ec4-8dbb-7344e1a8c4e8",
+      "type": "checkbox",
+      "text": "Please select the following symptoms that you are currently experiencing",
+      "options": [
+        "Coughing",
+        "Wheezing",
+        "Tight Chest",
+        "Shortness Of Breath",
+        "Activity limitations",
+        "None of these "
+      ]
+    },
+    {
+      "id": "8b4ed8bf-6746-44a5-b041-37c658ea36e1",
+      "type": "yesNo",
+      "text": "Did you miss school today because of your asthma?"
+    }
+  ]
+}

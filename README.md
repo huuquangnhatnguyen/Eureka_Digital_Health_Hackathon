@@ -83,8 +83,11 @@ TODO
 
 > **TODO:** Link to a live demo, plus setup instructions if we build one.
 
+Clinician dashboard for the sample asthma patient: `dashboard/` (plain HTML/JS, no dependencies).
+
 ```bash
-# TODO: setup / run commands
+node dashboard/serve.js     # then open http://localhost:8080/dashboard/
+node dashboard/check.js     # self-check of the data logic
 ```
 
 ## Tech Stack
