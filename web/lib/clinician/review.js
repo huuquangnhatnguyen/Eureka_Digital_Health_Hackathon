@@ -231,15 +231,3 @@ export function buildReview(model, raw, A, focus, selected) {
   }
   return { cards, ticks, picker, subtitle: `${fmtRange(A.r.start, A.r.end)} · ${bucket.toLowerCase()} chart intervals` };
 }
-
-/** The "Data coverage" line under the overview (spirometry counts sessions, other devices readings). A.trackers must already be limited to the department's trackers. */
-export function coverage(model, raw, A) {
-  const days = eachDay(A.r.start, A.r.end);
-  const checkins = days.filter(k => A.trackers.some(T => T.rows.some(x => x.k === k && x.m))).length;
-  const medicationDays = days.filter(k => { const d = model.days.get(k); return d && Object.values(d.doses || {}).some(ds => ds.length > 0); }).length;
-  const questions = A.trackers.flatMap(T => T.t.questions.filter(q => q.type !== "device").map(q => ({ T, q })));
-  const answered = questions.reduce((n, { T, q }) => n + T.rows.filter(r => r.m && r.m[q.id] != null && r.m[q.id] !== "").length, 0);
-  const kind = (raw.medicalDevices || []).flatMap(d => (d.baselineReadings || []).map(kindOf)).find(Boolean);
-  const device = !kind ? 0 : kind === "spirometry" ? A.spiro?.inR.length || 0 : baselineGroupsOf(raw, A, kind).length;
-  return { n: A.r.n, checkins, medicationDays, answered, totalQuestions: questions.length * A.r.n, device, deviceLabel: kind === "spirometry" ? "Device sessions" : "Device readings" };
-}

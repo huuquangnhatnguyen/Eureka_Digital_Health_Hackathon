@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import { getPatient, getTracker, listPatients } from "@/lib/store";
 import { toViewDoc, toViewTracker } from "./adapt";
 import { analyze, buildModel } from "./model";
-import { buildReview, coverage, reviewBins } from "./review";
+import { buildReview, reviewBins } from "./review";
 
 const setup = (i: number, range = "all") => {
   const raw = getPatient(i)!, model = buildModel(toViewDoc(raw, i), [toViewTracker(getTracker(raw))]);
@@ -55,13 +55,6 @@ test("every applicable optional card builds for every patient and range", () => 
       expect(cards.length).toBe(3 + ids.length - 1); // the fixed device card is listed but not added twice
       for (const c of cards) expect(c.title).toBeTruthy();
     }
-});
-
-test("coverage counts spirometry sessions or device readings", () => {
-  const c = (i: number) => { const { raw, model, A } = setup(i, "28"); return coverage(model, raw, A); };
-  expect(c(2)).toMatchObject({ n: 28, deviceLabel: "Device sessions" });
-  expect(c(8).deviceLabel).toBe("Device readings");
-  expect(c(8).device).toBeGreaterThan(28); // several glucose readings a day
 });
 
 test("bins: daily up to 14 days, weekly up to 91, else ~12 buckets", () => {
