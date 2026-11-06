@@ -25,5 +25,5 @@ test("CSV: one row per day, same column count on every row", () => {
     for (const l of lines) expect(cols(l)).toBe(cols(lines[0]));
   }
   expect(buildCSV(setup(1).model, setup(1).A).split("\n")[0]).toContain("FEV1 (L)");
-  expect(buildCSV(setup(7).model, setup(7).A).split("\n")[0]).not.toContain("FEV1 (L)");
+  expect(buildCSV(setup(11).model, setup(11).A).split("\n")[0]).not.toContain("FEV1 (L)");
 });

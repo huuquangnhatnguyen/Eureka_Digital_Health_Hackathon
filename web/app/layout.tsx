@@ -6,7 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" data-theme="light">
       <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
-        <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "12px 24px", borderBottom: "1px solid #ddd" }}>
+        <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "6px 24px", borderBottom: "1px solid #ddd" }}>
           <strong>Eureka</strong>
           <ViewSwitch />
         </header>

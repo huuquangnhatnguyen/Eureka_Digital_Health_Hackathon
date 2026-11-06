@@ -107,6 +107,10 @@ export default function ClinicianView() {
       <header className="bar" id="bar">
         <div className="bar-row">
           <p className="brand"><span className="brand-n">SMART@Home</span><span className="brand-s">Clinician view</span><span className="proto">PROTOTYPE</span></p>
+          <nav className="care-view-tabs" aria-label="Clinical view">
+            <button type="button" aria-pressed={view === "patient"} onClick={() => setView("patient")}>Patient</button>
+            <button type="button" aria-pressed={view === "team"} onClick={() => setView("team")}>Care team <span>{patients.length}</span></button>
+          </nav>
           <div className="bar-act">
             <button type="button" className="btn" id="btn-visit" aria-pressed={visit} disabled={!ready} onClick={() => { setVisit(!visit); window.scrollTo({ top: 0 }); }}>{visit ? "Clinician view" : "Visit mode"}</button>
             <button type="button" className="btn btn-ghost" id="btn-export" disabled={!ready} onClick={copyCSV} title="Copies one row per day for the period shown">Copy CSV</button>
@@ -134,10 +138,6 @@ export default function ClinicianView() {
       </header>
 
       <div className="main" id="main">
-        <nav className="care-view-tabs" aria-label="Clinical view">
-          <button type="button" aria-pressed={view === "patient"} onClick={() => setView("patient")}>Patient</button>
-          <button type="button" aria-pressed={view === "team"} onClick={() => setView("team")}>Care team <span>{patients.length}</span></button>
-        </nav>
         {error ? (
           <div className="notice notice-warn" role="alert"><p><b>Couldn&apos;t load patient data.</b> {error}</p></div>
         ) : view === "team" ? (
@@ -148,11 +148,10 @@ export default function ClinicianView() {
           <Visit model={model} A={A} focus={focus} onExit={() => { setVisit(false); window.scrollTo({ top: 0 }); }} />
         ) : (
           <>
-            <PatientHeader model={model} />
+            <PatientHeader model={model} nav={<WorkspaceNav tab={tab} onChange={setTab} />} />
             <Notices model={model} A={A} range={range} onShowAll={() => setRange("all")} />
-            <WorkspaceNav tab={tab} onChange={setTab} />
             <div id="workspace-content" role="tabpanel" aria-labelledby={`tab-${tab}`}>
-              {tab === "overview" ? <Overview key={deptId} model={model} raw={detail.patient} A={viewA} focus={focus} deptId={deptId} />
+              {tab === "overview" ? <Overview key={detail.index} model={model} raw={detail.patient} A={viewA} focus={focus} index={detail.index} />
                 : tab === "vitals" ? <Vitals model={model} raw={detail.patient} A={viewA} />
                 : tab === "medications" ? <Medications model={model} raw={detail.patient} A={A} />
                 : <Devices raw={detail.patient} A={A} />}
@@ -188,7 +187,8 @@ function DateControls({ start, end, onApply }: { start: string; end: string; onA
   );
 }
 
-function PatientHeader({ model }: { model: Any }) {
+/** Patient name, then the workspace tabs (nav) on the same line, then the data dates. */
+function PatientHeader({ model, nav }: { model: Any; nav: React.ReactNode }) {
   const v: string = model.visit, le = model.lastEntry, la = model.lastActivity, doc = model.doc;
   // The original reads a plan title from the record and falls back to "Treatment plan"; our records have none, so the condition names it.
   const plan = [doc.treatmentPlan?.title, doc.treatmentPlan?.name, doc.asthmaTreatmentPlan?.title, doc.asthmaTreatmentPlan?.name, doc.syntheticProfile?.plan]
@@ -199,6 +199,7 @@ function PatientHeader({ model }: { model: Any }) {
   return (
     <section className="pt" id="sec-patient" aria-label="Patient">
       <div className="pt-id"><h1>{doc.profile.displayName}</h1><span className="pt-plan-title">{plan}</span></div>
+      {nav}
       <dl className="pt-facts">
         <div><dt>Data through</dt><dd>{fmtD(v, v, { dow: true, year: true })}</dd></div>
         <div>

@@ -1,21 +1,33 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { buildReview } from "@/lib/clinician/review";
+import { useMemo, useRef, useState } from "react";
+import { buildReview, DEFAULT_CARDS } from "@/lib/clinician/review";
 import type { Any } from "./view";
 import ReviewOverview from "./Review";
 
-/** Card overview for every condition. Mount with key={deptId}: added cards are per department.
-    (The latest design dropped the data-coverage and action-plan lines that used to follow the cards.) */
-export default function Overview({ model, raw, A, focus, deptId }: { model: Any; raw: Any; A: Any; focus: Any[]; deptId: string }) {
-  const storeKey = `shcv-overview-cards-${deptId}`;
-  const [selected, setSelected] = useState<string[]>(() => {
-    try { return JSON.parse(localStorage.getItem(storeKey) ?? "[]"); } catch { return []; } // unreadable or blocked storage: start empty
-  });
+// Last saved list per patient this session: the fetched record is older once the clinician edits, and the
+// tab remounts on every visit to Overview.
+const latest = new Map<string, string[]>();
+
+/** Card overview for every condition. Mount with key={index}: the card list (order included) is saved per patient
+    through PATCH /api/patients/[index]. */
+export default function Overview({ model, raw, A, focus, index }: { model: Any; raw: Any; A: Any; focus: Any[]; index: number }) {
+  const [selected, setSelected] = useState<string[]>(() => latest.get(raw._id) ?? raw.overviewCards ?? DEFAULT_CARDS);
+  const [saveFailed, setSaveFailed] = useState(false);
+  const saving = useRef(Promise.resolve()); // one request at a time, so an older list never lands after a newer one
   const review = useMemo(() => buildReview(model, raw, A, focus, selected), [model, raw, A, focus, selected]);
   const save = (next: string[]) => {
     setSelected(next);
-    try { localStorage.setItem(storeKey, JSON.stringify(next)); } catch { /* storage unavailable: choice lasts until reload */ }
+    latest.set(raw._id, next);
+    saving.current = saving.current
+      .then(() => fetch(`/api/patients/${index}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ overviewCards: next }) }))
+      .then((r) => setSaveFailed(!r.ok), () => setSaveFailed(true));
   };
-  return review ? <ReviewOverview review={review} selected={selected} onChange={save} /> : <section className="sec"><p className="empty">No trackers to summarize.</p></section>;
+  if (!review) return <section className="sec"><p className="empty">No trackers to summarize.</p></section>;
+  return (
+    <>
+      {saveFailed && <div className="notice notice-warn" role="alert"><p><b>Couldn&apos;t save this layout.</b> It stays on this screen until you reload; your next change will try again.</p></div>}
+      <ReviewOverview review={review} selected={selected} onChange={save} />
+    </>
+  );
 }

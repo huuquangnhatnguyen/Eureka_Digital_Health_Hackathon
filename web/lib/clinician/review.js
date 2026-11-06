@@ -2,6 +2,7 @@
 // Builds plain card objects; app/clinician/Review.tsx draws them. The original was asthma/spirometry-only; here every
 // condition gets the same cards, and the device card follows the patient's device (spirometer, glucose meter, pulse oximeter).
 import { addDays, eachDay, fmtDay, fmtRange, median, plural, splitCamel, tally } from "./model";
+import { classify, RANGES, unusualTest } from "./ranges";
 
 /* ---------------- raw spirometer readings (also used by the Devices tab) ---------------- */
 export function spiroAccepted(r) { return r.accepted === true && (!r.qualityReport?.quality || r.qualityReport.quality === "Acceptable"); }
@@ -51,13 +52,21 @@ const BASELINE_GROUPS = ["Measured values", "Percent predicted", "Predicted valu
 /** The device card every patient with that device sees, and its title. */
 const FIXED = { spirometry: ["fev1Percent", "Lung function · FEV1"], glucose: ["glucose", "Blood glucose"], oximetry: ["spo2", "Oxygen saturation · SpO2"] };
 const NOUN = { spirometry: ["blow", "blows"], glucose: ["reading", "readings"], oximetry: ["reading", "readings"] };
+/** Cards a patient starts with, in order; "device" is this patient's main device reading (FIXED). */
+export const DEFAULT_CARDS = ["symptomDays", "doses", "device"];
+/** Slots on the overview: 3 × 2 fits one screen on a laptop. */
+export const MAX_CARDS = 6;
+const DEFAULTS = { symptomDays: "Days with symptoms", doses: "Scheduled doses logged" };
 const SUMMARY = { symptoms: "Symptom breakdown", feeling: "Latest reported feeling", rescue: "As-needed medication use", quality: "Reading quality", coverage: "Reporting coverage" };
+/** Every card id the overview knows; the save API accepts only these. */
+export const CARD_IDS = new Set([...DEFAULT_CARDS, ...Object.keys(SUMMARY), ...Object.keys(baselineFields)]);
 
 /** Card labels for this patient's device (the same id reads "blows" on a spirometer, "readings" elsewhere). */
 function labelOf(id, kind) {
   if (id === "accepted") return kind === "spirometry" ? "Blows kept by the app" : "Readings kept by the app";
   if (id === "quality") return kind === "spirometry" ? "Spirometry quality" : "Reading quality";
-  return SUMMARY[id] || baselineFields[id]?.label;
+  if (id === "device") return FIXED[kind]?.[1];
+  return DEFAULTS[id] || SUMMARY[id] || baselineFields[id]?.label;
 }
 
 /* ---------------- chart intervals ---------------- */
@@ -104,15 +113,23 @@ function baselineCard(id, raw, A, bins, kind) {
     };
   }
   const dp = d.dp ?? (d.pct ? 1 : 2), observations = baselineObservations(groups, d), valid = observations.filter(o => o.rawValue != null), latest = valid.at(-1);
-  const fmt = v => `${v.toFixed(dp)} ${d.unit}`;
+  const fmt = v => `${v.toFixed(dp)} ${d.unit}`, lim = v => d.pct ? `${v}%` : `${v} ${d.unit}`;
+  const range = RANGES[id], unusual = unusualTest(valid.map(o => o.rawValue)), flagged = v => classify(range, v) || unusual(v);
+  // What a point stands for can hide out-of-range readings in its interval, so each point lists them and marks the extremes.
+  const flagsOf = vs => {
+    const low = vs.filter(v => classify(range, v) === "low").length, high = vs.filter(v => classify(range, v) === "high").length, odd = vs.filter(unusual).length;
+    return [low && `${low} below ${lim(range.lo)}`, high && `${high} above ${lim(range.hi)}`, odd && `${odd} unusual for this patient`].filter(Boolean).join(" · ");
+  };
   const points = bins.list.map(b => {
     const obs = observations.filter(o => o.key >= b.start && o.key <= b.end), usable = obs.filter(o => o.rawValue != null), last = usable.at(-1);
+    const vs = usable.map(o => o.rawValue), v = d.median ? median(vs) : last?.rawValue ?? null;
+    const marks = vs.length ? [...new Set([Math.min(...vs), Math.max(...vs)])].filter(x => x !== v && flagged(x)).map(x => ({ v: x, status: classify(range, x), odd: unusual(x) })) : [];
+    const flags = { status: v == null ? null : classify(range, v), odd: v != null && unusual(v), marks, flag: flagsOf(vs) };
     if (d.median) {
       // several readings a day: one reading can't stand for the interval, so chart the median
-      const vs = usable.map(o => o.rawValue);
-      return { ...b, v: median(vs), detail: vs.length ? `median ${fmt(median(vs))} of ${plural(vs.length, one, many)} (${fmt(Math.min(...vs))} – ${fmt(Math.max(...vs))})` : "No usable value" };
+      return { ...b, v, ...flags, detail: vs.length ? `median ${fmt(v)} of ${plural(vs.length, one, many)} (${fmt(Math.min(...vs))} – ${fmt(Math.max(...vs))})` : "No usable value" };
     }
-    return { ...b, v: last?.rawValue ?? null, detail: last ? `${fmt(last.rawValue)} · ${spiroStamp(last.reading)} · ${last.device} · latest of ${usable.length} ${kind === "spirometry" ? "sessions" : many} with a value${obs.at(-1) !== last ? `; later ${kind === "spirometry" ? "session" : one} has no usable value` : ""}` : "No usable value" };
+    return { ...b, v, ...flags, detail: last ? `${fmt(last.rawValue)} · ${spiroStamp(last.reading)} · ${last.device} · latest of ${usable.length} ${kind === "spirometry" ? "sessions" : many} with a value${obs.at(-1) !== last ? `; later ${kind === "spirometry" ? "session" : one} has no usable value` : ""}` : "No usable value" };
   });
   const lastRaw = readings.slice().sort((a, b) => a.date.localeCompare(b.date)).at(-1);
   const max = Math.max(d.pct ? 120 : 1, Math.ceil(Math.max(0, ...valid.map(o => o.rawValue)) / (d.pct ? 20 : 1)) * (d.pct ? 20 : 1));
@@ -126,15 +143,20 @@ function baselineCard(id, raw, A, bins, kind) {
   const foot = `${selection} ${how}${d.unit === "L/s" ? " L/s follows the supplied mapping (unit confidence 90%)." : ""}`;
   const latestLabel = latest ? `${d.median ? "Latest reading · " : ""}${spiroStamp(latest.reading)} · ${latest.device}` : readings.length ? "No usable value in selected dates" : "No device readings in selected dates";
   const missing = latest && ((observations.at(-1)?.rawValue == null) || d.predicted && !Number.isFinite(lastRaw?.[RESULTS[kind]]?.[d.field]));
+  const status = latest && classify(range, latest.rawValue);
   const card = {
     title: labelOf(id, kind), value: latest ? fmt(latest.rawValue) : "No data", context: latestLabel + (missing ? " · Newer readings lack a usable value" : ""),
-    plot: { points, max, unit: d.pct ? "%" : "", decimals: d.pct ? 0 : dp, line: true, color, label: `${d.label} (${d.unit})` }, source, foot
+    flag: status ? (status === "low" ? "Below normal" : "Above normal") : latest && unusual(latest.rawValue) ? "Unusual for this patient" : "",
+    plot: { points, max, unit: d.pct ? "%" : "", decimals: d.pct ? 0 : dp, line: true, color, label: `${d.label} (${d.unit})`, range: range && { lo: range.lo, hi: range.hi } }, source, foot
   };
-  if (id === "glucose") {
-    // 70–180 mg/dL is the usual target range for type 1 diabetes (ADA)
-    const vs = valid.map(o => o.rawValue);
-    card.lists = [{ items: [["Below 70 mg/dL", vs.filter(v => v < 70).length], ["70–180 mg/dL", vs.filter(v => v >= 70 && v <= 180).length], ["Above 180 mg/dL", vs.filter(v => v > 180).length]] }];
-    card.foot += " Counts are accepted readings in the selected dates; 70–180 mg/dL is the usual target range.";
+  if (range) {
+    const vs = valid.map(o => o.rawValue), normal = range.hi == null ? `${lim(range.lo)} or above` : `${range.lo}–${lim(range.hi)}`;
+    card.lists = [{ items: [
+      [`Below ${lim(range.lo)}`, vs.filter(v => classify(range, v) === "low").length], [normal, vs.filter(v => !classify(range, v)).length],
+      ...(range.hi != null ? [[`Above ${lim(range.hi)}`, vs.filter(v => classify(range, v) === "high").length]] : []),
+      ["Unusual for this patient", vs.filter(unusual).length]
+    ] }];
+    card.foot += ` Counts are ${kind === "spirometry" ? "sessions" : "accepted readings"} in the selected dates. ${range.source} "Unusual" means far from this patient's own readings in these dates.`;
   }
   return card;
 }
@@ -148,6 +170,7 @@ function symptomTally(model, T) {
 
 /** Cards for the trackers in focus, for any condition. raw = the API patient record; selected = card ids the clinician added
     (ids that don't apply to this patient's device are skipped, so one saved list works across patients).
+    Cards follow the order of `selected`; every card carries the id it came from.
     Returns null when no tracker is in focus.
     @returns {any} */
 export function buildReview(model, raw, A, focus, selected) {
@@ -159,17 +182,6 @@ export function buildReview(model, raw, A, focus, selected) {
   const bins = reviewBins(A.r), bucket = bins.size === 1 ? "Daily" : bins.size === 7 ? "Weekly" : `${bins.size}-day`, cards = [];
   const ticks = [...new Set([0, Math.floor((bins.list.length - 1) / 2), bins.list.length - 1])].map(i => [i, fmtD(bins.list[i].start)]);
 
-  for (const T of trackers) {
-    const R = model.roles.get(T.t.id) || {};
-    if (!R.symptoms) continue;
-    const days = T.rows.filter(r => r.m && Array.isArray(r.m[R.symptoms.id]));
-    const symptomatic = days.filter(r => r.m[R.symptoms.id].length);
-    const points = bins.list.map(b => {
-      const ds = days.filter(r => r.k >= b.start && r.k <= b.end), count = ds.filter(r => r.m[R.symptoms.id].length).length;
-      return { ...b, v: ds.length ? count : null, detail: ds.length ? `${count} days with symptoms / ${ds.length} days answered (${b.keys.length - ds.length} days without an answer)` : "No symptom answers" };
-    });
-    cards.push({ title: "Days with symptoms", value: days.length ? `${symptomatic.length} of ${days.length} days` : "No answers", context: `${T.t.name} · Days with a symptom answer`, plot: { points, max: bins.size, label: "Days with symptoms" }, foot: `${bucket} symptom-day counts. — means no answers; missing days are not symptom-free days.` });
-  }
   const ids = new Set(trackers.map(T => T.t.id)), meds = A.lines.filter(X => X.kind === "daily" && ids.has(X.L.trackerId));
   const asthma = trackers.some(T => T.t.category === "respiratory"); // "controller" is asthma wording
   const taken = meds.reduce((s, X) => s + X.takenActive, 0), due = meds.reduce((s, X) => s + X.dueActive, 0);
@@ -178,15 +190,12 @@ export function buildReview(model, raw, A, focus, selected) {
     for (const X of meds) for (const day of X.perDay.filter(day => day.act && day.k >= b.start && day.k <= b.end)) { t += day.filled.filter(Boolean).length; d += X.L.schedule.perDay; }
     return { ...b, v: d ? t / d * 100 : null, detail: d ? `${t} of ${d} scheduled doses logged (${Math.round(t / d * 100)}%)` : "No scheduled doses on days with entries" };
   });
-  cards.push({ title: asthma ? "Controller doses logged" : "Scheduled doses logged", value: due ? `${Math.round(taken / due * 100)}%` : "No data", context: `${taken} of ${due} scheduled doses · Patient-reported`, plot: { points: medpoints, max: 100, unit: "%", color: "#287C82", label: "Scheduled doses logged" }, foot: `${meds.map(X => X.L.name).join(", ") || "No scheduled medication recorded"}. ${bucket} percentages count only days with app entries.` });
-  if (kind) cards.push({ ...baselineCard(FIXED[kind][0], raw, A, bins, kind), title: FIXED[kind][1] });
-
   // Picker: summary cards, then this device's fields by group.
-  const applies = id => id in SUMMARY ? (id !== "quality" || !!kind) : !!kind && (baselineFields[id]?.kind === kind || baselineFields[id]?.kind === "*");
+  const applies = id => id in DEFAULTS || (id === "device" ? !!kind : id in SUMMARY ? (id !== "quality" || !!kind) : !!kind && (baselineFields[id]?.kind === kind || baselineFields[id]?.kind === "*"));
   const choice = id => { const f = baselineFields[id]; return [id, labelOf(id, kind), f?.unit && !f.pct && !f.label.includes("%") ? ` (${f.unit})` : ""]; };
   const picker = {
-    fixed: kind ? FIXED[kind][0] : null,
-    summary: Object.keys(SUMMARY).filter(applies).map(choice),
+    fixed: kind && selected.includes("device") ? FIXED[kind][0] : null, // already on screen as the device card
+    summary: [...DEFAULT_CARDS, ...Object.keys(SUMMARY)].filter(applies).map(choice),
     groups: BASELINE_GROUPS.map(g => [g, Object.keys(baselineFields).filter(id => applies(id) && baselineFields[id].group === g).map(choice)]).filter(([, l]) => l.length),
     note: kind === "spirometry" ? "Device fields below use mappings rated ≥90%." : kind ? "Device fields below read the paired device's readings." : ""
   };
@@ -194,6 +203,22 @@ export function buildReview(model, raw, A, focus, selected) {
   const sessions = A.spiro?.inR || [];
   for (const id of selected) {
     if (!applies(id) || id === picker.fixed) continue;
+    if (id === "symptomDays") {
+      for (const T of trackers) {
+        const R = model.roles.get(T.t.id) || {};
+        if (!R.symptoms) continue;
+        const days = T.rows.filter(r => r.m && Array.isArray(r.m[R.symptoms.id]));
+        const symptomatic = days.filter(r => r.m[R.symptoms.id].length);
+        const points = bins.list.map(b => {
+          const ds = days.filter(r => r.k >= b.start && r.k <= b.end), count = ds.filter(r => r.m[R.symptoms.id].length).length;
+          return { ...b, v: ds.length ? count : null, detail: ds.length ? `${count} days with symptoms / ${ds.length} days answered (${b.keys.length - ds.length} days without an answer)` : "No symptom answers" };
+        });
+        cards.push({ id, title: "Days with symptoms", value: days.length ? `${symptomatic.length} of ${days.length} days` : "No answers", context: `${T.t.name} · Days with a symptom answer`, plot: { points, max: bins.size, label: "Days with symptoms" }, foot: `${bucket} symptom-day counts. — means no answers; missing days are not symptom-free days.` });
+      }
+      continue;
+    }
+    if (id === "doses") { cards.push({ id, title: asthma ? "Controller doses logged" : "Scheduled doses logged", value: due ? `${Math.round(taken / due * 100)}%` : "No data", context: `${taken} of ${due} scheduled doses · Patient-reported`, plot: { points: medpoints, max: 100, unit: "%", color: "#287C82", label: "Scheduled doses logged" }, foot: `${meds.map(X => X.L.name).join(", ") || "No scheduled medication recorded"}. ${bucket} percentages count only days with app entries.` }); continue; }
+    if (id === "device") { cards.push({ ...baselineCard(FIXED[kind][0], raw, A, bins, kind), title: FIXED[kind][1], id }); continue; }
     if (baselineFields[id]) { cards.push({ ...baselineCard(id, raw, A, bins, kind), id }); continue; }
     const card = { id, title: labelOf(id, kind), value: "", context: "", foot: "" };
     if (id === "symptoms") Object.assign(card, {

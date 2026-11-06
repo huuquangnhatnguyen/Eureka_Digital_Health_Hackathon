@@ -5,7 +5,7 @@ Made-up data in the shape the hackathon brief describes in section 3. It contain
 For what every column means, with confidence and evidence for each guessed name, see [FIELDS.md](FIELDS.md).
 
 - `synthetic_db.json` and `synthetic_tracker_definition.json`: **fully made-up test data, not based on any record**. Use these for building and demoing the clinician view.
-  - **Patients:** 3 asthma patients over 90 days (2026-08-11 to 2026-11-08), with the same structure as `sample_db.json`:
+  - **Patients:** 5 asthma patients over 90 days (3 tidy profiles, then 2 messier ones described below) (2026-08-11 to 2026-11-08), with the same structure as `sample_db.json`:
     - adherent and well controlled
     - poor adherence, with lung function drifting down to the Yellow zone
     - adherent, with one flare and recovery
@@ -13,7 +13,7 @@ For what every column means, with confidence and evidence for each guessed name,
   - **Tracker questions:** mood, symptoms, spirometry and missed school. The spirometry answer is filled in.
   - **Spirometry:** mostly good-quality blows. Each session has 3 accepted blows with the top two FEV1 within 0.15 L, and about 15% of sessions start with one rejected blow.
   - **Badges and plan:** tracker badges at 5-, 10- and 30-day streaks. `asthmaTreatmentPlan` is worked out from the latest best PEF: Green at 80% or more of predicted, Yellow at 50–80%, Red below 50%.
-  - **More chronic conditions, all with a home device:** one file pair per disease, each holding 3 patients with the same 3 profiles in the same order. The web app numbers them 4–12 in this order:
+  - **More chronic conditions, all with a home device:** one file pair per disease, each holding the same 3 profiles in the same order, then 2 messier patients (below). The web app numbers them 6–20 in this order:
 
     | Disease | Home device | Patients | Tracker |
     |---|---|---|---|
@@ -30,6 +30,17 @@ For what every column means, with confidence and evidence for each guessed name,
     - **Answers agree with the reading.** Mood, symptoms, missed school and as-needed doses follow from how bad the day's reading is. For diabetes there is one correction-insulin dose per reading over 250 mg/dL, and "Shakiness" only on days with a reading under 70. Warning signs (coughing up blood, fever, nausea or vomiting, blue lips or fingers, fainting) only appear on bad days, never in the well-controlled patient. Each condition has its own flare and drift dates.
     - `asthmaTreatmentPlan` is `null`, because the Green/Yellow/Red zone is asthma-only.
     - **Guesses:** the glucose and oximetry field names, `deviceType` 1 and 2, `bootId` `GM` and `PO`, and `protocol: null` (its meaning is unknown).
+  - **2 messier patients per disease (patients 4–5 in each file, so 4–5, 9–10, 14–15, 19–20 in the app):** made to look like real users, not perfect answers. They are made after all 12 tidy patients, so the tidy ones are unchanged. Each has its own story:
+
+    | Disease | Patient 4 | Patient 5 |
+    |---|---|---|
+    | Asthma | teen whose tracking and doses fade over the term, stoic, poor blow technique | 9-day holiday gap, autumn flare, anxious, often logs in the evening |
+    | Cystic fibrosis | joined 18 days in, 6-day hospital stay (no logs) during a flare | weekends off, often skips the spirometer |
+    | Type 1 diabetes | teen who skips checks, under-reports, logs only half the correction doses | tight control with frequent lows, parent logs everything, a short sick spell |
+    | Heart | stable but logs only 2–3 days a week | slowly getting worse despite taking meds, skips logging on bad days |
+
+    - What makes them messy: days not logged at all, questions skipped, days with only a dose logged, mood that doesn't match the reading, a second submission that is blank or changes the mood answer, "None of these" ticked next to a symptom, doses logged later at a round time, more rejected device readings, and spirometry sessions that stop after 1–2 good blows.
+    - The tidy-patient rules (one correction dose per high, warning signs only on bad days, 3 repeatable blows) are only checked for the tidy patients.
   - **Re-generating:** run `python data/generate_synthetic_db.py`. It writes all 4 file pairs and uses a fixed seed, so it gives the same files every time.
   - **Checking:** run `python data/test_synthetic_db.py`. It checks the structure, the ID links, value formats, each device's readings, the spirometry math, repeatability, adherence and the plan status.
 - `sample_db.json`: one patient document, in the form of a Cosmos DB (MongoDB API) collection export.

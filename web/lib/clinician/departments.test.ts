@@ -10,8 +10,8 @@ test("dropdown only offers departments that have mock patients", () => {
 
 test("department filters and groups patients by condition", () => {
   const pulm = groupPatients(byId("pulm"), listPatients());
-  expect(pulm.map(([k, ps]) => [k, ps.map((p) => p.index)])).toEqual([["Asthma", [1, 2, 3]], ["Cystic Fibrosis", [4, 5, 6]]]);
-  expect(groupPatients(byId("pcp"), listPatients()).flatMap(([, ps]) => ps)).toHaveLength(12);
+  expect(pulm.map(([k, ps]) => [k, ps.map((p) => p.index)])).toEqual([["Asthma", [1, 2, 3, 4, 5]], ["Cystic Fibrosis", [6, 7, 8, 9, 10]]]);
+  expect(groupPatients(byId("pcp"), listPatients()).flatMap(([, ps]) => ps)).toHaveLength(20);
   expect(groupPatients(byId("onc"), listPatients())).toEqual([]);
 });
 
