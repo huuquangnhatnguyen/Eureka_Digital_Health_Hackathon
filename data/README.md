@@ -4,6 +4,17 @@ Made-up data in the shape the hackathon brief describes in section 3. It contain
 
 For what every column means, with confidence and evidence for each guessed name, see [FIELDS.md](FIELDS.md).
 
+- `synthetic_db.json` and `synthetic_tracker_definition.json`: **fully made-up test data, not based on any record**. Use these for building and demoing the clinician view.
+  - **Patients:** 3 patients over 90 days (2026-08-11 to 2026-11-08), with the same structure as `sample_db.json`:
+    - adherent and well controlled
+    - poor adherence, with lung function drifting down to the Yellow zone
+    - adherent, with one flare and recovery
+  - **Medications:** a controller taken twice a day and a rescue inhaler.
+  - **Tracker questions:** mood, symptoms, spirometry and missed school. The spirometry answer is filled in.
+  - **Spirometry:** mostly good-quality blows. Each session has 3 accepted blows with the top two FEV1 within 0.15 L, and about 15% of sessions start with one rejected blow.
+  - **Badges and plan:** tracker badges at 5-, 10- and 30-day streaks. `asthmaTreatmentPlan` is worked out from the latest best PEF: Green at 80% or more of predicted, Yellow at 50–80%, Red below 50%.
+  - **Re-generating:** run `python data/generate_synthetic_db.py`. It uses a fixed seed, so it gives the same file every time.
+  - **Checking:** run `python data/test_synthetic_db.py`. It checks the structure, the ID links, value formats, the spirometry math, repeatability, adherence and the plan status.
 - `sample_db.json`: one patient document, in the form of a Cosmos DB (MongoDB API) collection export.
 - `sample_entry.json`: one tracker submission, as it would be added to `dailyLogs[].trackerResponses[]`.
 - `tracker_definition.json`: the question wording, which is stored outside the patient record.
