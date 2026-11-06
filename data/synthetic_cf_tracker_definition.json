@@ -1,0 +1,41 @@
+{
+  "id": "b1d365c8-9230-4e35-9866-f4072ff1eed7",
+  "name": "Cystic Fibrosis Tracker (synthetic)",
+  "questions": [
+    {
+      "id": "91d2fb9e-a140-4119-adc7-45b09e661fa7",
+      "type": "device",
+      "text": "Please complete your spirometer reading"
+    },
+    {
+      "id": "2f1ebb2e-23bd-4e50-ac32-f28f6d597f0f",
+      "type": "faceScale",
+      "text": "How are you feeling today?",
+      "options": [
+        "Great",
+        "Okay",
+        "Bad"
+      ]
+    },
+    {
+      "id": "8d232c55-1eb9-4462-a809-d95c5c252b9b",
+      "type": "checkbox",
+      "text": "Please select the following symptoms that you are currently experiencing",
+      "options": [
+        "Coughing",
+        "More mucus",
+        "Shortness Of Breath",
+        "Fatigue",
+        "Low appetite",
+        "Coughing up blood",
+        "Fever",
+        "None of these "
+      ]
+    },
+    {
+      "id": "c07687da-caa3-4a3d-9f76-72df2c2f5a29",
+      "type": "yesNo",
+      "text": "Did you miss school today because of your cystic fibrosis?"
+    }
+  ]
+}

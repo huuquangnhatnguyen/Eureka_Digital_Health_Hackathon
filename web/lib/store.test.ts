@@ -1,16 +1,21 @@
 import { expect, test } from "vitest";
 import { getPatient, getTracker, listPatients } from "./store";
 
-test("lists 3 patients", () => {
+test("lists 12 patients, 3 per condition", () => {
   const l = listPatients();
-  expect(l).toHaveLength(3);
-  expect(l.map((p) => p.zone)).toEqual(["Green", "Yellow", "Green"]);
+  expect(l).toHaveLength(12);
+  expect(l.slice(0, 3).map((p) => p.zone)).toEqual(["Green", "Yellow", "Green"]);
+  expect(l.slice(3).every((p) => p.zone === null)).toBe(true);
+  expect([...new Set(l.map((p) => p.condition))]).toEqual([
+    "Asthma Tracker (synthetic)", "Cystic Fibrosis Tracker (synthetic)", "Type 1 Diabetes Tracker (synthetic)",
+    "Congenital Heart Disease Tracker (synthetic)",
+  ]);
   expect(l[0]).toMatchObject({ index: 1, shortId: "10114c" });
 });
 
 test("getPatient out of range", () => {
   expect(getPatient(0)).toBeNull();
-  expect(getPatient(4)).toBeNull();
+  expect(getPatient(13)).toBeNull();
   expect(getPatient(NaN)).toBeNull();
   expect(getPatient(1.5)).toBeNull();
   expect(getPatient(2)?._id).toBe("0ab40715755cccbfecec5ff4");
@@ -18,4 +23,13 @@ test("getPatient out of range", () => {
 
 test("tracker has the four question types", () => {
   expect(getTracker().questions.map((q) => q.type).sort()).toEqual(["checkbox", "device", "faceScale", "yesNo"]);
+});
+
+test("each patient gets its own tracker, with asthma's question types", () => {
+  const names = [1, 4, 7, 10].map((i) => getTracker(getPatient(i)!).name);
+  expect(names).toEqual(listPatients().filter((_, i) => i % 3 === 0).map((p) => p.condition));
+  for (const i of [4, 7, 10]) {
+    expect(getTracker(getPatient(i)!).questions.map((q) => q.type).sort()).toEqual(["checkbox", "device", "faceScale", "yesNo"]);
+    expect(getPatient(i)!.medicalDevices).toHaveLength(1);
+  }
 });

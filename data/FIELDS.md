@@ -147,6 +147,104 @@ Each message pairs with its instruction:
 - Badge and tracker `date` values are **UTC**.
 - TrackerBadge10 (16:48 UTC) appeared 1 second after a tracker submission on the same day the Dulera dose was logged at 12:47 local. That suggests the patient was on UTC−4.
 
+## Synthetic datasets for other diseases
+
+The made-up cystic fibrosis, type 1 diabetes and heart datasets (see [README.md](README.md)) use the same patient record as asthma. Each file holds 3 patients over 90 days. They have no spreadsheet, so the trees below give each list's row count in that file instead of a table name. Everything not described here means the same as in the asthma tables above.
+
+### Cystic fibrosis: `synthetic_cf_db.json` + `synthetic_cf_tracker_definition.json`
+
+```
+patient
+├─ dailyLogs[]                       one per day                       227 rows
+│   ├─ medicationAdministrations[]   one per dose taken                393 rows (CFTR modulator, rescue inhaler)
+│   └─ trackerResponses[]            one per questionnaire submission  261 rows (34 blank)
+├─ medications[]                     one per medicine set up           2 per patient
+├─ medicalDevices[]                  one per paired device             1 per patient: Spirobank, same as asthma
+│   └─ baselineReadings[]            one per blow                      623 rows (35 rejected), with fvcPlusResults
+│       └─ qualityReport.qualityIndications[]  one per message         35 rows (BlowOutLonger, BlowOutFaster)
+├─ asthmaTreatmentPlan               null (the zone is asthma-only)
+├─ earnedMedicationBadges[]          (empty)
+└─ earnedTrackerBadges[]             one per badge                     21 rows
+```
+
+This is the same as asthma all the way down, including every `fvcPlusResults` column. The only differences are lower lung function (about 86% of predicted when well, with predicted FEV1 2.95 L, FVC 3.45 L and PEF 6.6 L/s) and the null plan.
+
+### Type 1 diabetes: `synthetic_t1d_db.json` + `synthetic_t1d_tracker_definition.json`
+
+```
+patient
+├─ dailyLogs[]                       one per day                       227 rows
+│   ├─ medicationAdministrations[]   one per dose taken                220 rows (long-acting insulin, correction insulin)
+│   └─ trackerResponses[]            one per questionnaire submission  247 rows (20 blank)
+├─ medications[]                     one per medicine set up           2 per patient
+├─ medicalDevices[]                  one per paired device             1 per patient: glucose meter
+│   └─ baselineReadings[]            one per finger-stick check        828 rows (31 rejected), with glucoseResults
+│       └─ qualityReport.qualityIndications[]  one per message         31 rows (StripError)
+├─ asthmaTreatmentPlan               null
+├─ earnedMedicationBadges[]          (empty)
+└─ earnedTrackerBadges[]             one per badge                     21 rows
+```
+
+### Congenital heart disease: `synthetic_heart_db.json` + `synthetic_heart_tracker_definition.json`
+
+```
+patient
+├─ dailyLogs[]                       one per day                       226 rows
+│   ├─ medicationAdministrations[]   one per dose taken                398 rows (heart medication, extra diuretic dose)
+│   └─ trackerResponses[]            one per questionnaire submission  257 rows (31 blank)
+├─ medications[]                     one per medicine set up           2 per patient
+├─ medicalDevices[]                  one per paired device             1 per patient: pulse oximeter
+│   └─ baselineReadings[]            one per reading                   249 rows (23 rejected), with oximetryResults
+│       └─ qualityReport.qualityIndications[]  one per message         23 rows (PoorSignal)
+├─ asthmaTreatmentPlan               null
+├─ earnedMedicationBadges[]          (empty)
+└─ earnedTrackerBadges[]             one per badge                     19 rows
+```
+
+### Medical devices in these datasets
+
+These are the same columns as the asthma device. All values for the glucose meter and pulse oximeter are invented (○ guess).
+
+| JSON field | Cystic fibrosis | Type 1 diabetes | Heart |
+|---|---|---|---|
+| `name` | Spirobank | Glucose meter (synthetic) | Pulse oximeter (synthetic) |
+| `deviceType` | 0 | 1 | 2 |
+| `bootId` | SM | GM | PO |
+| `serialNumber` / `advertisedName` | Z494449 / SM-009-Z494449 | G356847 / GM-G356847 | P116774 / PO-P116774 |
+| `protocol` | 9 | null (meaning unknown) | null (meaning unknown) |
+| `atsStandard` | true | false (ATS is a spirometry standard) | false |
+| `baselineReadingDate` | Day of the first reading | Day of the first reading | Day of the first reading |
+
+### Baseline readings in these datasets
+
+Every reading, from any device, has the same first three fields as a blow: `date` (UTC), `accepted` and `qualityReport` (`quality` plus `qualityIndications[]`). After those comes one results object, depending on the device:
+
+| Device | Results object | JSON field | Meaning | Unit | Example |
+|---|---|---|---|---|---|
+| Spirometer | `fvcPlusResults` | (all 14 columns) | Same as asthma | | |
+| Glucose meter | `glucoseResults` | `glucose` | Blood sugar. `null` when the strip failed. | mg/dL | 149 |
+| | | `unit` | Always the text `mg/dL` | text | mg/dL |
+| | | `mealContext` | When the check was done | text | BeforeBreakfast, BeforeLunch, AfterSchool, BeforeDinner |
+| Pulse oximeter | `oximetryResults` | `spo2` | Oxygen saturation | % | 98 |
+| | | `pulse` | Heart rate | beats/min | 89 |
+| | | `perfusionIndex` | Pulse signal strength. 1 or less is a weak signal. | % | 2.0 |
+
+- **Glucose:** up to 4 checks a day. The morning check is always done, and the others are each skipped 15% of the time. About 4% of checks fail (`StripError` → `UseANewTestStrip`), with `glucose: null`, and are re-tested a minute later. Normal is about 70–180 mg/dL. Under 70 is a low and over 250 is a high.
+- **Pulse oximeter:** one accepted reading each morning. About 15% of days start with a rejected one (`PoorSignal` → `KeepYourHandStill`), which reads low, with a high pulse and a perfusion index of 1 or less. 95% or more is normal for these patients.
+- **Times:** the last glucose check ends by 18:40 local time, so every reading has the same UTC date as its daily log.
+
+### Tracker answers in these datasets
+
+Each tracker has asthma's 4 question types: `device`, `faceScale` (Great/Okay/Bad), `checkbox` (symptoms ending in "None of these ") and `yesNo` (missed school). The `device` answer is JSON text holding that morning's result, the same way asthma's holds the best blow:
+
+| Disease | Device answer | Example |
+|---|---|---|
+| Cystic fibrosis | `fev1`, `fvc`, `pef`, `accepted` | `{"fev1":2.59,"fvc":2.82,"pef":5.77,"accepted":true}` |
+| Type 1 diabetes | `glucose`, `accepted` | `{"glucose":149,"accepted":true}` |
+| Heart | `spo2`, `pulse`, `accepted` | `{"spo2":98,"pulse":89,"accepted":true}` |
+
+In type 1 diabetes, each correction-insulin dose in `medicationAdministrations[]` matches one reading over 250 mg/dL, logged 2 minutes after it.
+
 ## Still open
 
 Answering these would replace the guesses above:

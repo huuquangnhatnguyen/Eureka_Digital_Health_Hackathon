@@ -1,0 +1,41 @@
+{
+  "id": "15acae39-2f07-4cb1-9f19-26ef93ed967a",
+  "name": "Congenital Heart Disease Tracker (synthetic)",
+  "questions": [
+    {
+      "id": "f21e5031-6c65-4c60-aa88-2b260eb004a5",
+      "type": "device",
+      "text": "Please complete your pulse oximeter reading"
+    },
+    {
+      "id": "d76e129d-5e82-4690-b404-6a62ae4a90e9",
+      "type": "faceScale",
+      "text": "How are you feeling today?",
+      "options": [
+        "Great",
+        "Okay",
+        "Bad"
+      ]
+    },
+    {
+      "id": "d06dae2c-53c2-4424-be9e-9ebb49aec900",
+      "type": "checkbox",
+      "text": "Please select the following symptoms that you are currently experiencing",
+      "options": [
+        "Fatigue",
+        "Shortness Of Breath",
+        "Swelling in legs or feet",
+        "Low appetite",
+        "Dizziness",
+        "Blue lips or fingers",
+        "Fainting",
+        "None of these "
+      ]
+    },
+    {
+      "id": "58d76bd9-0036-4a79-98e7-a7d92860e7d4",
+      "type": "yesNo",
+      "text": "Did you miss school today because of your heart condition?"
+    }
+  ]
+}

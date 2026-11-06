@@ -1,8 +1,17 @@
-"""Checks for data/synthetic_db.json. Run from the repo root: python data/test_synthetic_db.py"""
+"""Checks for the synthetic patient files, one pair per disease. Run from the repo root: python data/test_synthetic_db.py"""
 import json
+from datetime import date
 
-db = json.load(open("data/synthetic_db.json", encoding="utf-8"))
-tracker = json.load(open("data/synthetic_tracker_definition.json", encoding="utf-8"))
+load = lambda f: json.load(open(f"data/{f}", encoding="utf-8"))
+FILES = [("synthetic_db.json", "synthetic_tracker_definition.json")] + [
+    (f"synthetic_{k}_db.json", f"synthetic_{k}_tracker_definition.json") for k in ("cf", "t1d", "heart")]
+db, trackers = [], {}
+for db_file, tracker_file in FILES:  # each file holds one disease: 3 patients, all on that file's tracker
+    t = load(tracker_file)
+    trackers[t["id"]] = t
+    group = load(db_file)
+    assert len(group) == 3 and all(tr["trackerId"] == t["id"] for p in group for l in p["dailyLogs"] for tr in l["trackerResponses"])
+    db += group
 ref = json.load(open("data/sample_db.json", encoding="utf-8"))[0]  # structure reference only
 
 TOP = set(ref)
@@ -10,21 +19,37 @@ LOG_KEYS = {"day", "allMedicationsAdministered", "trackerResponses", "medication
 BLOW_KEYS = set(ref["medicalDevices"][0]["baselineReadings"][0]["fvcPlusResults"])
 DEVICE_KEYS = set(ref["medicalDevices"][0])
 MED_KEYS = set(ref["medications"][0])
-qtypes = {q["id"]: q for q in tracker["questions"]}
+# What each device's readings and tracker answer hold. The spirometer uses the brief's fvcPlusResults.
+DEVICE_TYPES = {"Spirobank": ("fvcPlusResults", {"fev1", "fvc", "pef"}),
+                "Glucose meter (synthetic)": ("glucoseResults", {"glucose"}),
+                "Pulse oximeter (synthetic)": ("oximetryResults", {"spo2", "pulse"})}
+
+
+def daily_med(p):
+    return next(m for m in p["medications"] if m["howOften"] == "Daily")
 
 
 def check_patient(p):
     assert set(p) == TOP, set(p) ^ TOP
     med_ids = {m["id"] for m in p["medications"]}
-    controller = next(m["id"] for m in p["medications"] if m["howOften"] == "Daily")
+    ctrl = daily_med(p)
+    per_day = ctrl["dosage"]["timing"]["frequency"]
     assert all(set(m) == MED_KEYS for m in p["medications"])
+    tracker_ids = {tr["trackerId"] for l in p["dailyLogs"] for tr in l["trackerResponses"]}
+    assert len(tracker_ids) == 1, "one tracker per patient"
+    tracker = trackers[tracker_ids.pop()]
+    assert all(m["relatedCondition"] == tracker["name"] for m in p["medications"])
+    qtypes = {q["id"]: q for q in tracker["questions"]}
+    assert len(p["medicalDevices"]) == 1, "every patient has one home device"
+    dev = p["medicalDevices"][0]
+    results_key, answer_keys = DEVICE_TYPES[dev["name"]]
 
     days = [l["day"] for l in p["dailyLogs"]]
     assert days == sorted(days) and len(days) == len(set(days)), "one entry per day, sorted"
     for l in p["dailyLogs"]:
         assert set(l) == LOG_KEYS
         for tr in l["trackerResponses"]:
-            assert set(tr) == {"trackerId", "date", "responses"} and tr["trackerId"] == tracker["id"]
+            assert set(tr) == {"trackerId", "date", "responses"}
             assert tr["date"][:10] == l["day"]
             for r in tr["responses"]:
                 q = qtypes[r["questionId"]]
@@ -37,22 +62,35 @@ def check_patient(p):
                 elif q["type"] == "yesNo":
                     assert v in ("true", "false")
                 elif q["type"] == "device":
-                    assert {"fev1", "fvc", "pef"} <= set(json.loads(v))
-        doses = [m for m in l["medicationAdministrations"] if m["id"] == controller]
-        assert l["allMedicationsAdministered"] == (len(doses) == 2)
+                    assert set(json.loads(v)) == answer_keys | {"accepted"}
+        doses = [m for m in l["medicationAdministrations"] if m["id"] == ctrl["id"]]
+        assert l["allMedicationsAdministered"] == (len(doses) == per_day)
         for m in l["medicationAdministrations"]:
             assert m["id"] in med_ids and set(m) == {"id", "time", "name", "value"}
 
-    dev = p["medicalDevices"][0]
     assert set(dev) == DEVICE_KEYS
     br = dev["baselineReadings"]
     assert [b["date"] for b in br] == sorted(b["date"] for b in br)
+    assert dev["baselineReadingDate"] == br[0]["date"][:10]
+    assert set(days) >= {b["date"][:10] for b in br}, "every reading falls on a logged day"
+    for b in br:
+        assert set(b) == {"date", "accepted", "qualityReport", results_key}
+        assert b["accepted"] == (b["qualityReport"]["quality"] == "Acceptable")
+        assert b["accepted"] == (not b["qualityReport"]["qualityIndications"])
+    if results_key == "glucoseResults":
+        for b in br:
+            g = b["glucoseResults"]["glucose"]
+            assert (g is None) == (not b["accepted"]) and (g is None or 40 <= g <= 450)
+    if results_key == "oximetryResults":
+        for b in br:
+            assert 70 <= b["oximetryResults"]["spo2"] <= 100 and 40 <= b["oximetryResults"]["pulse"] <= 200
+    if results_key != "fvcPlusResults":
+        assert p["asthmaTreatmentPlan"] is None
+        return
     by_day = {}
     for b in br:
         r = b["fvcPlusResults"]
         assert set(r) == BLOW_KEYS
-        assert b["accepted"] == (b["qualityReport"]["quality"] == "Acceptable")
-        assert b["accepted"] == (not b["qualityReport"]["qualityIndications"])
         assert 0 < r["fev1"] <= r["fvc"]
         for v, pr, pc in (("fev1", "fev1Predicted", "fev1PercentPredicted"),
                           ("fvc", "fvcPredicted", "fvcPercentPredicted"),
@@ -66,24 +104,83 @@ def check_patient(p):
         assert len(top) >= 3 and top[0] - top[1] <= 0.15, (day, top)
 
     plan = p["asthmaTreatmentPlan"]
+    if tracker["name"] != "Asthma Tracker (synthetic)":  # the zone is asthma-only
+        assert plan is None
+        return
     assert plan["status"] in ("Green", "Yellow", "Red")
     assert (plan["retestTime"] is None) == (plan["status"] == "Green")
 
 
 def adherence(p):
-    controller = next(m["id"] for m in p["medications"] if m["howOften"] == "Daily")
-    n = sum(1 for l in p["dailyLogs"] for m in l["medicationAdministrations"] if m["id"] == controller)
-    return n / (2 * len(p["dailyLogs"]))
+    ctrl = daily_med(p)
+    n = sum(1 for l in p["dailyLogs"] for m in l["medicationAdministrations"] if m["id"] == ctrl["id"])
+    return n / (ctrl["dosage"]["timing"]["frequency"] * len(p["dailyLogs"]))
 
 
 for p in db:
     check_patient(p)
 
-a = [adherence(p) for p in db]
-assert a[0] > 0.85 and a[1] < 0.6, a  # profiles really differ
+assert len(db) == 12 and len(trackers) == 4
+for g in range(0, 12, 3):  # each condition group: well controlled, poor adherence, one flare
+    a = [adherence(p) for p in db[g:g + 3]]
+    assert a[0] > 0.85 and a[1] < 0.6, (g, a)  # profiles really differ
 assert db[0]["asthmaTreatmentPlan"]["status"] == "Green"
 assert db[1]["asthmaTreatmentPlan"]["status"] != "Green"  # untreated drift shows up
 assert len({p["_id"] for p in db}) == len(db)
-print("ok:", len(db), "patients |", ", ".join(
-    f"{len(p['dailyLogs'])} days, {len(p['medicalDevices'][0]['baselineReadings'])} blows, "
-    f"adherence {adherence(p):.0%}, plan {p['asthmaTreatmentPlan']['status']}" for p in db))
+RED_FLAGS = {"Coughing up blood", "Fever", "Nausea or vomiting", "Blue lips or fingers", "Fainting"}
+
+
+def badness(readings):
+    """The day's device result, higher = worse; None if no accepted reading."""
+    ok = [b for b in readings if b["accepted"]]
+    if not ok:
+        return None
+    if "fvcPlusResults" in ok[0]:
+        return -max(b["fvcPlusResults"]["fev1PercentPredicted"] for b in ok)
+    if "glucoseResults" in ok[0]:
+        return sum(b["glucoseResults"]["glucose"] for b in ok) / len(ok)
+    return -min(b["oximetryResults"]["spo2"] for b in ok)
+
+
+def days_of(p):
+    """Per logged day: (day, feel, symptoms, badness, accepted readings, as-needed doses). New diseases only."""
+    t = trackers[p["dailyLogs"][0]["trackerResponses"][0]["trackerId"]]
+    q = {x["type"]: x["id"] for x in t["questions"]}
+    prn = next(m["id"] for m in p["medications"] if m["dosage"]["asNeeded"])
+    by_day = {}
+    for b in p["medicalDevices"][0]["baselineReadings"]:
+        by_day.setdefault(b["date"][:10], []).append(b)
+    out = []
+    for l in p["dailyLogs"]:
+        r = {a["questionId"]: a["value"] for s in l["trackerResponses"] for a in s["responses"]}
+        rd = by_day.get(l["day"], [])
+        out.append((l["day"], r[q["faceScale"]], set(json.loads(r[q["checkbox"]])) - {"None of these "}, badness(rd),
+                    [b for b in rd if b["accepted"]], sum(m["id"] == prn for m in l["medicationAdministrations"])))
+    return out
+
+
+peaks = []
+for g in range(3, 12, 3):
+    for i, p in enumerate(db[g:g + 3]):
+        rows = days_of(p)
+        for day, feel, syms, bad, ok, prn in rows:
+            if feel == "Great":
+                assert not syms & RED_FLAGS and len(syms - {"Shakiness"}) <= 1, (day, syms)
+            if i == 0:
+                assert not syms & RED_FLAGS, (day, syms, "warning sign in a well patient")
+        if i == 2:
+            peaks.append(max((r for r in rows if r[3] is not None), key=lambda r: r[3])[0])
+assert len({date.fromisoformat(d).isocalendar()[1] for d in peaks}) == len(peaks), ("flares share a week", peaks)
+t1d = [days_of(p) for p in db[6:9]]
+for rows in t1d:
+    for day, feel, syms, bad, ok, prn in rows:
+        assert prn == sum(b["glucoseResults"]["glucose"] > 250 for b in ok), (day, "one correction dose per high")
+        assert ("Shakiness" in syms) == any(b["glucoseResults"]["glucose"] < 70 for b in ok), (day, "shaky = a low")
+mean = lambda rows: sum(r[3] for r in rows) / len(rows)
+assert mean(t1d[1][-15:]) > mean(t1d[0][-15:]) + 40, "missed insulin -> higher sugars"
+
+print("ok:", len(db), "patients")
+for p in db:
+    dev = p["medicalDevices"][0]
+    print(f"  {p['medications'][0]['relatedCondition']}: {len(p['dailyLogs'])} days, adherence {adherence(p):.0%}, "
+          f"{dev['name']} {len(dev['baselineReadings'])} readings, plan {(p['asthmaTreatmentPlan'] or {}).get('status', '-')}")

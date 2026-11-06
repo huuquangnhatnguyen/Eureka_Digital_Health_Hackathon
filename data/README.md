@@ -5,7 +5,7 @@ Made-up data in the shape the hackathon brief describes in section 3. It contain
 For what every column means, with confidence and evidence for each guessed name, see [FIELDS.md](FIELDS.md).
 
 - `synthetic_db.json` and `synthetic_tracker_definition.json`: **fully made-up test data, not based on any record**. Use these for building and demoing the clinician view.
-  - **Patients:** 3 patients over 90 days (2026-08-11 to 2026-11-08), with the same structure as `sample_db.json`:
+  - **Patients:** 3 asthma patients over 90 days (2026-08-11 to 2026-11-08), with the same structure as `sample_db.json`:
     - adherent and well controlled
     - poor adherence, with lung function drifting down to the Yellow zone
     - adherent, with one flare and recovery
@@ -13,8 +13,25 @@ For what every column means, with confidence and evidence for each guessed name,
   - **Tracker questions:** mood, symptoms, spirometry and missed school. The spirometry answer is filled in.
   - **Spirometry:** mostly good-quality blows. Each session has 3 accepted blows with the top two FEV1 within 0.15 L, and about 15% of sessions start with one rejected blow.
   - **Badges and plan:** tracker badges at 5-, 10- and 30-day streaks. `asthmaTreatmentPlan` is worked out from the latest best PEF: Green at 80% or more of predicted, Yellow at 50–80%, Red below 50%.
-  - **Re-generating:** run `python data/generate_synthetic_db.py`. It uses a fixed seed, so it gives the same file every time.
-  - **Checking:** run `python data/test_synthetic_db.py`. It checks the structure, the ID links, value formats, the spirometry math, repeatability, adherence and the plan status.
+  - **More chronic conditions, all with a home device:** one file pair per disease, each holding 3 patients with the same 3 profiles in the same order. The web app numbers them 4–12 in this order:
+
+    | Disease | Home device | Patients | Tracker |
+    |---|---|---|---|
+    | Cystic fibrosis | Spirometer (Spirobank, as for asthma) | `synthetic_cf_db.json` | `synthetic_cf_tracker_definition.json` |
+    | Type 1 diabetes | Glucose meter | `synthetic_t1d_db.json` | `synthetic_t1d_tracker_definition.json` |
+    | Congenital heart disease | Pulse oximeter | `synthetic_heart_db.json` | `synthetic_heart_tracker_definition.json` |
+
+    - **Same shape as asthma:** same top-level fields, `dailyLogs[]`, `medications[]` (one daily, one as-needed) and badges. The tracker has asthma's 4 question types (`device`, `faceScale`, `checkbox`, `yesNo`), and each patient's submissions use the `trackerId` from their disease's tracker file.
+    - **Device:** one `medicalDevices[]` record with the same fields as the Spirobank. Its readings go in `baselineReadings[]` with the same `date`, `accepted` and `qualityReport`, plus one results object:
+      - cystic fibrosis: `fvcPlusResults`, exactly as for asthma, with lower lung function (about 86% of predicted when well)
+      - type 1 diabetes: `glucoseResults` (`glucose` in mg/dL, `unit`, `mealContext`), with up to 4 checks a day (before breakfast, before lunch, after school, before dinner). `glucose` is `null` on a failed strip, which is re-tested a minute later.
+      - heart: `oximetryResults` (`spo2`, `pulse`, `perfusionIndex`), with one morning reading. About 15% of days start with a rejected reading (poor signal).
+    - **The `device` answer** holds that morning's result, as asthma's does: `{"fev1","fvc","pef","accepted"}`, `{"glucose","accepted"}` or `{"spo2","pulse","accepted"}`.
+    - **Answers agree with the reading.** Mood, symptoms, missed school and as-needed doses follow from how bad the day's reading is. For diabetes there is one correction-insulin dose per reading over 250 mg/dL, and "Shakiness" only on days with a reading under 70. Warning signs (coughing up blood, fever, nausea or vomiting, blue lips or fingers, fainting) only appear on bad days, never in the well-controlled patient. Each condition has its own flare and drift dates.
+    - `asthmaTreatmentPlan` is `null`, because the Green/Yellow/Red zone is asthma-only.
+    - **Guesses:** the glucose and oximetry field names, `deviceType` 1 and 2, `bootId` `GM` and `PO`, and `protocol: null` (its meaning is unknown).
+  - **Re-generating:** run `python data/generate_synthetic_db.py`. It writes all 4 file pairs and uses a fixed seed, so it gives the same files every time.
+  - **Checking:** run `python data/test_synthetic_db.py`. It checks the structure, the ID links, value formats, each device's readings, the spirometry math, repeatability, adherence and the plan status.
 - `sample_db.json`: one patient document, in the form of a Cosmos DB (MongoDB API) collection export.
 - `sample_entry.json`: one tracker submission, as it would be added to `dailyLogs[].trackerResponses[]`.
 - `tracker_definition.json`: the question wording, which is stored outside the patient record.
