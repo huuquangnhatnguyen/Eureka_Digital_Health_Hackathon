@@ -1,4 +1,0 @@
-/* Full palette and dark mode arrive in Task 6 (page frame). */
-* { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; }
-body { font: 13px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif; }
