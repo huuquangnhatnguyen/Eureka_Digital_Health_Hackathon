@@ -8,6 +8,7 @@ import type { Any } from "./view";
 const FIT_CARDS = 3, FIT_MIN = 400, FIT_MIN_WIDTH = 1101; // the grid is 3 columns above 1100px (clinician.css)
 
 type Choice = [id: string, label: string, unit: string];
+type Range = { lo: number | null; hi: number | null };
 type Review = {
   cards: Any[]; ticks: [number, string][]; subtitle: string;
   picker: { fixed: string | null; summary: Choice[]; groups: [string, Choice[]][]; note: string };
@@ -15,7 +16,7 @@ type Review = {
 
 /** The card "At a glance" for every condition; the picker offers what this patient's device records.
     Every card (defaults included) can be removed or moved; the list is saved per patient (see Overview.tsx). */
-export default function ReviewOverview({ review, selected, onChange }: { review: Review; selected: string[]; onChange: (next: string[]) => void }) {
+export default function ReviewOverview({ review, selected, onChange, onRange }: { review: Review; selected: string[]; onChange: (next: string[]) => void; onRange: (key: string, r: Range | null) => void }) {
   const [notice, setNotice] = useState("");
   const [focusSel, setFocusSel] = useState<string | null>(null);
   const pickerRef = useRef<HTMLDetailsElement>(null);
@@ -61,6 +62,7 @@ export default function ReviewOverview({ review, selected, onChange }: { review:
     setFocusSel(`[data-widget="${a}"] [data-move="${d}"]:not(:disabled), [data-widget="${a}"] .review-remove`);
     onChange(selected.map((x) => (x === a ? b : x === b ? a : x)));
   };
+  const setRange = (c: Any, r: Range | null) => { setNotice(`${c.title}: normal range ${r ? "saved" : "back to the default"}.`); onRange(c.range.key, r); };
   const isDefault = selected.join() === DEFAULT_CARDS.join();
   const reset = () => { setNotice("Overview reset to the default cards."); setFocusSel(".overview-add > summary"); onChange(DEFAULT_CARDS); };
 
@@ -105,7 +107,7 @@ export default function ReviewOverview({ review, selected, onChange }: { review:
         <div className="review-grid" ref={gridRef}>
           {cards.map((c, i) => (
             <Card key={`${c.id}-${i}`} c={c} ticks={review.ticks} onRemove={() => change(c.id, false)}
-              onMove={(d) => move(i, d)} first={i === 0} last={i === cards.length - 1} />
+              onMove={(d) => move(i, d)} onRange={(r) => setRange(c, r)} first={i === 0} last={i === cards.length - 1} />
           ))}
         </div>
       ) : <p className="empty">No cards. Use ＋ Add to choose what to see.</p>}
@@ -113,7 +115,9 @@ export default function ReviewOverview({ review, selected, onChange }: { review:
   );
 }
 
-function Card({ c, ticks, onRemove, onMove, first, last }: { c: Any; ticks: [number, string][]; onRemove: () => void; onMove: (d: -1 | 1) => void; first: boolean; last: boolean }) {
+function Card({ c, ticks, onRemove, onMove, onRange, first, last }: { c: Any; ticks: [number, string][]; onRemove: () => void; onMove: (d: -1 | 1) => void; onRange: (r: Range | null) => void; first: boolean; last: boolean }) {
+  const [mode, setMode] = useState<"chart" | "average">("chart");
+  const links = <>{c.range && <RangeEditor key={c.range.text} r={c.range} title={c.title} onSave={onRange} />}{source(c)}</>;
   return (
     <article className="review-card" data-widget={c.id}>
       <header>
@@ -140,9 +144,41 @@ function Card({ c, ticks, onRemove, onMove, first, last }: { c: Any; ticks: [num
           <span style={{ width: `${(c.meter.n / c.meter.of) * 100}%` }} />
         </div>
       )}
-      {c.plot ? <ReviewPlot {...c.plot} ticks={ticks}>{source(c)}</ReviewPlot> : source(c)}
+      {c.average && (
+        <div className="review-mode" role="group" aria-label={`Show ${c.title} as`}>
+          {(["chart", "average"] as const).map((m) => <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)}>{m === "chart" ? "Chart" : "Average"}</button>)}
+        </div>
+      )}
+      {mode === "average" && c.average
+        ? <><div className="review-fact"><span>Average</span><strong>{c.average.value}</strong><small>{c.average.sub}</small></div><div className="review-links">{links}</div></>
+        : c.plot ? <ReviewPlot {...c.plot} ticks={ticks}>{links}</ReviewPlot> : links}
       {c.foot && <p className="review-foot">{c.foot}</p>}
     </article>
+  );
+}
+
+/** "Normal range" disclosure: edit this patient's limits (saved per patient), or go back to the default. */
+function RangeEditor({ r, title, onSave }: { r: Any; title: string; onSave: (r: Range | null) => void }) {
+  const [lo, setLo] = useState(r.value.lo == null ? "" : String(r.value.lo)), [hi, setHi] = useState(r.value.hi == null ? "" : String(r.value.hi));
+  const ref = useRef<HTMLDetailsElement>(null);
+  const num = (v: string) => (v.trim() === "" ? null : Number(v)), L = num(lo), H = num(hi);
+  const error = L == null && H == null ? "Set at least one limit." : [L, H].some((v) => v != null && !Number.isFinite(v)) ? "Limits must be numbers."
+    : L != null && H != null && L >= H ? "Low must be below high." : "";
+  const done = (v: Range | null) => { if (ref.current) ref.current.open = false; onSave(v); };
+  return (
+    <details className="review-values range-edit" ref={ref}>
+      <summary>Normal range: {r.text}{r.custom ? " · custom" : ""}</summary>
+      <form onSubmit={(e) => { e.preventDefault(); if (!error) done({ lo: L, hi: H }); }} aria-label={`Normal range for ${title}`}>
+        <label>Low <input type="number" step="any" inputMode="decimal" value={lo} onChange={(e) => setLo(e.target.value)} /> {r.unit}</label>
+        <label>High <input type="number" step="any" inputMode="decimal" value={hi} onChange={(e) => setHi(e.target.value)} /> {r.unit}</label>
+        <p className="range-hint">Leave one empty for no limit on that side. Saved for this patient.</p>
+        {error && <p className="range-error" role="alert">{error}</p>}
+        <div className="range-buttons">
+          <button type="submit" disabled={!!error}>Save</button>
+          {r.custom && <button type="button" onClick={() => done(null)}>Use default</button>}
+        </div>
+      </form>
+    </details>
   );
 }
 
@@ -162,14 +198,6 @@ function source(c: Any) {
 function ReviewPlot({ points, max = 100, line = false, unit = "", color = "#BE3268", label = "", decimals = 0, range, ticks, children }: Any) {
   const w = 420, left = 42, right = 400, top = 26, bottom = 154, n = points.length, step = (right - left) / Math.max(1, n);
   const x = (i: number) => left + step * (i + 0.5), y = (v: number) => bottom - (v / max) * (bottom - top);
-  const flagged = range && points.some((p: Any) => p.flag);
-  // Out of range: a triangle pointing the way it is out (shape, not only colour). Unusual for this patient: a ring.
-  const mark = (cx: number, v: number, status: string | null, odd: boolean, r: number, key?: number) => (
-    <g key={key}>
-      {status && <path d={status === "low" ? `M${cx - r},${y(v) - r * 0.7}h${2 * r}l${-r},${r * 1.7}z` : `M${cx - r},${y(v) + r * 0.7}h${2 * r}l${-r},${-r * 1.7}z`} fill="#B42318" />}
-      {odd && <circle cx={cx} cy={y(v)} r={r + 3.5} fill="none" stroke="#302A31" strokeWidth={1.5} />}
-    </g>
-  );
   const grid = [...new Set([0, unit ? max / 2 : Math.ceil(max / 2), max])];
   let path = "", connected = false;
   for (const [i, p] of points.entries()) {
@@ -198,22 +226,14 @@ function ReviewPlot({ points, max = 100, line = false, unit = "", color = "#BE32
           <text key={i} x={x(i)} y={bottom - 5} textAnchor="middle" fill="#706670" fontSize={12}>—</text>
         ) : (
           <g key={i}>
-            {p.marks?.map((m: Any, j: number) => mark(x(i), m.v, m.status, m.odd, 3.5, j))}
-            {(p.status || p.odd) && mark(x(i), p.v, p.status, p.odd, 5.5)}
             {line
-              ? <circle cx={x(i)} cy={y(p.v)} r={3.5} fill={color}><title>{`${p.label}: ${p.detail}${p.flag ? ` (${p.flag})` : ""}`}</title></circle>
+              ? <circle cx={x(i)} cy={y(p.v)} r={p.status ? 4.5 : 3.5} fill={p.status ? "#B42318" : color}><title>{`${p.label}: ${p.detail}${p.flag ? ` (${p.flag})` : ""}`}</title></circle>
               : <rect x={x(i) - step * 0.3} y={y(p.v)} width={step * 0.6} height={Math.max(1, bottom - y(p.v))} rx={3} fill={color}><title>{`${p.label}: ${p.detail}`}</title></rect>}
-            {(n <= 8 || i % 2 === 0 || i === n - 1 || p.status) && <text x={x(i)} y={y(p.v) - 10} textAnchor="middle" fill={p.status ? "#B42318" : "#302A31"} fontWeight={p.status ? 700 : 400} fontSize={11}>{p.v.toFixed(decimals)}{unit}</text>}
+            {(n <= 8 || i % 2 === 0 || i === n - 1 || p.status) && <text x={x(i)} y={y(p.v) - 8} textAnchor="middle" fill={p.status ? "#B42318" : "#302A31"} fontWeight={p.status ? 700 : 400} fontSize={11}>{p.v.toFixed(decimals)}{unit}</text>}
           </g>
         ))}
         {ticks.map(([i, t]: [number, string]) => <text key={i} x={x(i)} y={180} textAnchor="middle" fill="#706670" fontSize={11}>{t}</text>)}
       </svg>
-      {range && (
-        <p className="review-legend">
-          <span className="lg-band" /> Normal range
-          {flagged && <><span className="lg-out">▼▲</span> Below / above normal <span className="lg-odd" /> Unusual for this patient</>}
-        </p>
-      )}
       <div className="review-links">
         <details className="review-values">
           <summary>View chart values</summary>

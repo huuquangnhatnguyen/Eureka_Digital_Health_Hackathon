@@ -74,6 +74,8 @@ export interface PatientDoc {
   earnedTrackerBadges: unknown[];
   /** Overview card ids in display order, as the clinician last left them; absent = the default cards. */
   overviewCards?: string[];
+  /** Normal ranges the clinician changed for this patient, by chart field id; absent = the defaults (lib/clinician/ranges.js). */
+  overviewRanges?: Record<string, { lo: number | null; hi: number | null }>;
 }
 
 export interface TrackerQuestion {

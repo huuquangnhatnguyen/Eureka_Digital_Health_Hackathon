@@ -37,11 +37,13 @@ export function getTracker(patient?: PatientDoc): TrackerDef {
   return list.find((t) => t.id === id) ?? list[0];
 }
 
-/* ---------------- overview layouts (patient _id → card ids) ----------------
+/* ---------------- saved overview settings, per patient _id ----------------
+   "cards": the card ids in display order; "ranges": normal ranges the clinician changed (see lib/clinician/ranges.js).
    Kept apart from synthetic_*.json, which generate_synthetic_db.py rewrites. With Upstash Redis configured
-   (Vercel Marketplace → Upstash for Redis sets KV_REST_API_URL / KV_REST_API_TOKEN) they live in one Redis hash,
-   which is what works on Vercel; without it, in data/overview_layouts.json, for local runs. */
-const HASH = "overview-cards";
+   (Vercel Marketplace → Upstash for Redis sets KV_REST_API_URL / KV_REST_API_TOKEN) each lives in one Redis hash,
+   which is what works on Vercel; without it, in a JSON file next to data/overview_layouts.json, for local runs. */
+export interface Settings { cards: string[]; ranges: Record<string, { lo: number | null; hi: number | null }> }
+const HASH: Record<keyof Settings, string> = { cards: "overview-cards", ranges: "overview-ranges" };
 const redisEnv = () => {
   const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL, token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
   return url && token ? { url, token } : null;
@@ -56,27 +58,29 @@ async function redis(cmd: string[]) {
 }
 
 const layoutsFile = () => process.env.OVERVIEW_LAYOUTS_FILE ?? path.join(DATA_DIR, "overview_layouts.json");
-let layouts: Record<string, string[]> | undefined;
-const fileLayouts = () => (layouts ??= fs.existsSync(layoutsFile()) ? JSON.parse(fs.readFileSync(layoutsFile(), "utf8")) : {});
+const fileOf = (k: keyof Settings) => (k === "cards" ? layoutsFile() : path.join(path.dirname(layoutsFile()), "overview_ranges.json"));
+const cache: { [K in keyof Settings]?: Record<string, Settings[K]> } = {};
+const fileSettings = <K extends keyof Settings>(k: K): Record<string, Settings[K]> =>
+  ((cache[k] as Record<string, Settings[K]> | undefined) ??= fs.existsSync(fileOf(k)) ? JSON.parse(fs.readFileSync(fileOf(k), "utf8")) : {});
 
-/** A patient's saved overview cards, or undefined when none were saved. */
-export async function getOverviewCards(patientId: string): Promise<string[] | undefined> {
-  if (!redisEnv()) return fileLayouts()[patientId];
-  const v = await redis(["HGET", HASH, patientId]);
+/** One saved setting for a patient, or undefined when none was saved. */
+export async function getSetting<K extends keyof Settings>(k: K, patientId: string): Promise<Settings[K] | undefined> {
+  if (!redisEnv()) return fileSettings(k)[patientId];
+  const v = await redis(["HGET", HASH[k], patientId]);
   return v == null ? undefined : JSON.parse(v);
 }
 
-/** Saves a patient's overview cards; false when there is no such patient. Throws if the store can't be written. */
-export async function saveOverviewCards(index: number, cards: string[]): Promise<boolean> {
+/** Saves one setting for a patient; false when there is no such patient. Throws if the store can't be written. */
+export async function saveSetting<K extends keyof Settings>(k: K, index: number, value: Settings[K]): Promise<boolean> {
   const p = getPatient(index);
   if (!p) return false;
   if (redisEnv()) {
-    await redis(["HSET", HASH, p._id, JSON.stringify(cards)]);
+    await redis(["HSET", HASH[k], p._id, JSON.stringify(value)]);
     return true;
   }
-  const next = { ...fileLayouts(), [p._id]: cards }, file = layoutsFile();
+  const next = { ...fileSettings(k), [p._id]: value }, file = fileOf(k);
   fs.writeFileSync(`${file}.tmp`, JSON.stringify(next, null, 2) + "\n");
   fs.renameSync(`${file}.tmp`, file); // the whole file or nothing, never a half-written one
-  layouts = next;
+  (cache as Record<string, unknown>)[k] = next;
   return true;
 }

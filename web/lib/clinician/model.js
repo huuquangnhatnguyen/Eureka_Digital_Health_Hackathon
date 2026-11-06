@@ -612,7 +612,7 @@ function analyzeLine(model, L, r) {
       return { due, taken, pct: due ? taken / due * 100 : null, dueActive: dueA, takenActive: takenA, pctActive: dueA ? takenA / dueA * 100 : null, inactive, bySlot, extra, perDay };
     };
     const cur = f(r.start, r.end);
-    return { L, kind: "daily", span, ...cur, prev: f(r.prev.start, r.prev.end), blocks: blocksOf(r).map(b => { const x = f(b.start, b.end); return { ...b, v: x.dueActive ? x.takenActive / x.dueActive : null, taken: x.takenActive, due: x.dueActive }; }) };
+    return { L, kind: "daily", span, ...cur, prev: f(r.prev.start, r.prev.end), blocks: blocksOf(r).map(b => { const x = f(b.start, b.end); return { ...b, v: x.dueActive ? x.takenActive / x.dueActive : null, taken: x.takenActive, due: x.dueActive, bySlot: x.bySlot }; }) };
   }
   // fixed interval (e.g. every 14 days)
   const due = [];

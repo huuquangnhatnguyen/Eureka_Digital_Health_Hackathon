@@ -64,19 +64,15 @@ function MedPanel({ model, A, X }: { model: Any; A: Any; X: Any }) {
       <article className="mp">
         {head}
         <p className="mp-v"><span className="v">{pct(X.pctActive)}</span> <span className="u">of doses logged · {X.takenActive} of {X.dueActive} on days with entries</span></p>
-        {two && <p className="muted">Mornings {pct((X.bySlot[0].taken / X.bySlot[0].due) * 100)} · evenings {pct((X.bySlot[1].taken / X.bySlot[1].due) * 100)}{X.extra ? ` · ${plural(X.extra, "extra dose")} beyond the schedule` : ""}</p>}
-        {r.n <= 120 ? (
-          <>
-            <div className="dstrip" role="img" aria-label={`${L.name} doses each day`}>
-              {X.perDay.map((p: Any) => (
-                <span key={p.k} className={p.act ? "" : "nd"} title={`${d(p.k, true)}: ${p.act ? p.filled.map((x: Any, i: number) => `${two ? (i ? "evening" : "morning") : "dose"} ${x ? "at " + fmtTime(x.mins) : "not logged"}`).join(", ") : "no data (no entries that day)"}`}>
-                  {p.act ? p.filled.map((x: Any, i: number) => <i key={i} className={x ? "tk" : "ms"} />) : <i />}
-                </span>
-              ))}
-            </div>
-            <p className="viz-cap">Each column is a day{two ? ", morning on top" : ""}. Filled = logged, outline = not logged, gray dash = no data.</p>
-          </>
-        ) : <Cols blocks={X.blocks} max={1} refV={0.8} fmt={(v) => pct(v * 100)} aria="Doses logged by month, on days with entries" />}
+        {two && (
+          <p className="muted seg-legend">
+            <span className="nowrap"><span className="seg-key seg-0" />Mornings {pct((X.bySlot[0].taken / X.bySlot[0].due) * 100)}</span>
+            <span className="nowrap"><span className="seg-key seg-1" />Evenings {pct((X.bySlot[1].taken / X.bySlot[1].due) * 100)}</span>
+            {X.extra > 0 && <span>{plural(X.extra, "extra dose")} beyond the schedule</span>}
+          </p>
+        )}
+        <Cols blocks={X.blocks} max={1} refV={0.8} stack={two} fmt={(v) => pct(v * 100)} aria={`${L.name} doses logged each ${r.n <= 120 ? "week" : "month"}, on days with entries`} />
+        <p className="viz-cap">{r.n <= 120 ? "Weekly" : "Monthly"} share of doses logged · dashed line = 80%</p>
         {nd.length > 0 && <p className="card-f">{noDataText(nd, (k: string) => d(k))}: no entries in the app, so those days are left out of the rate.</p>}
       </article>
     );
@@ -98,44 +94,47 @@ function MedPanel({ model, A, X }: { model: Any; A: Any; X: Any }) {
 }
 
 /** Column sparkline, ported from the original colsHTML(). */
-function Cols({ blocks, max, refV, fmt, aria }: { blocks: Any[]; max?: number; refV?: number; fmt: (v: number) => string; aria: string }) {
+function Cols({ blocks, max, refV, stack, cls, fmt, aria }: { blocks: Any[]; max?: number; refV?: number; stack?: boolean; cls?: string; fmt: (v: number) => string; aria: string }) {
   if (!blocks.length) return null;
   const top = max ?? Math.max(1e-9, ...blocks.map((b) => b.v).filter((v) => v != null));
   return (
-    <div className="cols-wrap">
+    <div className={`cols-wrap${cls ? ` ${cls}` : ""}`}>
       <div className="cols" role="img" aria-label={aria}>
         {refV != null && <span className="cols-ref" style={{ bottom: `${clamp(refV / top, 0, 1) * 100}%` }} />}
         {blocks.map((b, i) => {
           const v = b.v, h = v == null ? 0 : clamp(v / top, 0, 1) * 100;
+          const slots = stack && v ? b.bySlot : null; // morning/evening segments; each is its share of the bar's total due doses
+          const tip = `${b.label}: ${v == null ? "no data" : fmt(v)}${slots ? ` · morning ${slots[0].taken} of ${slots[0].due}, evening ${slots[1].taken} of ${slots[1].due}` : ""}`;
           return (
-            <span key={i} className={`col${v == null ? " col-na" : v === 0 ? " col-zero" : ""}${i === blocks.length - 1 ? " col-last" : ""}`} title={`${b.label}: ${v == null ? "no data" : fmt(v)}`}>
-              <i style={{ height: `${v == null ? 0 : Math.max(h, 4)}%` }} />
+            <span key={i} className={`col${slots ? " col-stack" : ""}${v == null ? " col-na" : v === 0 ? " col-zero" : ""}${i === blocks.length - 1 ? " col-last" : ""}`} title={tip}>
+              {slots
+                ? slots.map((s: Any, j: number) => s.taken > 0 && <i key={j} className={`seg-${j}`} style={{ height: `${(s.taken / b.due / top) * 100}%` }} />)
+                : <i style={{ height: `${v == null ? 0 : Math.max(h, 4)}%` }} />}
             </span>
           );
         })}
       </div>
+      <div className="cols-axis" aria-hidden="true"><span>{md(blocks[0].start)}</span><span>{md(blocks.at(-1).end)}</span></div>
     </div>
   );
 }
 
-/** Daily log-count line chart, ported from the original dbTrend(). */
+const md = (k: string) => new Date(`${k}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+
+/** Daily log-count bars, one per calendar day (gaps = no log that day), ported from the original dbTrend(). */
 function DbTrend({ title, points, unit }: { title: string; points: { date: string; value: number }[]; unit: string }) {
   if (!points.length) return null;
-  const vs = points.map((p) => p.value), lo = Math.min(...vs), hi = Math.max(...vs), span = hi - lo || 1;
-  const t0 = Date.parse(points[0].date), tSpan = Date.parse(points.at(-1)!.date) - t0;
-  const x = (i: number) => 55 + (tSpan ? (Date.parse(points[i].date) - t0) / tSpan : 0) * 700, y = (v: number) => 175 - ((v - lo) / span) * 135;
+  const byDay = new Map(points.map((p) => [p.date, p.value])), blocks: Any[] = [];
+  for (let t = Date.parse(points[0].date); t <= Date.parse(points.at(-1)!.date); t += 864e5) {
+    const k = new Date(t).toISOString().slice(0, 10);
+    blocks.push({ label: md(k), start: k, end: k, v: byDay.get(k) ?? null });
+  }
+  const hi = Math.max(...points.map((p) => p.value));
   return (
     <figure className="proto-chart">
       <h3>{title} <small className="muted">{unit}</small></h3>
-      <svg viewBox="0 0 800 220" role="img" aria-label={`${title} trend`}>
-        <line x1={55} x2={755} y1={175} y2={175} stroke="#dae1e3" />
-        <text x={5} y={44} fill="currentColor">{hi}</text>
-        <text x={5} y={175} fill="currentColor">{lo}</text>
-        <polyline fill="none" stroke="#2a78d6" strokeWidth={2} points={points.map((p, i) => `${x(i)},${y(p.value)}`).join(" ")} />
-        {points.map((p, i) => <circle key={p.date} cx={x(i)} cy={y(p.value)} r={3} fill="#2a78d6"><title>{`${p.date}: ${p.value} ${unit}`}</title></circle>)}
-        <text x={55} y={210} fill="currentColor">{points[0].date}</text>
-        <text x={755} y={210} textAnchor="end" fill="currentColor">{points.at(-1)!.date}</text>
-      </svg>
+      <Cols blocks={blocks} cls="cols-dense cols-tall" fmt={(v) => `${v} ${unit}`} aria={`${title}, one bar per day`} />
+      <p className="viz-cap">Each bar is a day · tallest = {hi} · gaps = no log that day</p>
     </figure>
   );
 }

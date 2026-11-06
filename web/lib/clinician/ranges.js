@@ -1,25 +1,26 @@
-// Normal ranges for the overview charts, keyed by baselineFields id (review.js). Published reference values for a
-// demo, not cut-offs a clinician has set for this patient.
-import { median } from "./model";
-
+// Default normal ranges for the overview charts, keyed by baselineFields id (review.js). Published reference values
+// for a demo, not cut-offs set for a patient; a clinician can save their own per patient (overviewRanges).
 export const RANGES = {
-  fev1Percent: { lo: 80, source: "NAEPP asthma guideline: FEV1 of 80% predicted or more is normal." },
-  fvc: { lo: 80, source: "ATS/ERS: FVC of 80% predicted or more is normal." },
-  pefPercent: { lo: 80, source: "Peak flow of 80% predicted or more, as in the green zone." },
-  ratio: { lo: 80, source: "NAEPP (ages 5–11): an FEV1/FVC ratio below 80% suggests obstruction." },
-  glucose: { lo: 70, hi: 180, source: "ADA: 70–180 mg/dL is the usual target range for type 1 diabetes." },
-  // shortcut: one range for all heart patients; children with cyanotic heart disease live lower (often 75–85%), add a per-patient target when one is in the data
-  spo2: { lo: 95, source: "Resting SpO2 of 95% or more is typical; some heart conditions have a lower target." },
-  pulse: { lo: 70, hi: 120, source: "Typical resting pulse for ages 6–12 is 70–120 bpm." },
+  fev1Percent: { lo: 80, hi: null }, // NAEPP asthma guideline (EPR-3)
+  fvc: { lo: 80, hi: null }, // ATS/ERS interpretation
+  pefPercent: { lo: 80, hi: null }, // green zone of an asthma action plan
+  ratio: { lo: 80, hi: null }, // NAEPP, ages 5–11
+  glucose: { lo: 70, hi: 180 }, // ADA / International Consensus on Time in Range
+  // shortcut: one default for all heart patients; children with cyanotic heart disease run lower (often 75–85%), so set theirs per patient
+  spo2: { lo: 95, hi: null },
+  pulse: { lo: 70, hi: 120 }, // resting, ages 6–12
 };
 
 /** "low" | "high" | null for one value against a range. */
 export const classify = (range, v) => (range?.lo != null && v < range.lo ? "low" : range?.hi != null && v > range.hi ? "high" : null);
 
-/** Test for values far from this patient's usual readings: modified z-score above 3.5 (Iglewicz & Hoaglin),
-    which a few extreme readings can't drag along the way a mean and SD can. Needs 8+ values with some spread. */
-export function unusualTest(values) {
-  if (values.length < 8) return () => false;
-  const m = median(values), mad = median(values.map(v => Math.abs(v - m)));
-  return mad ? v => Math.abs(0.6745 * (v - m) / mad) > 3.5 : () => false;
-}
+/** The range a card uses: the patient's saved one, else the default. */
+export const rangeFor = (id, saved) => saved?.[id] ?? RANGES[id];
+
+/** A saved ranges object is valid when every key has a default and each entry is { lo, hi }, numbers or null,
+    with at least one set and lo below hi. */
+export const validRanges = (v) =>
+  !!v && typeof v === "object" && !Array.isArray(v) &&
+  Object.entries(v).every(([k, r]) => k in RANGES && !!r && typeof r === "object" &&
+    Object.keys(r).length === 2 && ["lo", "hi"].every((e) => r[e] === null || Number.isFinite(r[e])) &&
+    (r.lo != null || r.hi != null) && (r.lo == null || r.hi == null || r.lo < r.hi));
