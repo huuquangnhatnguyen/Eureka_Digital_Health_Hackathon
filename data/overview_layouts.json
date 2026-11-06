@@ -3,6 +3,13 @@
     "symptomDays",
     "pefPercent",
     "fvc",
-    "fev1Percent"
+    "fev1Percent",
+    "feeling"
+  ],
+  "db0254a511918e6bce20b10b": [
+    "symptomDays",
+    "doses",
+    "device",
+    "feeling"
   ]
 }
